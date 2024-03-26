@@ -1,7 +1,8 @@
 ## How to run
 
+
 ```
-npm i
-npm run build
+pnpm i
+pnpm run build
 node dist/index.js
 ```

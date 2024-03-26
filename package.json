@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
+    "build": "pnpm exec tsc",
+    "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,7 +15,9 @@
     "@types/node": "^20.11.30",
     "fs": "^0.0.1-security",
     "node-fetch": "^3.3.2",
-    "nodejs-polars": "^0.10.0",
+    "nodejs-polars": "^0.10.0"
+  },
+  "devDependencies": {
     "typescript": "^5.4.3"
   }
 }

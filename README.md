@@ -4,5 +4,5 @@
 ```
 pnpm i
 pnpm run build
-node dist/index.js
+pnpm start
 ```

@@ -1,0 +1,171 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@types/node':
+    specifier: ^20.11.30
+    version: 20.11.30
+  fs:
+    specifier: ^0.0.1-security
+    version: 0.0.1-security
+  node-fetch:
+    specifier: ^3.3.2
+    version: 3.3.2
+  nodejs-polars:
+    specifier: ^0.10.0
+    version: 0.10.0
+
+devDependencies:
+  typescript:
+    specifier: ^5.4.3
+    version: 5.4.3
+
+packages:
+
+  /@types/node@20.11.30:
+    resolution: {integrity: sha512-dHM6ZxwlmuZaRmUPfv1p+KrdD1Dci04FbdEm/9wEMouFqxYoFl5aMkt0VMAUtYRQDyYvD41WJLukhq/ha3YuTw==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: false
+
+  /data-uri-to-buffer@4.0.1:
+    resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
+    engines: {node: '>= 12'}
+    dev: false
+
+  /fetch-blob@3.2.0:
+    resolution: {integrity: sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==}
+    engines: {node: ^12.20 || >= 14.13}
+    dependencies:
+      node-domexception: 1.0.0
+      web-streams-polyfill: 3.3.3
+    dev: false
+
+  /formdata-polyfill@4.0.10:
+    resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
+    engines: {node: '>=12.20.0'}
+    dependencies:
+      fetch-blob: 3.2.0
+    dev: false
+
+  /fs@0.0.1-security:
+    resolution: {integrity: sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==}
+    dev: false
+
+  /node-domexception@1.0.0:
+    resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
+    engines: {node: '>=10.5.0'}
+    dev: false
+
+  /node-fetch@3.3.2:
+    resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      data-uri-to-buffer: 4.0.1
+      fetch-blob: 3.2.0
+      formdata-polyfill: 4.0.10
+    dev: false
+
+  /nodejs-polars-android-arm64@0.10.0:
+    resolution: {integrity: sha512-Zx0pKahgbKozh3wtvW2rcUhjMPh8zJZ8p45gah+l5kSPmAhhOcdZmK1k6yGgoy+3F1NRy8Pia4mxMNnkeaHi0g==}
+    engines: {node: '>= 16'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /nodejs-polars-darwin-arm64@0.10.0:
+    resolution: {integrity: sha512-TAtEFSmSoefSRz5mtUYPkbYp2W/HREvpEc4weS0/idameBOXmG077PlEGea1+YokePQQHpcPDHQ3AIYf/NcMnQ==}
+    engines: {node: '>= 16'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /nodejs-polars-darwin-x64@0.10.0:
+    resolution: {integrity: sha512-D4FLtb6a5I9OsHbAB7DFFmDy/t2oegpP9Up+PnEZ+5QTWt8eOuB4BxLkzpXPN+fMkjKZaxOrq93QEw8Y/4YUdA==}
+    engines: {node: '>= 16'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /nodejs-polars-linux-arm64-gnu@0.10.0:
+    resolution: {integrity: sha512-YcA5FsG/RejtOAvu3+To27clcTgs19hOWvQiOm2waY/uLC6PpuUQ17JP3msCrXo1WjLWok4DY7JIOvV1y/+BzQ==}
+    engines: {node: '>= 16'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /nodejs-polars-linux-arm64-musl@0.10.0:
+    resolution: {integrity: sha512-OVduD/2BhSHPvbMeWYLkZjBX61p4nYnO41OGcuNON6n5gN489LvawSQSB2znc6XT9LHmYl1uum8/Dalvz81wQg==}
+    engines: {node: '>= 16'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /nodejs-polars-linux-x64-gnu@0.10.0:
+    resolution: {integrity: sha512-TeMUg1XCmJhkkFZblcVqHMPE+Qdd0JoAjObv05m+ztGaDzJ1gP7bFoUerXyahGFZlfCxRNpzrd57g5IEZcCJOg==}
+    engines: {node: '>= 16'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /nodejs-polars-linux-x64-musl@0.10.0:
+    resolution: {integrity: sha512-DIY+QB0TlizPBgmgpOsPAQcP08p+JDedke9L1OMZ3QSdaOBSHfEhuTfz5syVn0e7LDbZolC+gYbIpmyOB1ogbA==}
+    engines: {node: '>= 16'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /nodejs-polars-win32-x64-msvc@0.10.0:
+    resolution: {integrity: sha512-p+hsgET2XLAx3mf30OVJLk8wgI6NWoJqP4EdmEV4JUkDHApv88xz4iXLzKTU3YGSpj4sG9kSYfucvpeNvqyzqQ==}
+    engines: {node: '>= 16'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /nodejs-polars@0.10.0:
+    resolution: {integrity: sha512-IZ5QMnkVhk5f7AcTZy6F8V5sv9eIt6qx6T874KQhb711rQClfYx9iWxtRc1MxC8M1GGbSShAEv08QL4zi15H/g==}
+    engines: {node: '>= 18'}
+    optionalDependencies:
+      nodejs-polars-android-arm64: 0.10.0
+      nodejs-polars-darwin-arm64: 0.10.0
+      nodejs-polars-darwin-x64: 0.10.0
+      nodejs-polars-linux-arm64-gnu: 0.10.0
+      nodejs-polars-linux-arm64-musl: 0.10.0
+      nodejs-polars-linux-x64-gnu: 0.10.0
+      nodejs-polars-linux-x64-musl: 0.10.0
+      nodejs-polars-win32-x64-msvc: 0.10.0
+    dev: false
+
+  /typescript@5.4.3:
+    resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
+
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: false
+
+  /web-streams-polyfill@3.3.3:
+    resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
+    engines: {node: '>= 8'}
+    dev: false

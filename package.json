@@ -1,0 +1,20 @@
+{
+  "name": "poc-eurostat-data-transformers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.11.30",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
+    "nodejs-polars": "^0.10.0",
+    "typescript": "^5.4.3"
+  }
+}

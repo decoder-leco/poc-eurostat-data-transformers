@@ -1,5 +1,5 @@
 {
-  "name": "poc-eurostat-data-transformers",
+  "name": "@decoder-leco/poc-eurostat-data-transformers",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

@@ -2,4 +2,4 @@ import {ProjectionsDePopulation2019_2024 as Projection} from "./ProjectionsDePop
 
 const proj = new Projection()
 proj.downLoad()
-proj.transform()
+//proj.transform()

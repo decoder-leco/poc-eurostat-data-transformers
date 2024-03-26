@@ -1,5 +1,5 @@
 import * as fs from "fs"
-import fetch from "node-fetch"
+//import fetch from "node-fetch"
 import * as pl from "nodejs-polars"
 
 export class ProjectionsDePopulation2019_2024 {
@@ -17,9 +17,11 @@ export class ProjectionsDePopulation2019_2024 {
     const res = await fetch(this.remoteFile)
     const fileStream = fs.createWriteStream(path)
     await new Promise((resolve, reject) => {
-      res.body?.pipe(fileStream)
-      res.body?.on("error", reject)
-      fileStream.on("finish", resolve)
+      //res.body?.pipe(fileStream)
+      //res.body?.on("error", reject)
+      //fileStream.write(res.body)
+      //fileStream.on("finish", resolve)
+      console.log(res.body)
     });
     this.localRawFile = path
   }

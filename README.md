@@ -1,8 +1,19 @@
-# How to run
+# Projection de la population 2019/2024 package
+a CLI to ingest & transform eurostat proj_19np.csv
 
+## How to install
 
 ```
 pnpm i
 pnpm run build
-pnpm start
+```
+
+## How to run
+```
+dist/index.js
+ or 
+pnpm run start
+
+or try: 
+dist/index.js --help
 ```

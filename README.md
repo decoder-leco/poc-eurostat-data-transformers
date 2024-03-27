@@ -13,7 +13,4 @@ pnpm run build
 dist/index.js
  or 
 pnpm run start
-
-or try: 
-dist/index.js --help
 ```

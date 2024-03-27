@@ -1,9 +1,19 @@
 import * as fs from "node:fs"
 import * as pl from "nodejs-polars"
 
+/**
+ * Transformation du DATASET depuis le repetoire des raw dataset
+ * & copie de la transformation dans un repertoire locale
+ */
 export class Transform {
   static baseRawUrl: string = ""
 
+  /**
+   *  TRANSFORMATION DU DATASET DANS UN NOUVEAU FICHIER
+   * 
+   * @param rawPath         local path [ex: ./rawData/proj_19np.csv   DO NOT FORGET ./ ATM]
+   * @param transformPath   local path [ex: ./transformedData/proj_19np_transformed.csv   DO NOT FORGET ./ ATM]
+   */
   constructor(protected rawPath: string, protected transformPath: string) {
     this.rawPath = rawPath
     this.transformPath = transformPath

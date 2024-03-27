@@ -6,8 +6,7 @@ import * as pl from "nodejs-polars"
  * & copie de la transformation dans un repertoire locale
  */
 export class Transform {
-  static baseRawUrl: string = ""
-
+  
   /**
    *  TRANSFORMATION DU DATASET DANS UN NOUVEAU FICHIER
    * 

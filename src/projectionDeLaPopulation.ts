@@ -3,7 +3,10 @@
 import { Command, OptionValues } from "commander"
 import { exit, stdin as input, stdout as output } from 'node:process';
 import {ProjectionsDePopulation2019_2024 as Projection} from "./ProjectionsDePopulation2019_2024"
+import * as abricot from "./abricot"
 
+
+ const machin = new abricot.ClassA
 // CLI functions
 const getHasCli = (prefix: string, alias = undefined) => {
   const prefixIndex = process.argv.findIndex(
@@ -75,5 +78,4 @@ const proj = new Projection(
   options
 )
 
-proj.run()
 

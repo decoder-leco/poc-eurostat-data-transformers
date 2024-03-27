@@ -1,4 +1,5 @@
 import * as fs from "node:fs"
+import { exit } from "node:process"
 import * as pl from "nodejs-polars"
 
 interface Options {
@@ -6,17 +7,30 @@ interface Options {
   showDataFrame: boolean
 }
 
+/**
+ * ProjectionsDePopulation2019_2024
+ */
 export class ProjectionsDePopulation2019_2024 {
-  remoteFile: string  //= "https://raw.githubusercontent.com/decoderleco/deces_europe/main/data/csv/proj_19np__custom_2224172_linear.csv"
-  localRawFile: string  //= "./rawData/proj_19np.csv"
-  transformedFile: string  //= "./transformedData/proj_19np_transformed.csv"
-  options: Options // = { log: true, showDataFrame: false }
-
+  remoteFile: string        // = "https://raw.githubusercontent.com/decoderleco/deces_europe/main/data/csv/proj_19np__custom_2224172_linear.csv"
+  localRawFile: string      // = "./rawData/proj_19np.csv"
+  transformedFile: string   // = "./transformedData/proj_19np_transformed.csv"
+  options: Options          // = { log: true, showDataFrame: false }
+  
+  /**
+   * 
+   * @param remoteFile 
+   * @param localRawFile 
+   * @param transformedFile 
+   * @param options 
+   */
   constructor(remoteFile: string, localRawFile: string, transformedFile: string, options: Options = { log: true, showDataFrame: false }) {
     this.localRawFile = localRawFile
     this.remoteFile = remoteFile
     this.transformedFile = transformedFile
     this.options = options
+    if ( !remoteFile || !localRawFile || !transformedFile)
+      console.log("Constructor error, missing argunments")
+    else this.run()
   }
 
   async handleDirs() {
@@ -72,9 +86,7 @@ export class ProjectionsDePopulation2019_2024 {
         (pl.col("projection").str.contains("BSL")) 
         .and(pl.col("sex").str.contains(/M|F/))
       ).withColumn(
-        //pl.col("time").str.Datetime().alias("newdate"),
         //pl.col("time").str.strptime(pl.Dtypes[pl.Datetime]).alias("newdate"),
-        //pl.col("time").str.replace(pl.col("time"), new Date(pl.col("time"))),
         pl.col('age').str.replace('Y_GE100','Y_OPEN') 
       )
 

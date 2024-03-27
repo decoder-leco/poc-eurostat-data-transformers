@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "description": "Decoder l'eco ELT module for eurostat population projection 2019/2024",
   "main": "index.js",
-  "bin": {
-    "projdppl": "./dist/projectionDeLaPopulation.js"
-  },
-  "man": "./man/doc.1",
   "engines": {
     "node": "20.11.1",
     "pnpm": "8.14.1"
@@ -20,8 +16,9 @@
     "url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/issues"
   },
   "scripts": {
-    "build": "pnpm exec tsc && chmod +x dist/projdppl.js",
-    "start": "dist/projdppl.js",
+    "build": "pnpm exec tsc",
+    "start": "node dist/index.js",
+    "dev": "rm -Rf rawData && rm -Rf transformedData && pnpm exec tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

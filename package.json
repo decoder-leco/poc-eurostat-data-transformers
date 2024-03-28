@@ -16,10 +16,11 @@
     "url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/issues"
   },
   "scripts": {
+    "test": "jest",
     "build": "pnpm exec tsc",
     "start": "node dist/index.js",
-    "dev": "rm -Rf rawData && rm -Rf transformedData && pnpm exec tsc && node dist/index.js",
-    "test": "jest"
+    "clean": "rm -Rf rawData && rm -Rf transformedData", 
+    "dev": "pnpm run clean && pnpm test && pnpm build && pnpm start"
   },
   "keywords": [
     "eurostat",

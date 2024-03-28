@@ -18,6 +18,7 @@ remove all
 pnpm remove jest
 pnpm remove @babel/preset-typescript
 rm babel.config.js
+------------------
 
 from : https://kulshekhar.github.io/ts-jest/docs/getting-started/installation
 
@@ -37,6 +38,5 @@ const jestConfig: JestConfigWithTsJest = {
 
 export default jestConfig
 ```
-
 
 pnpm add -D ts-node

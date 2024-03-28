@@ -79,7 +79,7 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
 
   describe('handleDirs', () => {
     it('mkDirSync shall create a new dir if requiered', async () => {
-      await handleDirs('./lol/test.csv')
+      await ingest.run() //handleDirs('./lol/test.csv')
 
       // TEST PASS WITH toHaveBeenCalledTimes(1)
       // TEST FAIL WITH toHaveBeenCalledTimes(2)

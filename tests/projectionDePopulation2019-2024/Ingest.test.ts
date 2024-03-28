@@ -90,6 +90,13 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
       // TEST PASS WITH toHaveBeenCalledTimes(1)
       // TEST FAIL WITH toHaveBeenCalledTimes(2)
       expect(handleDirs).toHaveBeenCalledTimes(1)
+    })
+  describe('download', () => {
+    it('mkDirSync shall create a new dir if requiered', async () => {
+      await ingest.run() 
+
+      // TEST PASS WITH toHaveBeenCalledTimes(1)
+      // TEST FAIL WITH toHaveBeenCalledTimes(2)
       expect(download).toHaveBeenCalledTimes(1)
     })
   })

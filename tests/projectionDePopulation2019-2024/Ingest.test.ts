@@ -1,7 +1,8 @@
 import * as projection from "../../src/projectionDePopulation2019-2024"
 //import { mkdirSync, existsSync } from "node:fs"
 // import * as fs from "node:fs"
-import { handleDirs } from "../../src/projectionDePopulation2019-2024/handleDir";
+import { handleDirs } from "../../src/projectionDePopulation2019-2024/handleDir"
+import { download } from "../../src/projectionDePopulation2019-2024/download"
 
 // const ingest = new projection.Ingest("test", "lol")
 
@@ -67,6 +68,11 @@ jest.mock('../../src/projectionDePopulation2019-2024/handleDir', () => ({
   handleDirs: jest.fn(),
 }))
 
+jest.mock('../../src/projectionDePopulation2019-2024/download', () => ({
+  download: jest.fn(),
+}))
+
+
 const ingest = new projection.Ingest("test", "./lol/test.cvs")
 
 // const mockMkDir = handleDirs("./rawDataTest")
@@ -79,11 +85,12 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
 
   describe('handleDirs', () => {
     it('mkDirSync shall create a new dir if requiered', async () => {
-      await ingest.run() //handleDirs('./lol/test.csv')
+      await ingest.run() 
 
       // TEST PASS WITH toHaveBeenCalledTimes(1)
       // TEST FAIL WITH toHaveBeenCalledTimes(2)
       expect(handleDirs).toHaveBeenCalledTimes(1)
+      expect(download).toHaveBeenCalledTimes(1)
     })
   })
 })

@@ -1,5 +1,6 @@
 import * as fs from "node:fs"
 import { handleDirs } from "./handleDir"
+import { download } from "./download"
 /**
  * Classe d'ingestation d'un depuis le repos deces_europe de decoderleco
  *  Téléchargement & copie locale afin d'archiver
@@ -37,12 +38,10 @@ export class Ingest {
   async run() {
     // await this.handleDirs()
     await handleDirs(this.rawPath)
-    await this.download()
+   // await this.download()
+    await download(this.remote ,this.rawPath)
   }
 
-  addition(a: number,b: number) {
-    return a+b
-  }
 /*
   async handleDirs() {
     if (fs.existsSync(this.rawPath.split("/")[1]) == false) {
@@ -51,6 +50,7 @@ export class Ingest {
     }
   }
 */
+  /*
   async download(){
     const res = await fetch( Ingest.baseUrl + this.remote + Ingest.format)
     const text = await res.text()
@@ -66,4 +66,5 @@ export class Ingest {
       console.log("error while writing " + this.rawPath + this.remote + ": ", err)
     }
   }
+  */
 }

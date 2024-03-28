@@ -62,6 +62,7 @@ jobs:
       PNPM_VERSION: << pipeline.parameters.pnpm_version >>
     steps:
       <<: *steps-commons
+      
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}

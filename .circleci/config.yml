@@ -61,7 +61,7 @@ jobs:
       BASH_ENV: /home/circleci/.profile
       PNPM_VERSION: << pipeline.parameters.pnpm_version >>
     steps:
-      <<: *steps-commons
+    <<: *steps-commons
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}

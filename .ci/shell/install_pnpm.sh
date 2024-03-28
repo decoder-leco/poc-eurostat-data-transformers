@@ -6,7 +6,7 @@ echo " [$0] - PNPM_VERSION=[$PNPM_VERSION]"
 echo " [$0] -----------------------"
 
 # curl -fsSL https://get.pnpm.io/install.sh | sh -
-curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=<version> sh -
+curl -fsSL https://get.pnpm.io/install.sh | env PNPM_VERSION=$PNPM_VERSION sh -
 cat <<EOF >./add.on.bashrc
 export PNPM_HOME="/home/circleci/.local/share/pnpm"
 case ":\$PATH:" in

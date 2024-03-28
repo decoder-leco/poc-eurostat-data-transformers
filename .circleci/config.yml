@@ -39,7 +39,7 @@ jobs:
     <<: *jobs-commons
     environment:
       BASH_ENV: /home/circleci/.profile
-      PNPM_VERSION: << pipeline.parameters.pnpm_version >>
+      # PNPM_VERSION: << pipeline.parameters.pnpm_version >>
     steps:
       - run:
           name: "System setup"
@@ -66,6 +66,7 @@ jobs:
               echo "NodeJS version:"
               node -v
               echo " BASH_ENV=[${BASH_ENV}]"
+              echo " PNPM_VERSION=[${PNPM_VERSION}]"
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -122,6 +123,7 @@ jobs:
               echo "NodeJS version:"
               node -v
               echo " BASH_ENV=[${BASH_ENV}]"
+              echo " PNPM_VERSION=[${PNPM_VERSION}]"
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -177,6 +179,7 @@ jobs:
               echo "NodeJS version:"
               node -v
               echo " BASH_ENV=[${BASH_ENV}]"
+              echo " PNPM_VERSION=[${PNPM_VERSION}]"
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -236,6 +239,7 @@ jobs:
               echo "NodeJS version:"
               node -v
               echo " BASH_ENV=[${BASH_ENV}]"
+              echo " PNPM_VERSION=[${PNPM_VERSION}]"
       # - checkout
       - attach_workspace:
           at: ~/repo
@@ -251,8 +255,10 @@ workflows:
   merge_requests_flow:
     when: << pipeline.parameters.publish_me >>
     jobs:
-      - run_unit_tests
+      - run_unit_tests:
+          context: poc-eurostat-data-transformers
       - build_npm_package:
+          context: poc-eurostat-data-transformers
           requires:
             - run_unit_tests
       - run_e2e_tests:
@@ -263,6 +269,7 @@ workflows:
           requires:
             - run_e2e_tests
       - publish_to_npm_registry:
+          context: poc-eurostat-data-transformers
           requires:
             - approve_publish_to_npm_registry
 

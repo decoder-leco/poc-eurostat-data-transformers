@@ -1,0 +1,243 @@
+
+version: "2.1"
+# ---
+#  https://circleci.com/docs/circleci-images/
+#  https://circleci.com/docs/circleci-images/#nodejs
+#  https://hub.docker.com/r/circleci/node/tags?ordering=last_updated
+#  docker pull circleci/node:lts-bullseye
+parameters:
+  publish_me:
+    type: boolean
+    default: false
+  runner_image_tag:
+    type: string
+    default: "lts-bullseye"
+  npm_publish_auth_secret_user:
+    type: string
+    default: "xxxx"
+  npm_publish_auth_secret_token:
+    type: string
+    default: $DECODERLECO_NPM_TOKEN
+
+*jobs-commons: &jobs-commons
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:<< pipeline.parameters.runner_image_tag >>
+  # resource_class: decoderleco/podman-small1 # that's for privately hosted runners
+
+jobs:
+  run_unit_tests:
+    <<: *jobs-commons
+    environment:
+      BASH_ENV: /home/circleci/.profile
+    steps:
+      # <<: *steps-commons
+      - run:
+          name: "System setup"
+          command: |
+              apt-get update -y && apt-get install -y curl jq
+      - run:
+          name: "env setup"
+          command: |
+              touch "$BASH_ENV"
+              echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
+              echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
+      - run:
+          name: "Install pnpm"
+          command: |
+              curl -fsSL https://get.pnpm.io/install.sh | sh -
+      - run:
+          name: "env checkup"
+          command: |
+              pnpm --version
+              echo " BASH_ENV=[${BASH_ENV}]"
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+	        # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run:
+          name: "Resolve Dependencies"
+          command: |
+              pnpm i --frozen-lockfile
+      - run:
+          name: "Run Unit Tests"
+          command: | 
+              echo "BASH_ENV=[${BASH_ENV}]"
+              pwd
+              echo "# Run Package Unit Tests!"
+              pnpm test
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  build_npm_package:
+    <<: *jobs-commons
+    environment:
+      BASH_ENV: /home/circleci/.profile
+    steps:
+      # <<: *steps-commons
+      - run:
+          name: "System setup"
+          command: |
+              apt-get update -y && apt-get install -y curl jq
+      - run:
+          name: "env setup"
+          command: |
+              touch "$BASH_ENV"
+              echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
+              echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
+      - run:
+          name: "Install pnpm"
+          command: |
+              curl -fsSL https://get.pnpm.io/install.sh | sh -
+      - run:
+          name: "env checkup"
+          command: |
+              pnpm --version
+              echo " BASH_ENV=[${BASH_ENV}]"
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+	        # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run:
+          name: "Resolve Dependencies"
+          command: |
+              pnpm i --frozen-lockfile
+      - run:
+          name: "Run The Package build"
+          command: | 
+              echo "BASH_ENV=[${BASH_ENV}]"
+              pwd
+              echo "# Run Package Unit Tests!"
+              pnpm run build
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  run_e2e_tests:
+    <<: *jobs-commons
+    environment:
+      BASH_ENV: /home/circleci/.profile
+    steps:
+      # <<: *steps-commons
+      - run:
+          name: "System setup"
+          command: |
+              apt-get update -y && apt-get install -y curl jq
+      - run:
+          name: "env setup"
+          command: |
+              touch "$BASH_ENV"
+              echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
+              echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
+      - run:
+          name: "Install pnpm"
+          command: |
+              curl -fsSL https://get.pnpm.io/install.sh | sh -
+      - run:
+          name: "env checkup"
+          command: |
+              pnpm --version
+              echo " BASH_ENV=[${BASH_ENV}]"
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+	        # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run:
+          name: "Resolve Dependencies"
+          command: |
+              pnpm i --frozen-lockfile
+      - run:
+          name: "Run The Package build"
+          command: | 
+              echo "BASH_ENV=[${BASH_ENV}]"
+              pwd
+              echo "# Run Package Unit Tests!"
+              pnpm run test:e2e
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  # ---
+  # Publish to npm registry
+  publish_to_npm_registry:
+    <<: *jobs-commons
+    environment:
+      BASH_ENV: /home/circleci/.profile
+      DECODERLECO_NPM_TOKEN: << pipeline.parameters.npm_publish_auth_secret_token >>
+      PKG_COMMIT_HASH: << pipeline.git.base_revision >>
+    steps:
+      # <<: *steps-commons
+      - checkout
+      - run:
+          name: "env setup"
+          command: |
+              touch "$BASH_ENV"
+              echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
+              echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
+      # - checkout
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$DECODERLECO_NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: |
+              pnpm publish --force --tag dev-$PKG_COMMIT_HASH
+
+workflows:
+  merge_requests_flow:
+    when: << pipeline.parameters.publish_me >>
+    jobs:
+      - run_unit_tests
+      - build_npm_package:
+          requires:
+            - run_unit_tests
+      - run_e2e_tests:
+          requires:
+            - build_npm_package
+      - approve_publish_to_npm_registry: # <<< A job that will require manual approval in the CircleCI web application.
+          type: approval # <<< This key-value pair will set your workflow to a status of "On Hold"
+          requires:
+            - run_e2e_tests
+      - publish_to_npm_registry:
+          requires:
+            - approve_publish_to_npm_registry
+
+  hello_pokus_containers_ci:
+    when: 
+      not: << pipeline.parameters.publish_me >>
+    jobs:
+      - run_unit_tests
+      - build_npm_package:
+          requires:
+            - run_unit_tests
+      - run_e2e_tests:
+          requires:
+            - build_npm_package
+      # - docker_push:
+      #     oci_gun_registry: docker.io
+      #     oci_gun_org: decoderleco.io
+      #     oci_gun_project: go-hello-pokus
+      #     oci_gun_tag: 0.0.1
+      #     requires:
+      #       - approve_docker_push

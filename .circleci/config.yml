@@ -231,6 +231,7 @@ jobs:
           command: |
               chmod +x ./.ci/shell/install_pnpm.sh
               ./.ci/shell/install_pnpm.sh
+              git checkout .ci/shell/install_pnpm.sh
       - run:
           name: "env checkup"
           command: |
@@ -244,13 +245,21 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - run:
+          name: Prepare Publishing package
+          command: |
+              mkdir -p ~/publish.ops/
+      - run:
           name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$DECODERLECO_NPM_TOKEN" > ~/repo/.npmrc
+          command: echo "//registry.npmjs.org/:_authToken=$DECODERLECO_NPM_TOKEN" > ~/publish.ops/.npmrc
+      - run:
+          name: Check NPM Registry auth
+          command: |
+              pnpm whoami
       - run:
           name: Publish package
           command: |
               git status
-              gti checkout .
+              # git checkout .
               pnpm publish --force --tag dev-$PKG_COMMIT_HASH
 
 workflows:

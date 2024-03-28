@@ -15,3 +15,5 @@ case ":\$PATH:" in
 esac
 EOF
 cat ./add.on.bashrc | tee -a "$BASH_ENV"
+
+rm ./add.on.bashrc

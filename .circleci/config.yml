@@ -250,7 +250,8 @@ jobs:
               mkdir -p ~/publish.ops/
       - run:
           name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$DECODERLECO_NPM_TOKEN" > ~/publish.ops/.npmrc
+          # command: echo "//registry.npmjs.org/:_authToken=$DECODERLECO_NPM_TOKEN" > ~/publish.ops/.npmrc
+          command: echo "//registry.npmjs.org/:_authToken=$DECODERLECO_NPM_TOKEN" > ~/.npmrc
       - run:
           name: Check NPM Registry auth
           command: |

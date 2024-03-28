@@ -62,7 +62,9 @@ jobs:
       - run:
           name: "Resolve Dependencies"
           command: |
-              pnpm i --frozen-lockfile
+              # --- 
+              # Il faudra revenir à [pnpm i --frozen-lockfile]: mais cela forcera à avoir une version spécifique de nodejs et de pnpm.
+              pnpm i
       - run:
           name: "Run Unit Tests"
           command: | 

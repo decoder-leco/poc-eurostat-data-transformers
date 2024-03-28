@@ -74,7 +74,7 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths: .
-          
+
   build_npm_package:
     <<: *jobs-commons
     environment:
@@ -103,7 +103,7 @@ jobs:
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
-	        # fallback to using the latest cache if no exact match is found
+          # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run:
           name: "Resolve Dependencies"
@@ -153,7 +153,7 @@ jobs:
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
-	        # fallback to using the latest cache if no exact match is found
+          # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run:
           name: "Resolve Dependencies"

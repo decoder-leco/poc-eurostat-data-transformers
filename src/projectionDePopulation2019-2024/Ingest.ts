@@ -7,6 +7,8 @@ import * as fs from "node:fs"
 export class Ingest {
   static baseUrl: string = "https://raw.githubusercontent.com/decoderleco/deces_europe/main/data/csv/"
   static format: string = ""
+  remote = ""
+  rawPath =""
 
   /**
    *  RECUPERATION D'UN DATASET & COPIE LOCALE
@@ -14,9 +16,20 @@ export class Ingest {
    * @param remote    dataset to set    [ex: proj_19np__custom_2224172_linear.csv ]
    * @param rawPath   local path        [plz this format atm (./dir/filename.ext)]
    */
+  /*
   constructor(protected remote: string, protected rawPath: string) {
     this.remote = remote
     this.rawPath = rawPath    
+  }
+  */
+  init(remote: string, rawPath: string) {
+    this.remote = remote
+    this.rawPath = rawPath    
+  }
+
+  constructor() {
+    this.remote = "https://raw.githubusercontent.com/decoderleco/deces_europe/main/data/csv/proj_19np__custom_2224172_linear.csv"
+    this.rawPath =  "./rawData/proj_19np.csv"
   }
 
   async run() {

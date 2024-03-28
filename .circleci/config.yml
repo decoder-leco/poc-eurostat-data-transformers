@@ -27,32 +27,12 @@ jobs-commons: &jobs-commons
   docker:
     - image: circleci/node:<< pipeline.parameters.runner_image_tag >>
   # resource_class: decoderleco/podman-small1 # that's for privately hosted runners
-steps-commons: &steps-commons
-  - run:
-      name: "System setup"
-      command: |
-          sudo apt-get update -y && sudo apt-get install -y curl jq
-  - run:
-      name: "env setup"
-      command: |
-          touch "$BASH_ENV"
-          echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
-          echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
-          echo 'export SHELL="/bin/bash"' >> "$BASH_ENV"
-  - checkout
-  - run:
-      name: "Install pnpm"
-      command: |
-          chmod +x ./.ci/shell/install_pnpm.sh
-          ./.ci/shell/install_pnpm.sh
-  - run:
-      name: "env checkup"
-      command: |
-          echo "PNPM version:"
-          pnpm --version
-          echo "NodeJS version:"
-          node -v
-          echo " BASH_ENV=[${BASH_ENV}]"
+#steps-commons: &steps-commons
+# aliases:
+#   - &bidule
+#     attach_workspace:
+#       at: /home/circleci
+
 
 jobs:
   run_unit_tests:
@@ -61,8 +41,31 @@ jobs:
       BASH_ENV: /home/circleci/.profile
       PNPM_VERSION: << pipeline.parameters.pnpm_version >>
     steps:
-      <<: *steps-commons
-      
+      - run:
+          name: "System setup"
+          command: |
+              sudo apt-get update -y && sudo apt-get install -y curl jq
+      - run:
+          name: "env setup"
+          command: |
+              touch "$BASH_ENV"
+              echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
+              echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
+              echo 'export SHELL="/bin/bash"' >> "$BASH_ENV"
+      - checkout
+      - run:
+          name: "Install pnpm"
+          command: |
+              chmod +x ./.ci/shell/install_pnpm.sh
+              ./.ci/shell/install_pnpm.sh
+      - run:
+          name: "env checkup"
+          command: |
+              echo "PNPM version:"
+              pnpm --version
+              echo "NodeJS version:"
+              node -v
+              echo " BASH_ENV=[${BASH_ENV}]"
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -94,7 +97,6 @@ jobs:
     environment:
       BASH_ENV: /home/circleci/.profile
     steps:
-      # <<: *steps-commons
       - run:
           name: "System setup"
           command: |
@@ -105,14 +107,20 @@ jobs:
               touch "$BASH_ENV"
               echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
               echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
+              echo 'export SHELL="/bin/bash"' >> "$BASH_ENV"
+      - checkout
       - run:
           name: "Install pnpm"
           command: |
-              curl -fsSL https://get.pnpm.io/install.sh | sh -
+              chmod +x ./.ci/shell/install_pnpm.sh
+              ./.ci/shell/install_pnpm.sh
       - run:
           name: "env checkup"
           command: |
+              echo "PNPM version:"
               pnpm --version
+              echo "NodeJS version:"
+              node -v
               echo " BASH_ENV=[${BASH_ENV}]"
       - restore_cache:
           keys:
@@ -144,7 +152,6 @@ jobs:
     environment:
       BASH_ENV: /home/circleci/.profile
     steps:
-      # <<: *steps-commons
       - run:
           name: "System setup"
           command: |
@@ -155,14 +162,20 @@ jobs:
               touch "$BASH_ENV"
               echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
               echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
+              echo 'export SHELL="/bin/bash"' >> "$BASH_ENV"
+      - checkout
       - run:
           name: "Install pnpm"
           command: |
-              curl -fsSL https://get.pnpm.io/install.sh | sh -
+              chmod +x ./.ci/shell/install_pnpm.sh
+              ./.ci/shell/install_pnpm.sh
       - run:
           name: "env checkup"
           command: |
+              echo "PNPM version:"
               pnpm --version
+              echo "NodeJS version:"
+              node -v
               echo " BASH_ENV=[${BASH_ENV}]"
       - restore_cache:
           keys:
@@ -198,14 +211,31 @@ jobs:
       DECODERLECO_NPM_TOKEN: << pipeline.parameters.npm_publish_auth_secret_token >>
       PKG_COMMIT_HASH: << pipeline.git.base_revision >>
     steps:
-      # <<: *steps-commons
-      - checkout
+      - run:
+          name: "System setup"
+          command: |
+              sudo apt-get update -y && sudo apt-get install -y curl jq
       - run:
           name: "env setup"
           command: |
               touch "$BASH_ENV"
               echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
               echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
+              echo 'export SHELL="/bin/bash"' >> "$BASH_ENV"
+      # - checkout
+      - run:
+          name: "Install pnpm"
+          command: |
+              chmod +x ./.ci/shell/install_pnpm.sh
+              ./.ci/shell/install_pnpm.sh
+      - run:
+          name: "env checkup"
+          command: |
+              echo "PNPM version:"
+              pnpm --version
+              echo "NodeJS version:"
+              node -v
+              echo " BASH_ENV=[${BASH_ENV}]"
       # - checkout
       - attach_workspace:
           at: ~/repo

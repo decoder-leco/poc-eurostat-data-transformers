@@ -52,7 +52,10 @@ jobs:
       - run:
           name: "env checkup"
           command: |
+              echo "PNPM version:"
               pnpm --version
+              echo "NodeJS version:"
+              node -v
               echo " BASH_ENV=[${BASH_ENV}]"
       - restore_cache:
           keys:

@@ -42,6 +42,7 @@ jobs:
               touch "$BASH_ENV"
               echo 'export PATH="$GOPATH"/bin:"$PATH"' >> "$BASH_ENV"
               echo 'export GIT_SHA1="$CIRCLE_SHA1"' >> "$BASH_ENV"
+              echo 'export SHELL="/bin/bash"' >> "$BASH_ENV"
       - run:
           name: "Install pnpm"
           command: |

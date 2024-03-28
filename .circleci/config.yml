@@ -266,7 +266,7 @@ jobs:
           command: |
               git status
               git checkout .
-              pnpm publish --publish-branch "$CIRCLE_BRANCH" --force --tag dev-$PKG_COMMIT_HASH
+              pnpm publish --access public --publish-branch "$CIRCLE_BRANCH" --force --tag dev-$PKG_COMMIT_HASH
 
 workflows:
   merge_requests_flow:

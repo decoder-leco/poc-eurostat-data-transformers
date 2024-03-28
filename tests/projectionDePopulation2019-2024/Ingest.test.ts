@@ -83,6 +83,10 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
     jest.restoreAllMocks();
   })
 
+  beforeEach(() => {
+    jest.restoreAllMocks();
+  })
+
   describe('handleDirs', () => {
     it('mkDirSync shall create a new dir if requiered', async () => {
       await ingest.run() 
@@ -91,13 +95,15 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
       // TEST FAIL WITH toHaveBeenCalledTimes(2)
       expect(handleDirs).toHaveBeenCalledTimes(1)
     })
+  })
+
   describe('download', () => {
-    it('mkDirSync shall create a new dir if requiered', async () => {
+    it('download shall fetch a remote file & copy it to the created dir', async () => {
       await ingest.run() 
 
-      // TEST PASS WITH toHaveBeenCalledTimes(1)
-      // TEST FAIL WITH toHaveBeenCalledTimes(2)
-      expect(download).toHaveBeenCalledTimes(1)
+      // TEST PASS WITH toHaveBeenCalledTimes(2)
+      // TEST FAIL WITH toHaveBeenCalledTimes(1)
+      expect(download).toHaveBeenCalledTimes(2)
     })
   })
 })

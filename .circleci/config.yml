@@ -262,6 +262,7 @@ workflows:
           requires:
             - run_unit_tests
       - run_e2e_tests:
+          context: poc-eurostat-data-transformers
           requires:
             - build_npm_package
       - approve_publish_to_npm_registry: # <<< A job that will require manual approval in the CircleCI web application.

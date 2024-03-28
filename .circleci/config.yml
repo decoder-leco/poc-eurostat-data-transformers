@@ -71,7 +71,7 @@ jobs:
           command: |
               # --- 
               # Il faudra revenir à [pnpm i --frozen-lockfile]: mais cela forcera à avoir une version spécifique de nodejs et de pnpm.
-              pnpm i
+              pnpm i --frozen-lockfile
       - run:
           name: "Run Unit Tests"
           command: | 

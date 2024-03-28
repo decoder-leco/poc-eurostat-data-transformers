@@ -24,6 +24,10 @@ export class Ingest {
     await this.download()
   }
 
+  addition(a: number,b: number) {
+    return a+b
+  }
+
   async handleDirs() {
     if (fs.existsSync(this.rawPath.split("/")[1]) == false) {
       fs.mkdirSync( this.rawPath.split("/")[1])

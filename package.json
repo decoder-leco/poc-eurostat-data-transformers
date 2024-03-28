@@ -19,7 +19,7 @@
     "build": "pnpm exec tsc",
     "start": "node dist/index.js",
     "dev": "rm -Rf rawData && rm -Rf transformedData && pnpm exec tsc && node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "eurostat",
@@ -36,6 +36,10 @@
     "nodejs-polars": "^0.10.0"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.3"
   }
 }

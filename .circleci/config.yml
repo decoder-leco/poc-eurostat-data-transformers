@@ -8,7 +8,7 @@ version: "2.1"
 parameters:
   publish_me:
     type: boolean
-    default: false
+    default: true
   runner_image_tag:
     type: string
     default: "lts-bullseye"
@@ -222,7 +222,7 @@ workflows:
           requires:
             - approve_publish_to_npm_registry
 
-  hello_pokus_containers_ci:
+  merge_requests_flow_no_publish:
     when: 
       not: << pipeline.parameters.publish_me >>
     jobs:

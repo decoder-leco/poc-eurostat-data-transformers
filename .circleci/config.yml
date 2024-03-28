@@ -211,7 +211,7 @@ jobs:
     <<: *jobs-commons
     environment:
       BASH_ENV: /home/circleci/.profile
-      DECODERLECO_NPM_TOKEN: << pipeline.parameters.npm_publish_auth_secret_token >>
+      # DECODERLECO_NPM_TOKEN: << pipeline.parameters.npm_publish_auth_secret_token >>
       PKG_COMMIT_HASH: << pipeline.git.base_revision >>
     steps:
       - run:

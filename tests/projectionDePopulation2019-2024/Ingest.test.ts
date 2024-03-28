@@ -1,15 +1,15 @@
 import {Ingest} from "../../src/projectionDePopulation2019-2024"
 
-const ingest = new Ingest()
-ingest.init("test", "lol")
-
-test('adds 1 + 2 to equal 3', () => {
-  expect(ingest.addition(1, 2)).toBe(3);
-});
+//const ingest = new Ingest()
+//ingest.init("test", "lol")
 
 jest.mock('../../src/projectionDePopulation2019-2024/Ingest', () => ({
   addition: jest.fn(),
 }))
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(addition(1, 2)).toBe(3);
+});
 
 describe("fonction d'addition", () => {
   it("shall add two entries & return their sum", async () => {

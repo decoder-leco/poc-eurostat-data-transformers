@@ -46,15 +46,8 @@ jobs:
       - run:
           name: "Install pnpm"
           command: |
-              curl -fsSL https://get.pnpm.io/install.sh | sh -
-              cat <<EOF >./add.on.bashrc
-              export PNPM_HOME="/home/circleci/.local/share/pnpm"
-              case ":\$PATH:" in
-                *":\$PNPM_HOME:"*) ;;
-                *) export PATH="\$PNPM_HOME:\$PATH" ;;
-              esac
-              EOF
-              cat ./add.on.bashrc | tee -a "$BASH_ENV"
+              chmod +x ./.ci/shell/install_pnpm.sh
+              ./.ci/shell/install_pnpm.sh
       - run:
           name: "env checkup"
           command: |

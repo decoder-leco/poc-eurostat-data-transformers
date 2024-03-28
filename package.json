@@ -1,6 +1,6 @@
 {
   "name": "@decoder-leco/poc-eurostat-data-transformers",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1-beta",
   "description": "Decoder l'eco ELT module for eurostat population projection 2019/2024",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

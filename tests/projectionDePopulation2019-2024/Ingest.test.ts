@@ -65,11 +65,11 @@ test('lit la vidéo', () => {
 
 
 jest.mock('../../src/projectionDePopulation2019-2024/handleDir', () => ({
-  handleDirs: jest.fn(),
+  handleDirs: jest.fn(() => console.log('mocking handleDirs')),
 }))
 
 jest.mock('../../src/projectionDePopulation2019-2024/download', () => ({
-  download: jest.fn(),
+  download: jest.fn(() => console.log('mocking download')),
 }))
 
 

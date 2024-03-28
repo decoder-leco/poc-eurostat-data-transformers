@@ -3,7 +3,7 @@ import * as projection from "../../src/projectionDePopulation2019-2024"
 // import * as fs from "node:fs"
 import { handleDirs } from "../../src/projectionDePopulation2019-2024/handleDir";
 
-const ingest = new projection.Ingest("test", "lol")
+// const ingest = new projection.Ingest("test", "lol")
 
 /*
 describe("fonction d'addition", () => {
@@ -67,6 +67,8 @@ jest.mock('../../src/projectionDePopulation2019-2024/handleDir', () => ({
   handleDirs: jest.fn(),
 }))
 
+const ingest = new projection.Ingest("test", "./lol/test.cvs")
+
 // const mockMkDir = handleDirs("./rawDataTest")
 // const mkdirSpy = jest.spyOn(, 'handleDirs').mockImplementation( () => mockMkDir )
 
@@ -76,8 +78,8 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
   })
 
   describe('handleDirs', () => {
-    it('mkDirSync shall create a new dir if requiered', () => {
-      ingest.run()
+    it('mkDirSync shall create a new dir if requiered', async () => {
+      await handleDirs('./lol/test.csv')
 
       // TEST PASS WITH toHaveBeenCalledTimes(1)
       // TEST FAIL WITH toHaveBeenCalledTimes(2)

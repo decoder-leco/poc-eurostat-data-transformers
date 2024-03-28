@@ -231,7 +231,7 @@ jobs:
           command: |
               chmod +x ./.ci/shell/install_pnpm.sh
               ./.ci/shell/install_pnpm.sh
-              git checkout .ci/shell/install_pnpm.sh
+              git checkout ./.ci/shell/install_pnpm.sh
       - run:
           name: "env checkup"
           command: |
@@ -266,7 +266,7 @@ jobs:
           command: |
               git status
               git checkout .
-              pnpm publish --force --tag dev-$PKG_COMMIT_HASH
+              pnpm publish --publish-branch "$CIRCLE_BRANCH" --force --tag dev-$PKG_COMMIT_HASH
 
 workflows:
   merge_requests_flow:

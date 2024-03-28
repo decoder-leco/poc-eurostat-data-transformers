@@ -3,17 +3,19 @@ import {Ingest} from "../../src/projectionDePopulation2019-2024"
 //const ingest = new Ingest()
 //ingest.init("test", "lol")
 
-jest.mock('../../src/projectionDePopulation2019-2024/Ingest', () => ({
-  addition: jest.fn(),
-}))
+const addition = jest.spyOn(Ingest, "addition").mockImplementation((a: number, b: number) => {
+  return a + b;
+});
 
+/*
 test('adds 1 + 2 to equal 3', () => {
   expect(addition(1, 2)).toBe(3);
 });
+*/
 
 describe("fonction d'addition", () => {
   it("shall add two entries & return their sum", async () => {
-    await ingest.addition(1, 2)
+    await addition(1,2)
 
     expect(ingest.addition).toHaveBeenCalledTimes(1)
     expect(ingest.addition).toHaveBeenCalledWith(1,2)

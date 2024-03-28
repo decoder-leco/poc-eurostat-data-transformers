@@ -1,19 +1,9 @@
-import {Ingest} from "../../src/projectionDePopulation2019-2024"
+import * as projection from "../../src/projectionDePopulation2019-2024"
+//import { mkdirSync, existsSync } from "node:fs"
+// import * as fs from "node:fs"
+import { handleDirs } from "../../src/projectionDePopulation2019-2024/handleDir";
 
-const ingest = new Ingest()
-ingest.init("test", "lol")
-
-/*
-const addition = jest.spyOn(Ingest, "addition").mockImplementation((a: number, b: number) => {
-  return a + b;
-});
-*/
-
-/*
-test('adds 1 + 2 to equal 3', () => {
-  expect(addition(1, 2)).toBe(3);
-});
-*/
+const ingest = new projection.Ingest("test", "lol")
 
 /*
 describe("fonction d'addition", () => {
@@ -25,6 +15,9 @@ describe("fonction d'addition", () => {
   })
 })
 */
+
+
+/*
 describe("Testing - projectionDePopulation2019-2024 Ingestion", () => {
   test('adds 1 + 2 to equal 3', () => {
     expect(ingest.addition(1, 2)).toBe(3);
@@ -33,3 +26,63 @@ describe("Testing - projectionDePopulation2019-2024 Ingestion", () => {
     expect(ingest.addition(1, 2)).toBe(3);
   })
 })
+*/
+
+
+/* from https://jestjs.io/fr/docs/next/jest-object#jestspyonobject-methodname
+
+const video = require('./video');
+
+afterEach(() => {
+  // restaure l'espion créé avec spyOn
+  jest.restoreAllMocks();
+});
+
+test('lit la vidéo', () => {
+  const spy = jest.spyOn(video, 'play');
+  const isPlaying = video.play();
+
+  expect(spy).toHaveBeenCalled();
+  expect(isPlaying).toBe(true);
+});
+*/
+
+
+/*
+afterEach(() => {
+  // restaure l'espion créé avec spyOn
+  jest.restoreAllMocks();
+})
+
+test('lit la vidéo', () => {
+  const spy = jest.spyOn(fs, 'mkdirSync')
+  const mkdir = fs.mkdirSync('./rawDataTest')
+  expect(spy).toHaveBeenCalled()
+  expect(mkdir).toBe(true)
+})
+*/
+
+
+jest.mock('../../src/projectionDePopulation2019-2024/handleDir', () => ({
+  handleDirs: jest.fn(),
+}))
+
+// const mockMkDir = handleDirs("./rawDataTest")
+// const mkdirSpy = jest.spyOn(, 'handleDirs').mockImplementation( () => mockMkDir )
+
+describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
+  afterAll(()=>{
+    jest.restoreAllMocks();
+  })
+
+  describe('handleDirs', () => {
+    it('mkDirSync shall create a new dir if requiered', () => {
+      ingest.run()
+
+      // TEST PASS WITH toHaveBeenCalledTimes(1)
+      // TEST FAIL WITH toHaveBeenCalledTimes(2)
+      expect(handleDirs).toHaveBeenCalledTimes(1)
+    })
+  })
+})
+

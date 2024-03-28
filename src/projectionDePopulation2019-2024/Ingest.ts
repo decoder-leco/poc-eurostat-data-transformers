@@ -1,5 +1,5 @@
 import * as fs from "node:fs"
-
+import { handleDirs } from "./handleDir"
 /**
  * Classe d'ingestation d'un depuis le repos deces_europe de decoderleco
  *  Téléchargement & copie locale afin d'archiver
@@ -7,8 +7,8 @@ import * as fs from "node:fs"
 export class Ingest {
   static baseUrl: string = "https://raw.githubusercontent.com/decoderleco/deces_europe/main/data/csv/"
   static format: string = ""
-  remote = ""
-  rawPath =""
+  //remote = ""
+  //rawPath =""
 
   /**
    *  RECUPERATION D'UN DATASET & COPIE LOCALE
@@ -16,13 +16,13 @@ export class Ingest {
    * @param remote    dataset to set    [ex: proj_19np__custom_2224172_linear.csv ]
    * @param rawPath   local path        [plz this format atm (./dir/filename.ext)]
    */
-  /*
+
   constructor(protected remote: string, protected rawPath: string) {
     this.remote = remote
     this.rawPath = rawPath    
   }
-  */
 
+/*
   constructor() {
     this.remote = "https://raw.githubusercontent.com/decoderleco/deces_europe/main/data/csv/proj_19np__custom_2224172_linear.csv"
     this.rawPath = "./rawData/proj_19np.csv"
@@ -32,24 +32,25 @@ export class Ingest {
     this.remote = remote
     this.rawPath = rawPath    
   }
-
+*/
 
   async run() {
-    await this.handleDirs()
+    // await this.handleDirs()
+    await handleDirs(this.rawPath)
     await this.download()
   }
 
   addition(a: number,b: number) {
     return a+b
   }
-
+/*
   async handleDirs() {
     if (fs.existsSync(this.rawPath.split("/")[1]) == false) {
       fs.mkdirSync( this.rawPath.split("/")[1])
       console.log("mkdir " + this.rawPath.split("/")[1] )
     }
   }
-
+*/
   async download(){
     const res = await fetch( Ingest.baseUrl + this.remote + Ingest.format)
     const text = await res.text()

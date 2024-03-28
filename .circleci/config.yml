@@ -19,7 +19,7 @@ parameters:
     type: string
     default: $DECODERLECO_NPM_TOKEN
 
-*jobs-commons: &jobs-commons
+jobs-commons: &jobs-commons
   working_directory: ~/repo
   docker:
     - image: circleci/node:<< pipeline.parameters.runner_image_tag >>

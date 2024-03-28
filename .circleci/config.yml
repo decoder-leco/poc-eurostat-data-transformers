@@ -265,7 +265,7 @@ jobs:
           name: Publish package
           command: |
               git status
-              # git checkout .
+              git checkout .
               pnpm publish --force --tag dev-$PKG_COMMIT_HASH
 
 workflows:

@@ -16,28 +16,75 @@ const testDir = "./tmp"
 const DecoderLecoGithubDataIngester = new projection.DecoderLecoGithubDataIngester("remote", testDir+"/test.cvs")
 
 describe('Testing - projectionDePopulation2019-2024 DecoderLecoGithubDataIngesterion', () => {
-  afterAll(()=>{
-    jest.restoreAllMocks();
-    fs.rmdir(testDir, { recursive: true }, ()=> console.log())
-  })
-
-  beforeEach(() => {
+  afterAll( ()=>{
     try {
-      fs.mkdirSync( testDir )
+      fs.rmdir( testDir, { recursive: true }, () => {})
     } catch (err) {
-      console.log(`in beforeEach creation of ${testDir} failed`, err)
+      console.log(`in afterEach creation of ${testDir} failed`, err)
     }
   })
 
-  it('createDir shall not create the directory when it allready exist', async () => {
-    // Test de la presence du directory
-    expect(fs.existsSync(testDir)).toBe(true)
+  describe('Test when the directory allready exist', () => {
+    beforeEach(  () => {
+      try {
+        fs.mkdirSync( testDir )
+      } catch (err) {
+        console.log(`in beforeEach creation of ${testDir} failed`, err)
+      }
+    })
 
-    const result = DecoderLecoGithubDataIngester.createDir() 
-    expect(result).toEqual('directory allready exist')
-    expect(fs.existsSync(testDir)).toBe(true)
+    afterEach( () => {
+      try {
+        fs.rmdirSync( testDir, { recursive: true })
+      } catch (err) {
+        console.log(`in afterEach creation of ${testDir} failed`, err)
+      }
+    })
+
+    afterAll( ()=>{
+      try {
+        fs.rmdirSync( testDir, { recursive: true })
+      } catch (err) {
+        console.log(`in afterEach creation of ${testDir} failed`, err)
+      }
+    })
+
+    it('createDir shall not create the directory when it allready exist', () => {
+      // Test de la presence du directory
+      expect(fs.existsSync(testDir)).toBe(true)
+      const result = DecoderLecoGithubDataIngester.createDir() 
+      expect(result).toEqual(`directory ${testDir} allready exist`)
+      expect(fs.existsSync(testDir)).toBe(true)
+    })
   })
+  
+  //fs.rmdir( testDir, { recursive: true }, () => {})
+  
+  describe('Test when the directory doesnt exist', () => {
+    beforeEach( () => {
+      console.log("beforeEach")
+      try {
+        fs.rmdirSync( testDir, { recursive: true })
+        console.log("beforeEach: ", fs.existsSync(testDir))
+      } catch (err) {
+        console.log(`in afterEach creation of ${testDir} failed`, err)
+      }
+    })
 
+    afterEach( () => {
+      try {
+        fs.rmdirSync( testDir, { recursive: true })
+      } catch (err) {
+        console.log(`in afterEach creation of ${testDir} failed`, err)
+      }
+    })
 
+    it('createDir shall create the directory when it doesnt exist', () => {
+      // Test de la presence du directory
+      expect(fs.existsSync(testDir)).toBe(false)
+      const result = DecoderLecoGithubDataIngester.createDir() 
+      expect(result).toEqual(`directory ${testDir} created`)
+      expect(fs.existsSync(testDir)).toBe(true)
+    })
+  })
 })
-

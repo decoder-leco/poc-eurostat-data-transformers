@@ -28,8 +28,9 @@ export class DecoderLecoGithubDataIngester {
     if (fs.existsSync(this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/"))) == false) {
       fs.mkdirSync( this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")), { recursive: true } )
       console.log("mkdir " + this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")) )
+      return (`directory ${this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/"))} created`)
     } else {
-      return ("directory allready exist")
+      return (`directory ${this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/"))} allready exist`)
     }
   }
 

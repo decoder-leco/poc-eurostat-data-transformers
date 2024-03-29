@@ -24,10 +24,10 @@ export class DecoderLecoGithubDataIngester {
   }
 
   createDir() {
-    console.log("path : ", this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")))
+    // console.log("path : ", this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")))
     if (fs.existsSync(this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/"))) == false) {
       fs.mkdirSync( this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")), { recursive: true } )
-      console.log("mkdir " + this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")) )
+      // console.log("mkdir " + this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")) )
       return (`directory ${this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/"))} created`)
     } else {
       return (`directory ${this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/"))} allready exist`)
@@ -35,8 +35,12 @@ export class DecoderLecoGithubDataIngester {
   }
 
   async download() {
-    console.log("download: ", DecoderLecoGithubDataIngester.baseUrl + this.gitVersion + this.filePathInRepo)
+    // console.log("download: ", DecoderLecoGithubDataIngester.baseUrl + this.gitVersion + this.filePathInRepo)
     const res = await fetch( DecoderLecoGithubDataIngester.baseUrl + this.gitVersion + this.filePathInRepo )
+    if (!res.ok) {
+      // console.log((`error while fetching ${DecoderLecoGithubDataIngester.baseUrl + this.gitVersion + this.filePathInRepo}`))
+      return (`error while fetching ${DecoderLecoGithubDataIngester.baseUrl + this.gitVersion + this.filePathInRepo}`)
+    }
     const text = await res.text()
     try {
       fs.writeFileSync( this.filePathInRepo, text, 
@@ -46,8 +50,10 @@ export class DecoderLecoGithubDataIngester {
           mode: 0o666
         }, 
       )
+      return (`File ${this.filePathInRepo} has succesfully been download `)
     } catch (err) {
-      console.log("error while writing " + this.filePathInRepo + ": ", err)
+      // console.log("error while writing " + this.filePathInRepo + ": ", err)
+      return (`File ${this.filePathInRepo} failed to download `)
     }
   }
 }

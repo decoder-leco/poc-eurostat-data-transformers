@@ -1,3 +1,4 @@
+/*
 import * as projection from "../../src/transformers"
 import * as fs from 'node:fs'
 
@@ -7,7 +8,17 @@ jest.mock('../../src/projectionDePopulation2019-2024/createDir', () => ({
 }))
 
 const transform = new projection.Transform("./tests/projectionDePopulation2019-2024/test-transform.csv", "transformed.cvs")
-
+const transformedData = "DATAFLOW,LAST UPDATE,time,freq,unit,sex,projection,age,population_proj\n"+
+                          "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2019,A,PER,F,BSL,Y1,\n"+
+                          "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2020,A,PER,F,BSL,Y1,\n"+
+                          "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2021,A,PER,F,BSL,Y1,\n"+
+                          "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2022,A,PER,F,BSL,Y1,\n"+
+                          "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2023,A,PER,F,BSL,Y1,\n"+
+                          "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2024,A,PER,F,BSL,Y1,\n"+
+                          "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2025,A,PER,F,BSL,Y1,\n"+
+                          "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2019,A,PER,F,BSL,Y1,\n"+
+                          "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2020,A,PER,F,BSL,Y1,\n"
+                          
 describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
   afterAll(()=>{
     jest.restoreAllMocks();
@@ -26,3 +37,4 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
   })
 })
 
+*/

@@ -22,7 +22,11 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
 
   beforeEach(() => {
     //jest.restoreAllMocks();
-    fs.mkdirSync( testDir )
+    try {
+      fs.mkdirSync( testDir )
+    } catch (err) {
+      console.log("in beforeEach creation oftestDir failed", err)
+    }
   })
 
   it('createDir shall not create the directory when it allready exist', async () => {

@@ -1,4 +1,5 @@
 import * as projection from "../../src/projectionDePopulation2019-2024"
+import * as fs from 'node:fs'
 //import { createDirs } from "../../src/projectionDePopulation2019-2024/createDir"
 //import { download } from "../../src/projectionDePopulation2019-2024/download"
 
@@ -23,7 +24,23 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
     jest.restoreAllMocks();
   })
 
-  it('createDir shall create a new dir if it does exist', async () => {
+  it('createDir shall not create the directory if when it does exist', async () => {
+    // Test de la presence du diretory
+    expect(fs.existsSync('test-file.tmp')).toBe(true)
+    
+
+    await ingest.run() 
+
+    // TEST PASS WITH toHaveBeenCalledTimes(1)
+    // TEST FAIL WITH toHaveBeenCalledTimes(2)
+    expect(ingest.createDir()).toHaveBeenCalledTimes(1)
+  })
+
+  it('createDir shall create a new dir if when it doesnt exist', async () => {
+    // Test de la presence du diretory
+
+    
+
     await ingest.run() 
 
     // TEST PASS WITH toHaveBeenCalledTimes(1)

@@ -28,6 +28,8 @@ export class Ingest {
     if (fs.existsSync(this.rawPath.split("/")[1]) == false) {
       fs.mkdirSync( this.rawPath.split("/")[1])
       console.log("mkdir " + this.rawPath.split("/")[1] )
+    } else {
+      return ("directory allready exist")
     }
   }
 

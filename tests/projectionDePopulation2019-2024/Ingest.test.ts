@@ -31,9 +31,10 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
 
   it('createDir shall not create the directory when it allready exist', async () => {
     // Test de la presence du directory
-    expect(fs.existsSync(testDir)).toBe(true)    
+    expect(fs.existsSync(testDir)).toBe(true)
 
-    await ingest.run() 
+    const result = ingest.createDir() 
+    expect(result).toEqual('directory allready exist')
 
     // TEST PASS WITH toHaveBeenCalledTimes(1)
     // TEST FAIL WITH toHaveBeenCalledTimes(2)

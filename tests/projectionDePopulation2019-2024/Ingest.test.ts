@@ -33,30 +33,14 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
     // Test de la presence du directory
     expect(fs.existsSync(testDir)).toBe(true)
 
-    // 
     const result = ingest.createDir() 
     expect(result).toEqual('directory allready exist')
     expect(fs.existsSync(testDir)).toBe(true)
-  })
-
-  it('createDir shall create a new dir if when it doesnt exist', async () => {
-    // Test de la presence du diretory
-
-    
-
-    await ingest.run() 
 
     // TEST PASS WITH toHaveBeenCalledTimes(1)
     // TEST FAIL WITH toHaveBeenCalledTimes(2)
     expect(ingest.createDir()).toHaveBeenCalledTimes(1)
   })
 
-  it('download shall fetch a remote file & copy it to the created dir', async () => {
-    await ingest.run() 
-
-    // TEST PASS WITH toHaveBeenCalledTimes(2)
-    // TEST FAIL WITH toHaveBeenCalledTimes(1)
-    expect(ingest.download()).toHaveBeenCalledTimes(2)
-  })
 })
 

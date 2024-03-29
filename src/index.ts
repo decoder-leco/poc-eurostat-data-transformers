@@ -1,11 +1,12 @@
-import * as projectionDePopulation from "./ingesters"
+import * as ingesters from "./ingesters"
+import * as Transformers from "./transformers"
 
- const DecoderLecoGithubDataIngester = new projectionDePopulation.DecoderLecoGithubDataIngester(
+ const DecoderLecoGithubDataIngester = new ingesters.DecoderLecoGithubDataIngester(
   "proj_19np__custom_2224172_linear.csv",
     "./rawData/proj_19np.csv"
  )
 
-const transform = new projectionDePopulation.Transform(
+const transform = new Transformers.Transform(
     "./rawData/proj_19np.csv",
     "./transformedData/proj_19np_transformed.csv"
   )
@@ -16,3 +17,4 @@ const run = async() => {
 }
 
 run()
+

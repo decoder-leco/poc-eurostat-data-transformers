@@ -2,12 +2,12 @@ import * as ingesters from "./ingesters"
 import * as Transformers from "./transformers"
 
  const DecoderLecoGithubDataIngester = new ingesters.DecoderLecoGithubDataIngester(
-  "proj_19np__custom_2224172_linear.csv",
-  "./rawData/proj_19np.csv"
+  "main/",
+  "data/csv/proj_19np__custom_2224172_linear.csv",
  )
 
 const transform = new Transformers.Transform(
-  "./rawData/proj_19np.csv",
+  "data/csv/proj_19np__custom_2224172_linear.csv",
   "./transformedData/proj_19np_transformed.csv"
 )
 

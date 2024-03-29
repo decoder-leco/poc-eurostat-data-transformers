@@ -6,8 +6,6 @@ import * as fs from "node:fs"
  */
 export class DecoderLecoGithubDataIngester {
   static baseUrl: string = "https://raw.githubusercontent.com/decoderleco/deces_europe/"
-  gitVersion ="main/"
-  filePathInRepo = "data/csv/"
 
   /**
    *  RECUPERATION D'UN DATASET & COPIE LOCALE
@@ -15,9 +13,9 @@ export class DecoderLecoGithubDataIngester {
    * @param fileName    dataset to set    [ex: proj_19np__custom_2224172_linear.csv ]
    * @param rawPath   local path        [plz this format atm (./dir/filename.ext)]
    */
-  constructor(protected fileName: string, protected rawPath: string) {
-    this.fileName = fileName
-    this.rawPath = rawPath  
+  constructor(protected gitVersion: string, protected filePathInRepo: string) {
+    this.gitVersion = gitVersion
+    this.filePathInRepo = filePathInRepo  
   }
 
   async run() {
@@ -26,19 +24,21 @@ export class DecoderLecoGithubDataIngester {
   }
 
   createDir() {
-    if (fs.existsSync(this.rawPath.split("/")[1]) == false) {
-      fs.mkdirSync( this.rawPath.split("/")[1])
-      console.log("mkdir " + this.rawPath.split("/")[1] )
+    console.log("path : ", this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")))
+    if (fs.existsSync(this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/"))) == false) {
+      fs.mkdirSync( this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")), { recursive: true } )
+      console.log("mkdir " + this.filePathInRepo.substring(0, this.filePathInRepo.lastIndexOf("/")) )
     } else {
       return ("directory allready exist")
     }
   }
 
   async download() {
-    const res = await fetch( DecoderLecoGithubDataIngester.baseUrl + this.fileName + DecoderLecoGithubDataIngester.format)
+    console.log("download: ", DecoderLecoGithubDataIngester.baseUrl + this.gitVersion + this.filePathInRepo)
+    const res = await fetch( DecoderLecoGithubDataIngester.baseUrl + this.gitVersion + this.filePathInRepo )
     const text = await res.text()
     try {
-      fs.writeFileSync( this.rawPath, text, 
+      fs.writeFileSync( this.filePathInRepo, text, 
         { 
           encoding: 'utf8',
           flag: 'w',
@@ -46,7 +46,7 @@ export class DecoderLecoGithubDataIngester {
         }, 
       )
     } catch (err) {
-      console.log("error while writing " + this.rawPath + this.fileName + ": ", err)
+      console.log("error while writing " + this.filePathInRepo + ": ", err)
     }
   }
 }

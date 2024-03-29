@@ -1,6 +1,5 @@
 import * as fs from "node:fs"
 import * as pl from "nodejs-polars"
-import { handleDirs } from "./handleDir"
 
 /**
  * Transformation du DATASET depuis le repetoire des raw dataset
@@ -20,8 +19,15 @@ export class Transform {
   }
 
   async run() {
-    await handleDirs(this.transformPath)
+    await this.handleDir()
     await this.transform()
+  }
+
+  async handleDir() {
+    if (fs.existsSync( this.transformPath.split("/")[1]) == false) {
+      fs.mkdirSync( this.transformPath.split("/")[1])
+      console.log("mkdir " + this.transformPath.split("/")[1] )
+    }
   }
 
   async transform() {

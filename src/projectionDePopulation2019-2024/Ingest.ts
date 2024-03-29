@@ -1,5 +1,4 @@
-import { handleDirs } from "./handleDir"
-import { download } from "./download"
+import * as fs from "node:fs"
 
 /**
  * Classe d'ingestation d'un depuis le repos deces_europe de decoderleco
@@ -17,11 +16,34 @@ export class Ingest {
    */
   constructor(protected remote: string, protected rawPath: string) {
     this.remote = remote
-    this.rawPath = rawPath    
+    this.rawPath = rawPath  
   }
 
   async run() {
-    await handleDirs(this.rawPath)
-    await download(this.remote ,this.rawPath)
+    await this.handleDir()
+    await this.download()
+  }
+
+  handleDir() {
+    if (fs.existsSync(this.rawPath.split("/")[1]) == false) {
+      fs.mkdirSync( this.rawPath.split("/")[1])
+      console.log("mkdir " + this.rawPath.split("/")[1] )
+    }
+  }
+
+  async download() {
+    const res = await fetch( Ingest.baseUrl + this.remote + Ingest.format)
+    const text = await res.text()
+    try {
+      fs.writeFileSync( this.rawPath, text, 
+        { 
+          encoding: 'utf8',
+          flag: 'w',
+          mode: 0o666
+        }, 
+      )
+    } catch (err) {
+      console.log("error while writing " + this.rawPath + this.remote + ": ", err)
+    }
   }
 }

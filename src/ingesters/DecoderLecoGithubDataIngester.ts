@@ -5,8 +5,9 @@ import * as fs from "node:fs"
  *  Téléchargement & copie locale afin d'archiver
  */
 export class DecoderLecoGithubDataIngester {
-  static baseUrl: string = "https://raw.githubusercontent.com/decoderleco/deces_europe/main/data/csv/"
-  static format: string = ""
+  static baseUrl: string = "https://raw.githubusercontent.com/decoderleco/deces_europe/"
+  gitVersion ="main/"
+  filePathInRepo = "data/csv/"
 
   /**
    *  RECUPERATION D'UN DATASET & COPIE LOCALE

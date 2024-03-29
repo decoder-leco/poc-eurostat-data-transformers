@@ -7,9 +7,9 @@ describe('download file', () => {
   })
 
   it('should write a file', async () => {
-    const result = await download('nothing', 'test-file.tmp');
+    const result = await download('nothing', 'test-file.tmp')
 
-    expect(result).toEqual('file downloaded');
-    expect(fs.existsSync('test-file.tmp')).toBe(true);
+    expect(result).toEqual('file downloaded')
+    expect(fs.existsSync('test-file.tmp')).toBe(true)
   });
 });

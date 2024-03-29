@@ -1,10 +1,10 @@
 import * as projection from "../../src/projectionDePopulation2019-2024"
-//import { handleDirs } from "../../src/projectionDePopulation2019-2024/handleDir"
+//import { createDirs } from "../../src/projectionDePopulation2019-2024/createDir"
 //import { download } from "../../src/projectionDePopulation2019-2024/download"
 
 /*
-jest.mock('../../src/projectionDePopulation2019-2024/handleDir', () => ({
-  handleDirs: jest.fn(),
+jest.mock('../../src/projectionDePopulation2019-2024/createDir', () => ({
+  createDirs: jest.fn(),
 }))
 
 jest.mock('../../src/projectionDePopulation2019-2024/download', () => ({
@@ -23,12 +23,12 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
     jest.restoreAllMocks();
   })
 
-  it('handleDir shall create a new dir if requiered', async () => {
+  it('createDir shall create a new dir if requiered', async () => {
     await ingest.run() 
 
     // TEST PASS WITH toHaveBeenCalledTimes(1)
     // TEST FAIL WITH toHaveBeenCalledTimes(2)
-    expect(ingest.handleDir()).toHaveBeenCalledTimes(1)
+    expect(ingest.createDir()).toHaveBeenCalledTimes(1)
   })
 
   it('download shall fetch a remote file & copy it to the created dir', async () => {

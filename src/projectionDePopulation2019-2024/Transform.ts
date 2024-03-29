@@ -19,11 +19,11 @@ export class Transform {
   }
 
   async run() {
-    await this.handleDir()
+    await this.createDir()
     await this.transform()
   }
 
-  async handleDir() {
+  async createDir() {
     if (fs.existsSync( this.transformPath.split("/")[1]) == false) {
       fs.mkdirSync( this.transformPath.split("/")[1])
       console.log("mkdir " + this.transformPath.split("/")[1] )

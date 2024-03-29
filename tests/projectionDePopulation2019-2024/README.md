@@ -57,5 +57,5 @@ test('lit la vidéo', () => {
 })
 */
 
-// const mockMkDir = handleDirs("./rawDataTest")
-// const mkdirSpy = jest.spyOn(, 'handleDirs').mockImplementation( () => mockMkDir )
+// const mockMkDir = createDirs("./rawDataTest")
+// const mkdirSpy = jest.spyOn(, 'createDirs').mockImplementation( () => mockMkDir )

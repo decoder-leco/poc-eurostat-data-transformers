@@ -35,6 +35,7 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
 
     const result = ingest.createDir() 
     expect(result).toEqual('directory allready exist')
+    expect(fs.existsSync(testDir)).toBe(true)
 
     // TEST PASS WITH toHaveBeenCalledTimes(1)
     // TEST FAIL WITH toHaveBeenCalledTimes(2)

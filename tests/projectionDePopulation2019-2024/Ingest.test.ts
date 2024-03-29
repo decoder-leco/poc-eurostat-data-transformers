@@ -33,6 +33,7 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
     // Test de la presence du directory
     expect(fs.existsSync(testDir)).toBe(true)
 
+    // 
     const result = ingest.createDir() 
     expect(result).toEqual('directory allready exist')
     expect(fs.existsSync(testDir)).toBe(true)

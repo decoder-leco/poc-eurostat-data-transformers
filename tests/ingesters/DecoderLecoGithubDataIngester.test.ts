@@ -18,6 +18,7 @@ const DecoderLecoGithubDataIngester = new projection.DecoderLecoGithubDataIngest
 describe('Testing - projectionDePopulation2019-2024 DecoderLecoGithubDataIngesterion', () => {
   afterAll(()=>{
     jest.restoreAllMocks();
+    fs.rmdir(testDir, { recursive: true }, ()=> console.log())
   })
 
   beforeEach(() => {

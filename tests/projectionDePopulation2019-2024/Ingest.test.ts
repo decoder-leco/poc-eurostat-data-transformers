@@ -13,7 +13,7 @@ jest.mock('../../src/projectionDePopulation2019-2024/download', () => ({
 }))
 */
 const testDir = "./tmp"
-const ingest = new projection.Ingest("test", testDir+"/test.cvs")
+const ingest = new projection.Ingest("remote", testDir+"/test.cvs")
 
 describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
   afterAll(()=>{

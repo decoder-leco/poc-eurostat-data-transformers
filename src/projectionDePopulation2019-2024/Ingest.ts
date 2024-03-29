@@ -11,11 +11,11 @@ export class Ingest {
   /**
    *  RECUPERATION D'UN DATASET & COPIE LOCALE
    * 
-   * @param remote    dataset to set    [ex: proj_19np__custom_2224172_linear.csv ]
+   * @param fileName    dataset to set    [ex: proj_19np__custom_2224172_linear.csv ]
    * @param rawPath   local path        [plz this format atm (./dir/filename.ext)]
    */
-  constructor(protected remote: string, protected rawPath: string) {
-    this.remote = remote
+  constructor(protected fileName: string, protected rawPath: string) {
+    this.fileName = fileName
     this.rawPath = rawPath  
   }
 
@@ -34,7 +34,7 @@ export class Ingest {
   }
 
   async download() {
-    const res = await fetch( Ingest.baseUrl + this.remote + Ingest.format)
+    const res = await fetch( Ingest.baseUrl + this.fileName + Ingest.format)
     const text = await res.text()
     try {
       fs.writeFileSync( this.rawPath, text, 
@@ -45,7 +45,7 @@ export class Ingest {
         }, 
       )
     } catch (err) {
-      console.log("error while writing " + this.rawPath + this.remote + ": ", err)
+      console.log("error while writing " + this.rawPath + this.fileName + ": ", err)
     }
   }
 }

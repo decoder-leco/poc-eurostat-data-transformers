@@ -14,7 +14,8 @@ export async function download(remote: string, rawPath: string){
         mode: 0o666
       }, 
     )
+    return('file downloaded')
   } catch (err) {
-    console.log("error while writing " + rawPath + remote + ": ", err)
+    return("error while writing " + rawPath + remote + ": " + err)
   }
 }

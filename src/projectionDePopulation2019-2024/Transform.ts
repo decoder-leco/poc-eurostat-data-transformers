@@ -1,5 +1,6 @@
 import * as fs from "node:fs"
 import * as pl from "nodejs-polars"
+import { handleDirs } from "./handleDir"
 
 /**
  * Transformation du DATASET depuis le repetoire des raw dataset
@@ -19,18 +20,8 @@ export class Transform {
   }
 
   async run() {
-    await this.handleDirs()
+    await handleDirs(this.transformPath)
     await this.transform()
-  }
-
-  async handleDirs() {
-    if (
-          fs.existsSync(this.transformPath.split("/")[
-              this.transformPath.substring(0,2) == "./" ? 1 : 0
-            ]) == false)   
-      fs.mkdirSync( "./"+this.transformPath.split("/")[ 
-          this.transformPath.substring(0,2) == "./" ? 1 : 0 
-      ])
   }
 
   async transform() {
@@ -49,8 +40,9 @@ export class Transform {
 
     try {
       df.writeCSV( this.transformPath )
+      return('file writed')
     } catch (err) {
-      console.log("error: "+ err)
+      return("error: " + err)
     }
   }
 

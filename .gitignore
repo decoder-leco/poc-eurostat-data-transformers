@@ -4,5 +4,4 @@ rawData/
 transformedData/
 .github/
 .npmrc/
-man/
 src/CLI

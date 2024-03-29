@@ -1,5 +1,4 @@
-import * as projection from "../../src/projectionDePopulation2019-2024"
-import { createDirs } from "../../src/projectionDePopulation2019-2024/createDir"
+import * as projection from "../../src/transformers"
 import * as fs from 'node:fs'
 
 
@@ -21,7 +20,7 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
 
       // TEST PASS WITH toHaveBeenCalledTimes(1)
       // TEST FAIL WITH toHaveBeenCalledTimes(2)
-      expect(createDirs).toHaveBeenCalledTimes(1)
+      expect(transform.createDir).toHaveBeenCalledTimes(1)
       expect(fs.existsSync('transformed.cvs')).toBe(true);
     })
   })

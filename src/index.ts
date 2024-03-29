@@ -1,4 +1,4 @@
-import * as projectionDePopulation from "./projectionDePopulation2019-2024"
+import * as projectionDePopulation from "./ingesters"
 
  const DecoderLecoGithubDataIngester = new projectionDePopulation.DecoderLecoGithubDataIngester(
   "proj_19np__custom_2224172_linear.csv",

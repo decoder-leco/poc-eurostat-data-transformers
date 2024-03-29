@@ -1,4 +1,4 @@
-import * as projection from "../../src/projectionDePopulation2019-2024"
+import * as projection from "../../src/ingesters"
 import * as fs from 'node:fs'
 //import { createDirs } from "../../src/projectionDePopulation2019-2024/createDir"
 //import { download } from "../../src/projectionDePopulation2019-2024/download"
@@ -21,7 +21,6 @@ describe('Testing - projectionDePopulation2019-2024 DecoderLecoGithubDataIngeste
   })
 
   beforeEach(() => {
-    //jest.restoreAllMocks();
     try {
       fs.mkdirSync( testDir )
     } catch (err) {
@@ -37,5 +36,7 @@ describe('Testing - projectionDePopulation2019-2024 DecoderLecoGithubDataIngeste
     expect(result).toEqual('directory allready exist')
     expect(fs.existsSync(testDir)).toBe(true)
   })
+
+
 })
 

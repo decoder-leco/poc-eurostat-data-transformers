@@ -1,8 +1,7 @@
 dist/
 node_modules/
-rawData/
+data/
 transformedData/
 .github/
 .npmrc/
-man/
 src/CLI

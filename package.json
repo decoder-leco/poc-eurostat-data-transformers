@@ -1,7 +1,7 @@
 {
   "name": "@decoder-leco/poc-eurostat-data-transformers",
-  "version": "0.0.1-beta",
-  "description": "Decoder l'eco ELT module for eurostat population projection 2019/2024",
+  "version": "0.0.1-alpha",
+  "description": "Decoder l'eco EuroStat Data Ingesters and Transformers ELT module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -11,10 +11,10 @@
     "node": "20.11.1",
     "pnpm": "8.14.1"
   },
-  "homepage": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/feature/data/pipeline/eurostat/010_eurostat_creation_tables_deces_europe.R/premiere/cellule/README.md",
+  "homepage": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/decoder-leco/poc-eurostat-data-transformers/tree/feature/data/pipeline/eurostat/010_eurostat_creation_tables_deces_europe.R/premiere/cellule"
+    "url": "git+https://github.com/decoder-leco/poc-eurostat-data-transformers"
   },
   "bugs": {
     "url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/issues"
@@ -23,11 +23,16 @@
     "test": "jest",
     "test:e2e": "echo 'Run e2e Tests'",
     "build": "pnpm exec tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/dev.js",
     "clean": "rm -Rf rawData && rm -Rf transformedData", 
     "dev": "pnpm run clean && pnpm test && pnpm build && pnpm start"
   },
   "keywords": [
+    "polars",
+    "nodejs-polars",
+    "typescript",
+    "dataframes",
+    "data-engineering",
     "eurostat",
     "ELT",
     "decoderleco",

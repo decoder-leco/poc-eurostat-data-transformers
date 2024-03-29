@@ -24,7 +24,7 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
     jest.restoreAllMocks();
   })
 
-  it('createDir shall not create the directory if when it does exist', async () => {
+  it('createDir shall not create the directory when it allready exist', async () => {
     // Test de la presence du diretory
     expect(fs.existsSync('test-file.tmp')).toBe(true)
     

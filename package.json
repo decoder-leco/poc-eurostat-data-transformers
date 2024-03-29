@@ -18,7 +18,7 @@
   "scripts": {
     "test": "jest",
     "build": "pnpm exec tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/dev.js",
     "clean": "rm -Rf rawData && rm -Rf transformedData", 
     "dev": "pnpm run clean && pnpm test && pnpm build && pnpm start"
   },

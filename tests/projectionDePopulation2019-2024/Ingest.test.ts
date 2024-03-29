@@ -23,7 +23,7 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
     jest.restoreAllMocks();
   })
 
-  it('createDir shall create a new dir if requiered', async () => {
+  it('createDir shall create a new dir if it does exist', async () => {
     await ingest.run() 
 
     // TEST PASS WITH toHaveBeenCalledTimes(1)

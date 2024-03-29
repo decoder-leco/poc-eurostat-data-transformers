@@ -14,6 +14,7 @@ export async function download(remote: string, rawPath: string){
         mode: 0o666
       }, 
     )
+    console.log("le fichier " + baseUrl + remote + "a été telechargé dans " + rawPath)
     return('file downloaded')
   } catch (err) {
     return("error while writing " + rawPath + remote + ": " + err)

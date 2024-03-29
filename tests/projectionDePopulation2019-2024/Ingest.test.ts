@@ -27,7 +27,7 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
 
   it('createDir shall not create the directory when it allready exist', async () => {
     // Test de la presence du diretory
-    expect(fs.existsSync(DestDir)).toBe(false)
+    expect(fs.existsSync(DestDir)).toBe(true)
     
 
     await ingest.run() 

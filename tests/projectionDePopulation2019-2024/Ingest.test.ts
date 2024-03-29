@@ -25,7 +25,7 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
     try {
       fs.mkdirSync( testDir )
     } catch (err) {
-      console.log("in beforeEach creation oftestDir failed", err)
+      console.log(`in beforeEach creation of ${testDir} failed`, err)
     }
   })
 

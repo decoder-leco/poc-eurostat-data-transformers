@@ -1,10 +1,10 @@
 import * as fs from "node:fs"
 
 /**
- * Classe d'ingestation d'un depuis le repos deces_europe de decoderleco
+ * Classe d'DecoderLecoGithubDataIngesteration d'un depuis le repos deces_europe de decoderleco
  *  Téléchargement & copie locale afin d'archiver
  */
-export class Ingest {
+export class DecoderLecoGithubDataIngester {
   static baseUrl: string = "https://raw.githubusercontent.com/decoderleco/deces_europe/main/data/csv/"
   static format: string = ""
 
@@ -34,7 +34,7 @@ export class Ingest {
   }
 
   async download() {
-    const res = await fetch( Ingest.baseUrl + this.fileName + Ingest.format)
+    const res = await fetch( DecoderLecoGithubDataIngester.baseUrl + this.fileName + DecoderLecoGithubDataIngester.format)
     const text = await res.text()
     try {
       fs.writeFileSync( this.rawPath, text, 

@@ -13,9 +13,9 @@ jest.mock('../../src/projectionDePopulation2019-2024/download', () => ({
 }))
 */
 const testDir = "./tmp"
-const ingest = new projection.Ingest("remote", testDir+"/test.cvs")
+const DecoderLecoGithubDataIngester = new projection.DecoderLecoGithubDataIngester("remote", testDir+"/test.cvs")
 
-describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
+describe('Testing - projectionDePopulation2019-2024 DecoderLecoGithubDataIngesterion', () => {
   afterAll(()=>{
     jest.restoreAllMocks();
   })
@@ -33,7 +33,7 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
     // Test de la presence du directory
     expect(fs.existsSync(testDir)).toBe(true)
 
-    const result = ingest.createDir() 
+    const result = DecoderLecoGithubDataIngester.createDir() 
     expect(result).toEqual('directory allready exist')
     expect(fs.existsSync(testDir)).toBe(true)
   })

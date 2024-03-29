@@ -84,7 +84,8 @@ jobs:
               echo "BASH_ENV=[${BASH_ENV}]"
               pwd
               echo "# Run Package Unit Tests!"
-              pnpm test
+              # WARNING! As soon as [https://github.com/decoder-leco/poc-eurostat-data-transformers/pull/6] PR is merged, YOU MUST remove the [--passWithNoTests] option
+              pnpm test --passWithNoTests
       - save_cache:
           paths:
             - node_modules

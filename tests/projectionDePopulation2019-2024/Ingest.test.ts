@@ -12,8 +12,8 @@ jest.mock('../../src/projectionDePopulation2019-2024/download', () => ({
   download: jest.fn(),
 }))
 */
-const DestDir = "./tmp"
-const ingest = new projection.Ingest("test", DestDir+"/test.cvs")
+const testDir = "./tmp"
+const ingest = new projection.Ingest("test", testDir+"/test.cvs")
 
 describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
   afterAll(()=>{
@@ -22,13 +22,12 @@ describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
 
   beforeEach(() => {
     //jest.restoreAllMocks();
-    fs.mkdirSync( DestDir )
+    fs.mkdirSync( testDir )
   })
 
   it('createDir shall not create the directory when it allready exist', async () => {
-    // Test de la presence du diretory
-    expect(fs.existsSync(DestDir)).toBe(true)
-    
+    // Test de la presence du directory
+    expect(fs.existsSync(testDir)).toBe(true)    
 
     await ingest.run() 
 

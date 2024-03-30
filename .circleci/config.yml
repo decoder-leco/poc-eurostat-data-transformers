@@ -26,7 +26,7 @@ jobs-commons: &jobs-commons
   working_directory: ~/repo
   docker:
     # - image: circleci/node:<< pipeline.parameters.runner_image_tag >>
-    - image: cimg/node::<< pipeline.parameters.runner_image_tag >>
+    - image: cimg/node:<< pipeline.parameters.runner_image_tag >>
   # resource_class: decoderleco/podman-small1 # that's for privately hosted runners
 #steps-commons: &steps-commons
 # aliases:

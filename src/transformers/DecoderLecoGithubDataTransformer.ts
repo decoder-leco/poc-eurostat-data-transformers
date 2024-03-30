@@ -66,9 +66,15 @@ export class DecoderLecoGithubDataTransformer {
    * Transforms the data, and persists the transformed data to a file.
    */
   public async transform(): Promise<pl.DataFrame> {
-     
-    this.transformedDataframe = this.polarsSourceDataFrame.rename( {"TIME_PERIOD":"time"}) .rename( {"OBS_FLAG":"population_proj"} )
-      .select( 'DATAFLOW','LAST UPDATE','time','freq','unit','sex','projection','age','population_proj' )
+     /**
+      * source data: [DATAFLOW	LAST UPDATE	freq	projection	unit	sex	age	geo	TIME_PERIOD	OBS_VALUE	OBS_FLAG]
+      * -DATAFLOW,-LAST.UPDATE,-freq,-unit,-OBS_FLAG
+      * target data: 
+      *   either [projection	sex	age	geo	TIME_PERIOD	OBS_VALUE]
+      *   or     [DATAFLOW	LAST UPDATE	freq unit OBS_FLAG]
+      */
+    this.transformedDataframe = this.polarsSourceDataFrame.rename( {"TIME_PERIOD":"time"}) .rename( {"OBS_VALUE":"population_proj"} )
+      .select( 'projection','sex','age','geo','time', 'population_proj' )
       .filter(
         (pl.col("projection").str.contains("BSL")) 
         .and(pl.col("sex").str.contains(/M|F/))

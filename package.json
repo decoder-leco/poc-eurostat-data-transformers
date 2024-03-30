@@ -14,7 +14,7 @@
   "homepage": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/feature/circleci/pipeline/%232/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/decoder-leco/poc-eurostat-data-transformers"
+    "url": "git+https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/feature/circleci/pipeline/%232"
   },
   "bugs": {
     "url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/issues"

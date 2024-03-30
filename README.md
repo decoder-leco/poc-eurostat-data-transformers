@@ -1,4 +1,4 @@
-![décoder l'éco](./docs/images/small_decoder_leco_org.jpg)
+![Décoder l'éco](https://raw.githubusercontent.com/decoder-leco/poc-eurostat-data-transformers/feature/circleci/pipeline/%232/docs/images/small_decoder_leco_org.jpg)
 --
 
 # Décoder l'éco: A EuroStat Data Transformers Proof of Concept

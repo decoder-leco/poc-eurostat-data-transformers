@@ -11,7 +11,7 @@ parameters:
     default: true
   runner_image_tag:
     type: string
-    default: "lts-bullseye"
+    default: "21.7.1" # "lts-bullseye"
   pnpm_version:
     type: string
     default: "8.14.1"
@@ -25,7 +25,8 @@ parameters:
 jobs-commons: &jobs-commons
   working_directory: ~/repo
   docker:
-    - image: circleci/node:<< pipeline.parameters.runner_image_tag >>
+    # - image: circleci/node:<< pipeline.parameters.runner_image_tag >>
+    - image: cimg/node::<< pipeline.parameters.runner_image_tag >>
   # resource_class: decoderleco/podman-small1 # that's for privately hosted runners
 #steps-commons: &steps-commons
 # aliases:

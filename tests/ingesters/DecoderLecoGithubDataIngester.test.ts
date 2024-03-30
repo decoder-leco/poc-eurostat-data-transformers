@@ -7,7 +7,7 @@ const testDataWorkDir = "data_pipeline_tests"
 const ingester = 
   new projection.DecoderLecoGithubDataIngester("main", testFilePathInRepo, testDataWorkDir)
   
-describe('Testing - projectionDePopulation2019-2024 DecoderLecoGithubDataIngesterion', () => {
+describe('Testing - DecoderLecoGithubDataIngester', () => {
 
   describe('Test when the directory already exist', () => {
     beforeEach(  () => {

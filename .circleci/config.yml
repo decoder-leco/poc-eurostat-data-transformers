@@ -268,6 +268,8 @@ jobs:
           command: |
               git status
               git checkout .
+              git config --global user.email "bot@decoderleco.io"
+              git config --global user.name "Tryphon Tournesol"
               pnpm version 0.0.1-gamma-commit-$PKG_COMMIT_HASH
       - run:
           name: Publish package

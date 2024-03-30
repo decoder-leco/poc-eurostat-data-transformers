@@ -5,3 +5,4 @@ transformedData/
 .github/
 .npmrc/
 src/CLI
+data_pipeline_workdir

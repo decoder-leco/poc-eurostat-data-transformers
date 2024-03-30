@@ -266,6 +266,8 @@ jobs:
       - run:
           name: Bump package version
           command: |
+              git status
+              git checkout .
               pnpm version 0.0.1-gamma-commit-$PKG_COMMIT_HASH
       - run:
           name: Publish package

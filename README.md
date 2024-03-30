@@ -16,8 +16,9 @@ npm i @decoder-leco/poc-eurostat-data-transformers
 
 * Then, in your code, you can create this very first simple data pipeline, which pulls data from CSV files in the <https://github.com/decoderleco/deces_europe> repository:
 
-```TypeSCript
-import { ingesters, transformers } from "@decoder-leco/poc-eurostat-data-transformers/"
+```TypeScript
+import pl from "nodejs-polars"
+import { ingesters, transformers } from "@decoder-leco/poc-eurostat-data-transformers"
 
 /**
  * This will pull https://github.com/decoderleco/deces_europe/blob/main/data/csv/proj_19np__custom_2224172_linear.csv
@@ -33,17 +34,18 @@ const populationLinearProjection_2019_2024_Transformer = new transformers.Decode
   "./data_pipeline_workdir/42/transformedData/proj_19np_transformed.csv"
 )
 
-const runExamplePipeline = async() => { 
+const runExamplePipeline = async(): Promise<pl.DataFrame> => { 
   await populationLinearProjection_2019_2024_Ingester.run() 
-  await populationLinearProjection_2019_2024_Transformer.run()
+  return await populationLinearProjection_2019_2024_Transformer.run()
 }
 
-runExamplePipeline()
+const resultDF = await runExamplePipeline()
 ```
 
 * Another example, with <https://github.com/decoderleco/deces_europe/blob/main/data/csv/deces_ireland.csv> :
 
-```TypeSCript
+```TypeScript
+import pl from "nodejs-polars"
 import { ingesters, transformers } from "@decoder-leco/poc-eurostat-data-transformers/"
 
 /**
@@ -60,10 +62,10 @@ const irelandPopulationDeathsData_Transformer = new transformers.DecoderLecoGith
   "./data_pipeline_workdir/42/transformedData/deces_ireland.csv"
 )
 
-const runExamplePipeline = async() => { 
+const runExamplePipeline = async(): Promise<pl.DataFrame> => { 
   await irelandPopulationDeathsData_Ingester.run() 
   await irelandPopulationDeathsData_Transformer.run()
 }
 
-runExamplePipeline()
+const resultDF = await runExamplePipeline()
 ```

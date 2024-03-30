@@ -266,7 +266,7 @@ jobs:
       - run:
           name: Bump package version
           command: |
-              pnpm version 0.0.1-alpha-commit-$PKG_COMMIT_HASH
+              pnpm version 0.0.1-gamma-commit-$PKG_COMMIT_HASH
       - run:
           name: Publish package
           command: |

@@ -1,6 +1,6 @@
 {
   "name": "@decoder-leco/poc-eurostat-data-transformers",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1-alpha-dev-1651351341534354",
   "description": "Decoder l'eco EuroStat Data Ingesters and Transformers ELT module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

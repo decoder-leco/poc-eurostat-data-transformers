@@ -1,5 +1,5 @@
 import pl from 'nodejs-polars'
-export class PolarsDataFramesUtilsPolarsDataFramesUtils {
+export class PolarsDataFramesUtils {
     constructor() {
         
     }
@@ -25,15 +25,15 @@ export class PolarsDataFramesUtilsPolarsDataFramesUtils {
          **/
 
         const theNewColumnIwillUseToGroupAllRows = pl.Series("Used to sum all rows of a given column", arrayForBuildingOneNewColumn)
-        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> providedDf.columns is: `, providedDf.columns)
-        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> providedDf.rows() is: `, providedDf.rows())
+        console.log(`PolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> providedDf.columns is: `, providedDf.columns)
+        console.log(`PolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> providedDf.rows() is: `, providedDf.rows())
         
         const dfWithNewColumn = providedDf.hstack([theNewColumnIwillUseToGroupAllRows]/*, false*/).select(
             pl.col("Used to sum all rows of a given column"),
             pl.col("*").exclude("Used to sum all rows of a given column") // all of the columns, except the one I added and titled "A Kind Of Magic"
         )
-        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithNewColumn.columns is: `, dfWithNewColumn.columns)
-        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithNewColumn.rows() is: `, dfWithNewColumn.rows())
+        console.log(`PolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithNewColumn.columns is: `, dfWithNewColumn.columns)
+        console.log(`PolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithNewColumn.rows() is: `, dfWithNewColumn.rows())
         
         const dfWithTotalSum = dfWithNewColumn.groupBy("Used to sum all rows of a given column").agg(
             pl.col("*").exclude(`${columunName}`).first(),
@@ -42,8 +42,8 @@ export class PolarsDataFramesUtilsPolarsDataFramesUtils {
             // pl.col("*").exclude("Used to sum all rows of a given column")
             pl.col(`totalSumYouWant`)
         )
-        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithTotalSum.columns is: `, dfWithTotalSum.columns)
-        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithTotalSum.rows() is: `, dfWithTotalSum.rows())
+        console.log(`PolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithTotalSum.columns is: `, dfWithTotalSum.columns)
+        console.log(`PolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithTotalSum.rows() is: `, dfWithTotalSum.rows())
         return dfWithTotalSum.rows()[0][0]
     }
 }

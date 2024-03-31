@@ -1,6 +1,6 @@
 import pl from 'nodejs-polars'
 /*
-export class PolarsDataFramesUtilsPolarsDataFramesUtils {
+export class PolarsDataFramesUtils {
     constructor() {
         
     }
@@ -121,7 +121,7 @@ const testDF7 = pl.readCSV(testShoeOwnersCSV7, { sep: "," } )
 
 
 
-describe('Testing - PolarsDataFramesUtilsPolarsDataFramesUtils', () => {
+describe('Testing - PolarsDataFramesUtils', () => {
   afterAll(()=>{
     //jest.restoreAllMocks();
     // nothing to do
@@ -129,31 +129,31 @@ describe('Testing - PolarsDataFramesUtilsPolarsDataFramesUtils', () => {
 
   describe('Test the totalSum() static method', () => {
     it('shall return a total number of [17] shoe pairs, for the testDF1 dataframe', async () => {
-      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF1)
+      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF1)
       expect(numberOfOwnedShoePairsResult).toEqual(17)
     })
     it('shall return a total number of [10] shoe pairs, for the testDF2 dataframe', async () => {
-      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF2)
+      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF2)
       expect(numberOfOwnedShoePairsResult).toEqual(10)
     })
     it('shall return a total number of [170] shoe pairs, for the testDF3 dataframe', async () => {
-      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF3)
+      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF3)
       expect(numberOfOwnedShoePairsResult).toEqual(170)
     })
     it('shall return a total number of [170] shoe pairs, for the testDF4 dataframe', async () => {
-      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF4)
+      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF4)
       expect(numberOfOwnedShoePairsResult).toEqual(170)
     })
     it('shall return a total number of [0] shoe pairs, for the testDF5 dataframe', async () => {
-      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF5)
+      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF5)
       expect(numberOfOwnedShoePairsResult).toEqual(0)
     })
     it('shall return a total number of [4] shoe pairs, for the testDF6 dataframe', async () => {
-      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF6)
+      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF6)
       expect(numberOfOwnedShoePairsResult).toEqual(4)
     })
     it('shall return a total number of [4] shoe pairs, for the testDF7 dataframe', async () => {
-      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF7)
+      const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF7)
       expect(numberOfOwnedShoePairsResult).toEqual(4)
     })
   })

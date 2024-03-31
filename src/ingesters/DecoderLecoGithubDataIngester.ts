@@ -2,10 +2,12 @@ import * as fs from "node:fs"
 /**
  * Ingestion des données csv provenant du repsitory Github https://github.com/decoderleco/deces_europe
  * 
- * - Download the file,
- * - sends the data file to kafka (publish to kafka topic)
- * - Persist the file to an S3 bucket (using the local filesystem in much too uncomfortable, using an S3 bucket so much better)
- */
+ * - Download the CSV dataset file,
+ * - Sends the CSV dataset file to kafka (publish to kafka topic)
+ * - Persists the CSV dataset file to an S3 bucket (using the local filesystem in much too uncomfortable, using an S3 bucket so much better)
+ * - the S3 bucket (containing the CSV dataset file) is added on a git branch in LakeFS
+ * 
+ **/
 export class DecoderLecoGithubDataIngester {
   static baseUrl: string = "https://raw.githubusercontent.com/decoderleco/deces_europe"
   

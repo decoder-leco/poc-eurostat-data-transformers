@@ -1,10 +1,17 @@
 import pl from 'nodejs-polars'
+/**
+ * A Utility Class with static methods that
+ * are very useful when working with [Polars](https://github.com/pola-rs/nodejs-polars) dataframes
+ * [Polars](https://github.com/pola-rs/nodejs-polars) Rocks!
+ */
 export class PolarsDataFramesUtils {
-    constructor() {
-        
-    }
+    /**
+     * Compute the sum of all values in a column of a `polars` dataframe
+     * @param columunName The name of the column for which you want to compute the total sum of all values
+     * @param providedDf The dataframe for which you want to compute the sum of all values in the <code>columunName</code> column.
+     * @returns 
+     */
     public static async totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> {
-        let totalSum = 0;
         /**
          * I get the number of rows of my dataframe
          **/

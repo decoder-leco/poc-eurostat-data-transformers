@@ -1,5 +1,9 @@
-![Décoder l'éco](https://raw.githubusercontent.com/decoder-leco/poc-eurostat-data-transformers/feature/circleci/pipeline/%232/docs/images/small_decoder_leco_org.jpg)
+![Décoder l'éco](https://raw.githubusercontent.com/decoder-leco/poc-eurostat-data-transformers/feature/circleci/pipeline/%232/documentation/images/small_decoder_leco_org.jpg)
 --
+
+![npm bundle size](https://img.shields.io/bundlephobia/min/%40decoder-leco%2Fpoc-eurostat-data-transformers?style=for-the-badge&logoColor=%23dc34eb&label=bundle%20size&labelColor=%2334eb3d&color=%23dc34eb)
+
+![CircleCI (branch)](https://img.shields.io/circleci/build/github/decoder-leco/poc-eurostat-data-transformers/feature%252Fcircleci%252Fpipeline%252F%25232?style=for-the-badge&labelColor=%2334ebd3&color=%23eb34eb)
 
 # Décoder l'éco: A EuroStat Data Transformers Proof of Concept
 
@@ -68,4 +72,10 @@ const runExamplePipeline = async(): Promise<pl.DataFrame> => {
 }
 
 const resultDF = await runExamplePipeline()
+```
+
+## Generate the docs
+
+```bash
+pnpm run gen:api-docs
 ```

@@ -109,6 +109,7 @@
   "exclude": [
     "node_modules",
     "jest.config.ts",
-    "tests"
+    "tests",
+    "documentation"
   ]
 }

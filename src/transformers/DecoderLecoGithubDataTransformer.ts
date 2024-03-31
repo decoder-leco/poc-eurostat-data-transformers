@@ -2,15 +2,15 @@ import * as fs from "node:fs"
 import * as pl from "nodejs-polars"
 
 /**
- * Transformation du DATASET depuis le repetoire des raw dataset
- * & copie de la transformation dans un repertoire locale
+ * Transformation des données csv provenant du
+ * repository Github https://github.com/decoderleco/deces_europe
  */
 export class DecoderLecoGithubDataTransformer {
   private polarsSourceDataFrame: pl.DataFrame;
   private transformedDataframe: pl.DataFrame;
   /**
-   * @param sourceDataFilePath The path to the file containing the data to transform "the source data". E.g. './rawData/proj_19np.csv', the path must begin with './'.
-   * @param transformedDataFilePath The path to the file in which the transformed data will be persisted. E.g. [./transformedData/proj_19np_transformed.csv], the path must begin with './'.
+   * @param sourceDataFilePath The path to the file containing the data to transform "the source data". E.g. `./rawData/proj_19np.csv`, the path must begin with './'.
+   * @param transformedDataFilePath The path to the file in which the transformed data will be persisted. E.g. `./transformedData/proj_19np_transformed.csv`, the path must begin with './'.
    */
   constructor(protected sourceDataFilePath: string, protected transformedDataFilePath: string) {
     this.sourceDataFilePath = sourceDataFilePath
@@ -29,7 +29,9 @@ export class DecoderLecoGithubDataTransformer {
                      3,Charlie,2002-03-08`
     this.transformedDataframe = pl.readCSV( csvInitDataAsString, { sep: "," } )
   }
-
+  /**
+   * 
+   **/
   private getTransformedDataFileFolderPath(): string {
     let folderPath: string = ``;
     folderPath = this.transformedDataFilePath.split("/").slice(0,-1).join("/")

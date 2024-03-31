@@ -30,65 +30,65 @@ test('plays video', () => {
  * Expected total sum : 17
  * ??? La somme des n premiers nombres premiers donne une suite dont les éléments sont alternativment premiers ???...
  */
-const testShoeOwnersCSV1 = `ID,Name,Birthday,NumberOfOwnedShoePairs\n
-1,Jean,20BC-07-12,2\n
-2,Mathieu,25BC-09-20,3\n
-3,Marc,31BC-03-08,5\n
-3,Luc,18BC-07-11,7\n`
+const testShoeOwnersCSV1 = `ID,Name,Birthday,NumberOfOwnedShoePairs
+1,Jean,20BC-07-12,2
+2,Mathieu,25BC-09-20,3
+3,Marc,31BC-03-08,5
+3,Luc,18BC-07-11,7`
 
 /**
  * Expected total sum : 10
  */
-const testShoeOwnersCSV2 = `ID,Name,Birthday,NumberOfOwnedShoePairs\n
-1,Jean,20BC-07-12,1\n
-2,Mathieu,25BC-09-20,2\n
-3,Marc,31BC-03-08,3\n
-3,Luc,18BC-07-11,4\n`
+const testShoeOwnersCSV2 = `ID,Name,Birthday,NumberOfOwnedShoePairs
+1,Jean,20BC-07-12,1
+2,Mathieu,25BC-09-20,2
+3,Marc,31BC-03-08,3
+3,Luc,18BC-07-11,4`
 
 /**
  * Expected total sum : 170
  */
-const testShoeOwnersCSV3 = `ID,Name,Birthday,NumberOfOwnedShoePairs\n
-1,Jean,20BC-07-12,20\n
-2,Mathieu,25BC-09-20,30\n
-3,Marc,31BC-03-08,50\n
-3,Luc,18BC-07-11,70\n`
+const testShoeOwnersCSV3 = `ID,Name,Birthday,NumberOfOwnedShoePairs
+1,Jean,20BC-07-12,20
+2,Mathieu,25BC-09-20,30
+3,Marc,31BC-03-08,50
+3,Luc,18BC-07-11,70`
 
 /**
  * Expected total sum : 170
  */
-const testShoeOwnersCSV4 = `ID,Name,NumberOfOwnedShoePairs\n
-1,Jean,20\n
-2,Mathieu,30\n
-3,Marc,50\n
-3,Luc,70\n`
+const testShoeOwnersCSV4 = `ID,Name,NumberOfOwnedShoePairs
+1,Jean,20
+2,Mathieu,30
+3,Marc,50
+3,Luc,70`
 
 /**
  * Expected total sum : 0
  */
-const testShoeOwnersCSV5 = `ID,Name,Birthday,NumberOfOwnedShoePairs\n
-1,Jean,20BC-07-12,0\n
-2,Mathieu,25BC-09-20,0\n
-3,Marc,31BC-03-08,0\n
-3,Luc,18BC-07-11,0\n`
+const testShoeOwnersCSV5 = `ID,Name,Birthday,NumberOfOwnedShoePairs
+1,Jean,20BC-07-12,0
+2,Mathieu,25BC-09-20,0
+3,Marc,31BC-03-08,0
+3,Luc,18BC-07-11,0`
 
 /**
  * Expected total sum : 4
  */
-const testShoeOwnersCSV6 = `ID,Name,Birthday,NumberOfOwnedShoePairs\n
-1,Jean,20BC-07-12,1\n
-2,Mathieu,25BC-09-20,1\n
-3,Marc,31BC-03-08,1\n
-3,Luc,18BC-07-11,1\n`
+const testShoeOwnersCSV6 = `ID,Name,Birthday,NumberOfOwnedShoePairs
+1,Jean,20BC-07-12,1
+2,Mathieu,25BC-09-20,1
+3,Marc,31BC-03-08,1
+3,Luc,18BC-07-11,1`
 
 /**
  * Expected total sum : 4
  */
-const testShoeOwnersCSV7 = `ID,NumberOfOwnedShoePairs\n
-0,1\n
-1,1\n
-2,1\n
-3,1\n`
+const testShoeOwnersCSV7 = `ID,NumberOfOwnedShoePairs
+0,1
+1,1
+2,1
+3,1`
 
 /**
  * expected totalSum: 17

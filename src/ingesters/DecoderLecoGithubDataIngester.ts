@@ -3,6 +3,7 @@ import * as fs from "node:fs"
  * Ingestion des données csv provenant du repsitory Github https://github.com/decoderleco/deces_europe
  * 
  * - Download the file,
+ * - sends the data file to kafka (publish to kafka topic)
  * - Persist the file to an S3 bucket (using the local filesystem in much too uncomfortable, using an S3 bucket so much better)
  */
 export class DecoderLecoGithubDataIngester {

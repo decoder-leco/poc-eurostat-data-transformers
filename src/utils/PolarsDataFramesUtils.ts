@@ -1,0 +1,49 @@
+import pl from 'nodejs-polars'
+export class PolarsDataFramesUtilsPolarsDataFramesUtils {
+    constructor() {
+        
+    }
+    public static async totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> {
+        let totalSum = 0;
+        /**
+         * I get the number of rows of my dataframe
+         **/
+        const numberOfRows = providedDf.rows().length
+
+        /**
+         * I build a Polars Serie which has exactly the
+         * length of the number of rows of my dataframe
+         **/
+        const arrayForBuildingOneNewColumn = []
+        const columnSingleValue = `I use This Column To group by all rows regardless of row values in other columns`
+        for (let i = 0; i < numberOfRows; i++) {
+            arrayForBuildingOneNewColumn.push(`${columnSingleValue}`)
+        }
+
+        /**
+         * And I add the new column on the left of my dataframe, using the sooo powerful [hstack] polars dataframe method!
+         **/
+
+        const theNewColumnIwillUseToGroupAllRows = pl.Series("Used to sum all rows of a given column", arrayForBuildingOneNewColumn)
+        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> providedDf.columns is: `, providedDf.columns)
+        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> providedDf.rows() is: `, providedDf.rows())
+        
+        const dfWithNewColumn = providedDf.hstack([theNewColumnIwillUseToGroupAllRows]/*, false*/).select(
+            pl.col("Used to sum all rows of a given column"),
+            pl.col("*").exclude("Used to sum all rows of a given column") // all of the columns, except the one I added and titled "A Kind Of Magic"
+        )
+        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithNewColumn.columns is: `, dfWithNewColumn.columns)
+        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithNewColumn.rows() is: `, dfWithNewColumn.rows())
+        
+        const dfWithTotalSum = dfWithNewColumn.groupBy("Used to sum all rows of a given column").agg(
+            pl.col("*").exclude(`${columunName}`).first(),
+            pl.col(`${columunName}`).sum().alias(`totalSumYouWant`)
+        ).select(
+            // pl.col("*").exclude("Used to sum all rows of a given column")
+            pl.col(`totalSumYouWant`)
+        )
+        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithTotalSum.columns is: `, dfWithTotalSum.columns)
+        console.log(`PolarsDataFramesUtilsPolarsDataFramesUtils.totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> ----------->> dfWithTotalSum.rows() is: `, dfWithTotalSum.rows())
+        return dfWithTotalSum.rows()[0][0]
+    }
+}

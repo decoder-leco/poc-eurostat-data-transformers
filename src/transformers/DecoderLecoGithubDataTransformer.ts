@@ -16,12 +16,12 @@ export class DecoderLecoGithubDataTransformer {
     this.sourceDataFilePath = sourceDataFilePath
     this.transformedDataFilePath = transformedDataFilePath
     /**
-     * Loading Source Data  as a Polars Dataframe
+     * Loading Source Data as a Polars Dataframe
      */
     const sourceData: string = fs.readFileSync(this.sourceDataFilePath, { encoding: 'utf8' })
     this.polarsSourceDataFrame = pl.readCSV( sourceData.replace(/\\/,',').replace(/,/g, '\t'), { sep: "\t" } ) // [c|t]sv to tsv
     /**
-     * init the transoformed dataframe to dummy dataframe (almost empty)
+     * init the transformed dataframe to dummy dataframe (almost empty)
      */
     let csvInitDataAsString = `ID,Name,Birthday
                      1,Alice,1995-07-12
@@ -49,7 +49,7 @@ export class DecoderLecoGithubDataTransformer {
   }
 
   /**
-   * Creates, if itdoes not exists, the 
+   * Creates, if it does not exists, the 
    * folder containing the file in which 
    * the transformed data will be persisted.
    */

@@ -87,6 +87,31 @@ const runExamplePipeline = async(): Promise<pl.DataFrame> => {
 const resultDF = await runExamplePipeline()
 ```
 
+* A third Example, how to compute the sum of all rows in a given column of a `polars` dataframe:
+
+```TypeScript
+import pl from 'nodejs-polars'
+import * as utils from "../../src/utils"
+/**
+ * Expected total sum : 17
+ */
+const testShoeOwnersCSV1 = `ID,Name,Birthday,NumberOfOwnedShoePairs
+1,Jean,20BC-07-12,2
+2,Mathieu,25BC-09-20,3
+3,Marc,31BC-03-08,5
+3,Luc,18BC-07-11,7`
+
+/**
+ * expected totalSum: 17
+ */
+const testDF1 = pl.readCSV(testShoeOwnersCSV1, { sep: "," } )
+
+const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF1)
+
+console.log(`numberOfOwnedShoePairsResult = [${numberOfOwnedShoePairsResult}]`);
+
+```
+
 ## Generate the docs
 
 ```bash

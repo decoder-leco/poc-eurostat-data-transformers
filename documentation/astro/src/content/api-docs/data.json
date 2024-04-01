@@ -1,0 +1,2067 @@
+{
+	"id": 0,
+	"name": "@decoder-leco/poc-eurostat-data-transformers",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "abricot",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "A dummy package to test the <code>@decoder-leco/poc-eurostat-data-transformers</code> architecture."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 2,
+					"name": "ClasseA",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 3,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "abricot/ClasseA.ts",
+									"line": 2,
+									"character": 4,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseA.ts#L2"
+								}
+							],
+							"signatures": [
+								{
+									"id": 4,
+									"name": "new ClasseA",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "abricot/ClasseA.ts",
+											"line": 2,
+											"character": 4,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseA.ts#L2"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 2,
+										"name": "ClasseA",
+										"package": "@decoder-leco/poc-eurostat-data-transformers"
+									}
+								}
+							]
+						},
+						{
+							"id": 5,
+							"name": "sayHello",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "abricot/ClasseA.ts",
+									"line": 5,
+									"character": 4,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseA.ts#L5"
+								}
+							],
+							"signatures": [
+								{
+									"id": 6,
+									"name": "sayHello",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "abricot/ClasseA.ts",
+											"line": 5,
+											"character": 4,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseA.ts#L5"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								3
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								5
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "abricot/ClasseA.ts",
+							"line": 1,
+							"character": 13,
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseA.ts#L1"
+						}
+					]
+				},
+				{
+					"id": 7,
+					"name": "ClasseB",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 8,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "abricot/ClasseB.ts",
+									"line": 2,
+									"character": 4,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseB.ts#L2"
+								}
+							],
+							"signatures": [
+								{
+									"id": 9,
+									"name": "new ClasseB",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "abricot/ClasseB.ts",
+											"line": 2,
+											"character": 4,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseB.ts#L2"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 7,
+										"name": "ClasseB",
+										"package": "@decoder-leco/poc-eurostat-data-transformers"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								8
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "abricot/ClasseB.ts",
+							"line": 1,
+							"character": 13,
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseB.ts#L1"
+						}
+					]
+				},
+				{
+					"id": 10,
+					"name": "ClasseC",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 11,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "abricot/ClasseC.ts",
+									"line": 2,
+									"character": 4,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseC.ts#L2"
+								}
+							],
+							"signatures": [
+								{
+									"id": 12,
+									"name": "new ClasseC",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "abricot/ClasseC.ts",
+											"line": 2,
+											"character": 4,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseC.ts#L2"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 10,
+										"name": "ClasseC",
+										"package": "@decoder-leco/poc-eurostat-data-transformers"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								11
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "abricot/ClasseC.ts",
+							"line": 1,
+							"character": 13,
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/ClasseC.ts#L1"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						2,
+						7,
+						10
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "abricot/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/abricot/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 23,
+			"name": "ingesters",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "The package in which you will find all <code>@decoder-leco</code>'s Data Ingesters."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 24,
+					"name": "DecoderLecoGithubDataIngester",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Ingestion des données csv provenant du repsitory Github https://github.com/decoderleco/deces_europe\r\n\r\n- Download the CSV dataset file,\r\n- Sends the CSV dataset file to kafka (publish to kafka topic)\r\n- Persists the CSV dataset file to an S3 bucket (using the local filesystem in much too uncomfortable, using an S3 bucket so much better)\r\n- the S3 bucket (containing the CSV dataset file) is added on a git branch in LakeFS"
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 26,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+									"line": 20,
+									"character": 2,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+								}
+							],
+							"signatures": [
+								{
+									"id": 27,
+									"name": "new DecoderLecoGithubDataIngester",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+											"line": 20,
+											"character": 2,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+										}
+									],
+									"parameters": [
+										{
+											"id": 28,
+											"name": "gitVersion",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 29,
+											"name": "filePathInRepo",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 30,
+											"name": "dataWorkDir",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 24,
+										"name": "DecoderLecoGithubDataIngester",
+										"package": "@decoder-leco/poc-eurostat-data-transformers"
+									}
+								}
+							]
+						},
+						{
+							"id": 33,
+							"name": "dataWorkDir",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+									"line": 20,
+									"character": 88,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 32,
+							"name": "filePathInRepo",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+									"line": 20,
+									"character": 54,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 31,
+							"name": "gitVersion",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+									"line": 20,
+									"character": 24,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 25,
+							"name": "baseUrl",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isStatic": true
+							},
+							"sources": [
+								{
+									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+									"line": 12,
+									"character": 9,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L12"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "\"https://raw.githubusercontent.com/decoderleco/deces_europe\""
+						},
+						{
+							"id": 38,
+							"name": "createDir",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+									"line": 46,
+									"character": 9,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L46"
+								}
+							],
+							"signatures": [
+								{
+									"id": 39,
+									"name": "createDir",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+											"line": 46,
+											"character": 9,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L46"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 40,
+							"name": "download",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+									"line": 67,
+									"character": 8,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L67"
+								}
+							],
+							"signatures": [
+								{
+									"id": 41,
+									"name": "download",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+											"line": 67,
+											"character": 8,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L67"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.4.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 36,
+							"name": "getIngestedDataFileFolderPath",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+									"line": 41,
+									"character": 2,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L41"
+								}
+							],
+							"signatures": [
+								{
+									"id": 37,
+									"name": "getIngestedDataFileFolderPath",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+											"line": 41,
+											"character": 2,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L41"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							]
+						},
+						{
+							"id": 34,
+							"name": "run",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+									"line": 36,
+									"character": 8,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L36"
+								}
+							],
+							"signatures": [
+								{
+									"id": 35,
+									"name": "run",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+											"line": 36,
+											"character": 8,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L36"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.4.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								26
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								33,
+								32,
+								31,
+								25
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								38,
+								40,
+								36,
+								34
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
+							"line": 11,
+							"character": 13,
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/DecoderLecoGithubDataIngester.ts#L11"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						24
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "ingesters/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/ingesters/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 13,
+			"name": "pomme",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "A dummy package to test the <code>@decoder-leco/poc-eurostat-data-transformers</code> architecture."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 14,
+					"name": "ClasseA",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 15,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "pomme/ClasseA.ts",
+									"line": 2,
+									"character": 4,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/ClasseA.ts#L2"
+								}
+							],
+							"signatures": [
+								{
+									"id": 16,
+									"name": "new ClasseA",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "pomme/ClasseA.ts",
+											"line": 2,
+											"character": 4,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/ClasseA.ts#L2"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 14,
+										"name": "ClasseA",
+										"package": "@decoder-leco/poc-eurostat-data-transformers"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								15
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "pomme/ClasseA.ts",
+							"line": 1,
+							"character": 13,
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/ClasseA.ts#L1"
+						}
+					]
+				},
+				{
+					"id": 17,
+					"name": "ClasseB",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 18,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "pomme/ClasseB.ts",
+									"line": 2,
+									"character": 4,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/ClasseB.ts#L2"
+								}
+							],
+							"signatures": [
+								{
+									"id": 19,
+									"name": "new ClasseB",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "pomme/ClasseB.ts",
+											"line": 2,
+											"character": 4,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/ClasseB.ts#L2"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 17,
+										"name": "ClasseB",
+										"package": "@decoder-leco/poc-eurostat-data-transformers"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								18
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "pomme/ClasseB.ts",
+							"line": 1,
+							"character": 13,
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/ClasseB.ts#L1"
+						}
+					]
+				},
+				{
+					"id": 20,
+					"name": "ClasseC",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 21,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "pomme/ClasseC.ts",
+									"line": 2,
+									"character": 4,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/ClasseC.ts#L2"
+								}
+							],
+							"signatures": [
+								{
+									"id": 22,
+									"name": "new ClasseC",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "pomme/ClasseC.ts",
+											"line": 2,
+											"character": 4,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/ClasseC.ts#L2"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 20,
+										"name": "ClasseC",
+										"package": "@decoder-leco/poc-eurostat-data-transformers"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								21
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "pomme/ClasseC.ts",
+							"line": 1,
+							"character": 13,
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/ClasseC.ts#L1"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						14,
+						17,
+						20
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "pomme/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/pomme/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 42,
+			"name": "transformers",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "The package in which you will find all <code>@decoder-leco</code>'s Data Transformations."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 43,
+					"name": "DecoderLecoGithubDataTransformer",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Transformation des données csv provenant du\r\nrepository Github https://github.com/decoderleco/deces_europe"
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 44,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 15,
+									"character": 2,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
+								}
+							],
+							"signatures": [
+								{
+									"id": 45,
+									"name": "new DecoderLecoGithubDataTransformer",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+											"line": 15,
+											"character": 2,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
+										}
+									],
+									"parameters": [
+										{
+											"id": 46,
+											"name": "sourceDataFilePath",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The path to the file containing the data to transform \"the source data\". E.g. "
+													},
+													{
+														"kind": "code",
+														"text": "`./rawData/proj_19np.csv`"
+													},
+													{
+														"kind": "text",
+														"text": ", the path must begin with './'."
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 47,
+											"name": "transformedDataFilePath",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The path to the file in which the transformed data will be persisted. E.g. "
+													},
+													{
+														"kind": "code",
+														"text": "`./transformedData/proj_19np_transformed.csv`"
+													},
+													{
+														"kind": "text",
+														"text": ", the path must begin with './'."
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 43,
+										"name": "DecoderLecoGithubDataTransformer",
+										"package": "@decoder-leco/poc-eurostat-data-transformers"
+									}
+								}
+							]
+						},
+						{
+							"id": 48,
+							"name": "polarsSourceDataFrame",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 9,
+									"character": 10,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L9"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/nodejs-polars@0.10.0/node_modules/nodejs-polars/bin/dataframe.d.ts",
+									"qualifiedName": "DataFrame"
+								},
+								"name": "DataFrame",
+								"package": "nodejs-polars"
+							}
+						},
+						{
+							"id": 50,
+							"name": "sourceDataFilePath",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true
+							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The path to the file containing the data to transform \"the source data\". E.g. "
+									},
+									{
+										"kind": "code",
+										"text": "`./rawData/proj_19np.csv`"
+									},
+									{
+										"kind": "text",
+										"text": ", the path must begin with './'."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 15,
+									"character": 24,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 51,
+							"name": "transformedDataFilePath",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true
+							},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "The path to the file in which the transformed data will be persisted. E.g. "
+									},
+									{
+										"kind": "code",
+										"text": "`./transformedData/proj_19np_transformed.csv`"
+									},
+									{
+										"kind": "text",
+										"text": ", the path must begin with './'."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 15,
+									"character": 62,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 49,
+							"name": "transformedDataframe",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 10,
+									"character": 10,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L10"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"sourceFileName": "node_modules/.pnpm/nodejs-polars@0.10.0/node_modules/nodejs-polars/bin/dataframe.d.ts",
+									"qualifiedName": "DataFrame"
+								},
+								"name": "DataFrame",
+								"package": "nodejs-polars"
+							}
+						},
+						{
+							"id": 56,
+							"name": "createDir",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 56,
+									"character": 15,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L56"
+								}
+							],
+							"signatures": [
+								{
+									"id": 57,
+									"name": "createDir",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Creates, if it does not exists, the \r\nfolder containing the file in which \r\nthe transformed data will be persisted."
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+											"line": 56,
+											"character": 15,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L56"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.4.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 58,
+							"name": "getPolarsSourceDataframe",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 64,
+									"character": 9,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L64"
+								}
+							],
+							"signatures": [
+								{
+									"id": 59,
+									"name": "getPolarsSourceDataframe",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+											"line": 64,
+											"character": 9,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L64"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/nodejs-polars@0.10.0/node_modules/nodejs-polars/bin/dataframe.d.ts",
+											"qualifiedName": "DataFrame"
+										},
+										"name": "DataFrame",
+										"package": "nodejs-polars"
+									}
+								}
+							]
+						},
+						{
+							"id": 52,
+							"name": "getTransformedDataFileFolderPath",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPrivate": true
+							},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 35,
+									"character": 10,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L35"
+								}
+							],
+							"signatures": [
+								{
+									"id": 53,
+									"name": "getTransformedDataFileFolderPath",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+											"line": 35,
+											"character": 10,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L35"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							]
+						},
+						{
+							"id": 62,
+							"name": "persistTransformedData",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 91,
+									"character": 15,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L91"
+								}
+							],
+							"signatures": [
+								{
+									"id": 63,
+									"name": "persistTransformedData",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+											"line": 91,
+											"character": 15,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L91"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.4.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 54,
+							"name": "run",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 44,
+									"character": 8,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L44"
+								}
+							],
+							"signatures": [
+								{
+									"id": 55,
+									"name": "run",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Runs the data transformation."
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+											"line": 44,
+											"character": 8,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L44"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.4.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": {
+													"sourceFileName": "node_modules/.pnpm/nodejs-polars@0.10.0/node_modules/nodejs-polars/bin/dataframe.d.ts",
+													"qualifiedName": "DataFrame"
+												},
+												"name": "DataFrame",
+												"package": "nodejs-polars"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 60,
+							"name": "transform",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true
+							},
+							"sources": [
+								{
+									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+									"line": 70,
+									"character": 15,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L70"
+								}
+							],
+							"signatures": [
+								{
+									"id": 61,
+									"name": "transform",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Transforms the data, and persists the transformed data to a file."
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+											"line": 70,
+											"character": 15,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L70"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.4.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": {
+													"sourceFileName": "node_modules/.pnpm/nodejs-polars@0.10.0/node_modules/nodejs-polars/bin/dataframe.d.ts",
+													"qualifiedName": "DataFrame"
+												},
+												"name": "DataFrame",
+												"package": "nodejs-polars"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								44
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								48,
+								50,
+								51,
+								49
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								56,
+								58,
+								52,
+								62,
+								54,
+								60
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
+							"line": 8,
+							"character": 13,
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/DecoderLecoGithubDataTransformer.ts#L8"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						43
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "transformers/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/transformers/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 64,
+			"name": "utils",
+			"variant": "declaration",
+			"kind": 4,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "A package where you will find all <code>@decoder-leco</code> utilities: tools to run tests, to execute data transformations, etc..."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 65,
+					"name": "PolarsDataFramesUtils",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "A Utility Class with static methods that\r\nare very useful when working with [Polars](https://github.com/pola-rs/nodejs-polars) dataframes\r\n[Polars](https://github.com/pola-rs/nodejs-polars) Rocks!"
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 70,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"signatures": [
+								{
+									"id": 71,
+									"name": "new PolarsDataFramesUtils",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 65,
+										"name": "PolarsDataFramesUtils",
+										"package": "@decoder-leco/poc-eurostat-data-transformers"
+									}
+								}
+							]
+						},
+						{
+							"id": 66,
+							"name": "totalSum",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isPublic": true,
+								"isStatic": true
+							},
+							"sources": [
+								{
+									"fileName": "utils/PolarsDataFramesUtils.ts",
+									"line": 14,
+									"character": 24,
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/utils/PolarsDataFramesUtils.ts#L14"
+								}
+							],
+							"signatures": [
+								{
+									"id": 67,
+									"name": "totalSum",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "Compute the sum of all values in a column of a "
+											},
+											{
+												"kind": "code",
+												"text": "`polars`"
+											},
+											{
+												"kind": "text",
+												"text": " dataframe"
+											}
+										],
+										"blockTags": [
+											{
+												"tag": "@returns",
+												"content": []
+											}
+										]
+									},
+									"sources": [
+										{
+											"fileName": "utils/PolarsDataFramesUtils.ts",
+											"line": 14,
+											"character": 24,
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/utils/PolarsDataFramesUtils.ts#L14"
+										}
+									],
+									"parameters": [
+										{
+											"id": 68,
+											"name": "columunName",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The name of the column for which you want to compute the total sum of all values"
+													}
+												]
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 69,
+											"name": "providedDf",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"comment": {
+												"summary": [
+													{
+														"kind": "text",
+														"text": "The dataframe for which you want to compute the sum of all values in the <code>columunName</code> column."
+													}
+												]
+											},
+											"type": {
+												"type": "reference",
+												"target": {
+													"sourceFileName": "node_modules/.pnpm/nodejs-polars@0.10.0/node_modules/nodejs-polars/bin/dataframe.d.ts",
+													"qualifiedName": "DataFrame"
+												},
+												"name": "DataFrame",
+												"package": "nodejs-polars"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"sourceFileName": "node_modules/.pnpm/typescript@5.4.3/node_modules/typescript/lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "number"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								70
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								66
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "utils/PolarsDataFramesUtils.ts",
+							"line": 7,
+							"character": 13,
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/utils/PolarsDataFramesUtils.ts#L7"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"children": [
+						65
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "utils/index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/54f3537/src/utils/index.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Namespaces",
+			"children": [
+				1,
+				23,
+				13,
+				42,
+				64
+			]
+		}
+	],
+	"packageName": "@decoder-leco/poc-eurostat-data-transformers",
+	"readme": [
+		{
+			"kind": "text",
+			"text": "![Décoder l'éco](https://raw.githubusercontent.com/decoder-leco/poc-eurostat-data-transformers/feature/circleci/pipeline/%232/documentation/images/small_decoder_leco_org.jpg)\r\n--\r\n\r\n![npm bundle size](https://img.shields.io/bundlephobia/min/%40decoder-leco%2Fpoc-eurostat-data-transformers?style=for-the-badge&logoColor=%23dc34eb&label=bundle%20size&labelColor=%2334eb3d&color=%23dc34eb)\r\n\r\n![CircleCI (branch)](https://img.shields.io/circleci/build/github/decoder-leco/poc-eurostat-data-transformers/feature%252Fcircleci%252Fpipeline%252F%25232?style=for-the-badge&labelColor=%2334ebd3&color=%23eb34eb)\r\n\r\n# Décoder l'éco: A EuroStat Data Transformers Proof of Concept\r\n\r\nA Proof of Concept package to build Data Pipelines from Eurostat DataSources.\r\n\r\n## How to Use\r\n\r\n* first, install the package:\r\n\r\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\r\nnpm i @decoder-leco/poc-eurostat-data-transformers\r\n# pnpm add @decoder-leco/poc-eurostat-data-transformers\r\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\r\n\r\n* Then, in your code, you can create this very first simple data pipeline, which pulls data from CSV files in the <https://github.com/decoderleco/deces_europe> repository:\r\n\r\n"
+		},
+		{
+			"kind": "code",
+			"text": "```TypeScript\r\nimport pl from \"nodejs-polars\"\r\nimport { ingesters, transformers } from \"@decoder-leco/poc-eurostat-data-transformers\"\r\n\r\n/**\r\n * This will pull https://github.com/decoderleco/deces_europe/blob/main/data/csv/proj_19np__custom_2224172_linear.csv\r\n */\r\nconst populationLinearProjection_2019_2024_Ingester = new ingesters.DecoderLecoGithubDataIngester(\r\n  \"main\", // may be a git branch, a git tag, or a git commit hash\r\n  \"data/csv/proj_19np__custom_2224172_linear.csv\", // path in the repo of the CSV file\r\n  `./data_pipeline_workdir/42` // any folder path in the local filesystem, as you choose, where the file will locally be persisted\r\n)\r\n\r\nconst populationLinearProjection_2019_2024_Transformer = new transformers.DecoderLecoGithubDataTransformer(\r\n  \"./data_pipeline_workdir/42/data/csv/proj_19np__custom_2224172_linear.csv\",\r\n  \"./data_pipeline_workdir/42/transformedData/proj_19np_transformed.csv\"\r\n)\r\n\r\nconst runExamplePipeline = async(): Promise<pl.DataFrame> => { \r\n  await populationLinearProjection_2019_2024_Ingester.run() \r\n  return await populationLinearProjection_2019_2024_Transformer.run()\r\n}\r\n\r\nconst resultDF = await runExamplePipeline()\r\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\r\n\r\n* Another example, with <https://github.com/decoderleco/deces_europe/blob/main/data/csv/deces_ireland.csv> :\r\n\r\n"
+		},
+		{
+			"kind": "code",
+			"text": "```TypeScript\r\nimport pl from \"nodejs-polars\"\r\nimport { ingesters, transformers } from \"@decoder-leco/poc-eurostat-data-transformers/\"\r\n\r\n/**\r\n * This will pull https://github.com/decoderleco/deces_europe/blob/main/data/csv/deces_ireland.csv\r\n */\r\nconst irelandPopulationDeathsData_Ingester = new ingesters.DecoderLecoGithubDataIngester(\r\n  \"main\", // may be a git branch, a git tag, or a git commit hash\r\n  \"data/csv/deces_ireland.csv\", // path in the repo of the CSV file\r\n  `./data_pipeline_workdir/42` // any folder path in the local filesystem, as you choose, where the file will locally be persisted\r\n)\r\n\r\nconst irelandPopulationDeathsData_Transformer = new transformers.DecoderLecoGithubDataTransformer(\r\n  \"./data_pipeline_workdir/42/data/csv/deces_ireland.csv\",\r\n  \"./data_pipeline_workdir/42/transformedData/deces_ireland.csv\"\r\n)\r\n\r\nconst runExamplePipeline = async(): Promise<pl.DataFrame> => { \r\n  await irelandPopulationDeathsData_Ingester.run() \r\n  await irelandPopulationDeathsData_Transformer.run()\r\n}\r\n\r\nconst resultDF = await runExamplePipeline()\r\n```"
+		},
+		{
+			"kind": "text",
+			"text": "\r\n\r\n## Generate the docs\r\n\r\n"
+		},
+		{
+			"kind": "code",
+			"text": "```bash\r\npnpm run gen:api-docs\r\n```"
+		}
+	],
+	"symbolIdMap": {
+		"0": {
+			"sourceFileName": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1": {
+			"sourceFileName": "src/abricot/index.ts",
+			"qualifiedName": ""
+		},
+		"2": {
+			"sourceFileName": "src/abricot/ClasseA.ts",
+			"qualifiedName": "ClasseA"
+		},
+		"3": {
+			"sourceFileName": "src/abricot/ClasseA.ts",
+			"qualifiedName": "ClasseA.__constructor"
+		},
+		"4": {
+			"sourceFileName": "src/abricot/ClasseA.ts",
+			"qualifiedName": "ClasseA"
+		},
+		"5": {
+			"sourceFileName": "src/abricot/ClasseA.ts",
+			"qualifiedName": "ClasseA.sayHello"
+		},
+		"6": {
+			"sourceFileName": "src/abricot/ClasseA.ts",
+			"qualifiedName": "ClasseA.sayHello"
+		},
+		"7": {
+			"sourceFileName": "src/abricot/ClasseB.ts",
+			"qualifiedName": "ClasseB"
+		},
+		"8": {
+			"sourceFileName": "src/abricot/ClasseB.ts",
+			"qualifiedName": "ClasseB.__constructor"
+		},
+		"9": {
+			"sourceFileName": "src/abricot/ClasseB.ts",
+			"qualifiedName": "ClasseB"
+		},
+		"10": {
+			"sourceFileName": "src/abricot/ClasseC.ts",
+			"qualifiedName": "ClasseC"
+		},
+		"11": {
+			"sourceFileName": "src/abricot/ClasseC.ts",
+			"qualifiedName": "ClasseC.__constructor"
+		},
+		"12": {
+			"sourceFileName": "src/abricot/ClasseC.ts",
+			"qualifiedName": "ClasseC"
+		},
+		"13": {
+			"sourceFileName": "src/pomme/index.ts",
+			"qualifiedName": ""
+		},
+		"14": {
+			"sourceFileName": "src/pomme/ClasseA.ts",
+			"qualifiedName": "ClasseA"
+		},
+		"15": {
+			"sourceFileName": "src/pomme/ClasseA.ts",
+			"qualifiedName": "ClasseA.__constructor"
+		},
+		"16": {
+			"sourceFileName": "src/pomme/ClasseA.ts",
+			"qualifiedName": "ClasseA"
+		},
+		"17": {
+			"sourceFileName": "src/pomme/ClasseB.ts",
+			"qualifiedName": "ClasseB"
+		},
+		"18": {
+			"sourceFileName": "src/pomme/ClasseB.ts",
+			"qualifiedName": "ClasseB.__constructor"
+		},
+		"19": {
+			"sourceFileName": "src/pomme/ClasseB.ts",
+			"qualifiedName": "ClasseB"
+		},
+		"20": {
+			"sourceFileName": "src/pomme/ClasseC.ts",
+			"qualifiedName": "ClasseC"
+		},
+		"21": {
+			"sourceFileName": "src/pomme/ClasseC.ts",
+			"qualifiedName": "ClasseC.__constructor"
+		},
+		"22": {
+			"sourceFileName": "src/pomme/ClasseC.ts",
+			"qualifiedName": "ClasseC"
+		},
+		"23": {
+			"sourceFileName": "src/ingesters/index.ts",
+			"qualifiedName": ""
+		},
+		"24": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester"
+		},
+		"25": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.baseUrl"
+		},
+		"26": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.__constructor"
+		},
+		"27": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester"
+		},
+		"28": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "gitVersion"
+		},
+		"29": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "filePathInRepo"
+		},
+		"30": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "dataWorkDir"
+		},
+		"31": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.gitVersion"
+		},
+		"32": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.filePathInRepo"
+		},
+		"33": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.dataWorkDir"
+		},
+		"34": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.run"
+		},
+		"35": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.run"
+		},
+		"36": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.getIngestedDataFileFolderPath"
+		},
+		"37": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.getIngestedDataFileFolderPath"
+		},
+		"38": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.createDir"
+		},
+		"39": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.createDir"
+		},
+		"40": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.download"
+		},
+		"41": {
+			"sourceFileName": "src/ingesters/DecoderLecoGithubDataIngester.ts",
+			"qualifiedName": "DecoderLecoGithubDataIngester.download"
+		},
+		"42": {
+			"sourceFileName": "src/transformers/index.ts",
+			"qualifiedName": ""
+		},
+		"43": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer"
+		},
+		"44": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.__constructor"
+		},
+		"45": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer"
+		},
+		"46": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "sourceDataFilePath"
+		},
+		"47": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "transformedDataFilePath"
+		},
+		"48": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.polarsSourceDataFrame"
+		},
+		"49": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.transformedDataframe"
+		},
+		"50": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.sourceDataFilePath"
+		},
+		"51": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.transformedDataFilePath"
+		},
+		"52": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.getTransformedDataFileFolderPath"
+		},
+		"53": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.getTransformedDataFileFolderPath"
+		},
+		"54": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.run"
+		},
+		"55": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.run"
+		},
+		"56": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.createDir"
+		},
+		"57": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.createDir"
+		},
+		"58": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.getPolarsSourceDataframe"
+		},
+		"59": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.getPolarsSourceDataframe"
+		},
+		"60": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.transform"
+		},
+		"61": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.transform"
+		},
+		"62": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.persistTransformedData"
+		},
+		"63": {
+			"sourceFileName": "src/transformers/DecoderLecoGithubDataTransformer.ts",
+			"qualifiedName": "DecoderLecoGithubDataTransformer.persistTransformedData"
+		},
+		"64": {
+			"sourceFileName": "src/utils/index.ts",
+			"qualifiedName": ""
+		},
+		"65": {
+			"sourceFileName": "src/utils/PolarsDataFramesUtils.ts",
+			"qualifiedName": "PolarsDataFramesUtils"
+		},
+		"66": {
+			"sourceFileName": "src/utils/PolarsDataFramesUtils.ts",
+			"qualifiedName": "PolarsDataFramesUtils.totalSum"
+		},
+		"67": {
+			"sourceFileName": "src/utils/PolarsDataFramesUtils.ts",
+			"qualifiedName": "PolarsDataFramesUtils.totalSum"
+		},
+		"68": {
+			"sourceFileName": "src/utils/PolarsDataFramesUtils.ts",
+			"qualifiedName": "columunName"
+		},
+		"69": {
+			"sourceFileName": "src/utils/PolarsDataFramesUtils.ts",
+			"qualifiedName": "providedDf"
+		}
+	}
+}

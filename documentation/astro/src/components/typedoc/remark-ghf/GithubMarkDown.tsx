@@ -29,9 +29,9 @@ interface GithubMarkDownProps {
     markdown: string
     
 }
-export const GithubMarkDown: React.FunctionComponent<GithubMarkDownProps> = ({ 
+export default function GithubMarkDown ({ 
     markdown,
-}: GithubMarkDownProps) => {
+}: GithubMarkDownProps): JSX.Element {
     const [renderedMarkdown, setRenderedMarkdown] = useState<string>('')
     const [renderMarkdownError, setrenderMarkdownError] = useState<any>(null)
     const [loading, setLoading] = useState<boolean>(true)

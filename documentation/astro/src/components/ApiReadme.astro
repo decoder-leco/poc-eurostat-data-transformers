@@ -1,8 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import MarkDown from './typedoc/markdown/MarkDown'; // <MarkDown markdown={readmeEntry.text} client:only="preact" />
-import { GithubMarkDown } from './typedoc/remark-ghf/GithubMarkDown'; // not a much better result with // <GithubMarkDown client:only="preact" markdown={readmeEntry.text} />
-// import Markdown from 'react-markdown' // does not work at all with hydrated islands
+import GithubMarkDown from "./typedoc/remark-ghf/GithubMarkDown"// import Markdown from 'react-markdown' // does not work at all with hydrated islands
 // import rehypeHighlight from 'rehype-highlight'
 
 const typeDocEntries = await getCollection('api-docs');

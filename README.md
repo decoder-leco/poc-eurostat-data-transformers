@@ -92,3 +92,11 @@ const resultDF = await runExamplePipeline()
 ```bash
 pnpm run gen:api-docs
 ```
+
+### The Astro docs (WIP)
+
+```bash
+pnpm run build:docs:astro
+# pnpm run dev:docs:astro
+
+```

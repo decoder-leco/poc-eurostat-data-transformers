@@ -106,7 +106,7 @@ const testShoeOwnersCSV1 = `ID,Name,Birthday,NumberOfOwnedShoePairs
  */
 const testDF1 = pl.readCSV(testShoeOwnersCSV1, { sep: "," } )
 
-const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF1)
+const numberOfOwnedShoePairsResult = await utils.PolarsDataFramesUtils.totalSum(`NumberOfOwnedShoePairs`,testDF1);
 
 console.log(`numberOfOwnedShoePairsResult = [${numberOfOwnedShoePairsResult}]`);
 

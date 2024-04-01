@@ -24,7 +24,7 @@
     "clean:api-docs": "chmod +x ./.npm.scripts/docs/clean.sh && bash ./.npm.scripts/docs/clean.sh",
     "gen:api-docs:html": "pnpm run clean:api-docs:astro && pnpm exec typedoc ./src/index.ts --out ./docs/  --tsconfig ./tsconfig.json",
     "gen:api-docs:json": "pnpm run clean:api-docs:astro && pnpm exec typedoc ./src/index.ts --out documentation/astro/src/content/api-docs/  --tsconfig ./tsconfig.json",
-    "gen:api-docs:astro": "pnpm run clean:api-docs:astro && gen:api-docs:json",
+    "gen:api-docs:astro": "pnpm run clean:api-docs:astro && pnpm run gen:api-docs:json",
     "gen:api-docs:md": "pnpm run clean:api-docs:astro && pnpm exec typedoc ./src/index.ts --out documentation/astro/src/content/api-docs/  --tsconfig ./tsconfig.json --plugin typedoc-plugin-markdown --plugin typedoc-plugin-frontmatter",
     "gen:api-docs": "pnpm run clean:api-docs && pnpm exec typedoc ./src/index.ts --out ./docs/  --tsconfig ./tsconfig.json",
     "build:docs:astro": "pnpm run gen:api-docs && cd documentation/astro/ && pnpm run build",

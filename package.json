@@ -28,7 +28,7 @@
     "gen:api-docs:md": "pnpm run clean:api-docs:astro && pnpm exec typedoc ./src/index.ts --out documentation/astro/src/content/api-docs/  --tsconfig ./tsconfig.json --plugin typedoc-plugin-markdown --plugin typedoc-plugin-frontmatter",
     "gen:api-docs:astro": "pnpm run clean:api-docs:astro && pnpm run gen:api-docs:json",
     "gen:api-docs": "pnpm run clean:api-docs && pnpm exec typedoc ./src/index.ts --out ./docs/  --tsconfig ./tsconfig.json",
-    "build:docs:astro": "pnpm run gen:api-docs:astro && cd documentation/astro/ && pnpm run build",
+    "build:docs:astro": "pnpm run gen:api-docs:astro && cd documentation/astro/ && pnpm i --frozen-lockfile && pnpm run build",
     "dev:docs:astro": "pnpm run gen:api-docs:astro && cd documentation/astro/ && pnpm run dev",
     "dev:docs:html": "pnpm run gen:api-docs && serve docs/",
     "dev:docs": "pnpm run gen:api-docs && pnpm exec serve docs/",

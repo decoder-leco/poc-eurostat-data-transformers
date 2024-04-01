@@ -57,11 +57,21 @@ import { ingesters, transformers } from "@decoder-leco/poc-eurostat-data-transfo
  * This will pull https://github.com/decoderleco/deces_europe/blob/main/data/csv/deces_ireland.csv
  */
 const irelandPopulationDeathsData_Ingester = new ingesters.DecoderLecoGithubDataIngester(
-  "main", // may be a git branch, a git tag, or a git commit hash
-
-  "data/csv/deces_ireland.csv", // path in the repo of the CSV file
-
-  `./data_pipeline_workdir/42` // any folder path in the local filesystem, as you choose, where the file will locally be persisted
+  /**
+   * may be a git branch, a git tag, or a 
+   * git commit hash
+   */
+  "main",
+  /**
+   * path in the repo of the CSV file
+   */
+  "data/csv/deces_ireland.csv",
+  /**
+   * any folder path in the local filesystem, as 
+   * you choose, where the file will locally be
+   * persisted
+   */
+  `./data_pipeline_workdir/42`
 )
 
 const irelandPopulationDeathsData_Transformer = new transformers.DecoderLecoGithubDataTransformer(

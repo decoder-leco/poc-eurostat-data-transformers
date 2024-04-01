@@ -38,7 +38,7 @@
 									"fileName": "abricot/ClasseA.ts",
 									"line": 2,
 									"character": 4,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseA.ts#L2"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseA.ts#L2"
 								}
 							],
 							"signatures": [
@@ -53,7 +53,7 @@
 											"fileName": "abricot/ClasseA.ts",
 											"line": 2,
 											"character": 4,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseA.ts#L2"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseA.ts#L2"
 										}
 									],
 									"type": {
@@ -76,7 +76,7 @@
 									"fileName": "abricot/ClasseA.ts",
 									"line": 5,
 									"character": 4,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseA.ts#L5"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseA.ts#L5"
 								}
 							],
 							"signatures": [
@@ -91,7 +91,7 @@
 											"fileName": "abricot/ClasseA.ts",
 											"line": 5,
 											"character": 4,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseA.ts#L5"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseA.ts#L5"
 										}
 									],
 									"type": {
@@ -121,7 +121,7 @@
 							"fileName": "abricot/ClasseA.ts",
 							"line": 1,
 							"character": 13,
-							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseA.ts#L1"
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseA.ts#L1"
 						}
 					]
 				},
@@ -143,7 +143,7 @@
 									"fileName": "abricot/ClasseB.ts",
 									"line": 2,
 									"character": 4,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseB.ts#L2"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseB.ts#L2"
 								}
 							],
 							"signatures": [
@@ -158,7 +158,7 @@
 											"fileName": "abricot/ClasseB.ts",
 											"line": 2,
 											"character": 4,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseB.ts#L2"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseB.ts#L2"
 										}
 									],
 									"type": {
@@ -184,7 +184,7 @@
 							"fileName": "abricot/ClasseB.ts",
 							"line": 1,
 							"character": 13,
-							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseB.ts#L1"
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseB.ts#L1"
 						}
 					]
 				},
@@ -206,7 +206,7 @@
 									"fileName": "abricot/ClasseC.ts",
 									"line": 2,
 									"character": 4,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseC.ts#L2"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseC.ts#L2"
 								}
 							],
 							"signatures": [
@@ -221,7 +221,7 @@
 											"fileName": "abricot/ClasseC.ts",
 											"line": 2,
 											"character": 4,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseC.ts#L2"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseC.ts#L2"
 										}
 									],
 									"type": {
@@ -247,7 +247,7 @@
 							"fileName": "abricot/ClasseC.ts",
 							"line": 1,
 							"character": 13,
-							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/ClasseC.ts#L1"
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/ClasseC.ts#L1"
 						}
 					]
 				}
@@ -267,7 +267,7 @@
 					"fileName": "abricot/index.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/abricot/index.ts#L1"
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/abricot/index.ts#L1"
 				}
 			]
 		},
@@ -312,7 +312,7 @@
 									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 									"line": 20,
 									"character": 2,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
 								}
 							],
 							"signatures": [
@@ -327,7 +327,7 @@
 											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 											"line": 20,
 											"character": 2,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
 										}
 									],
 									"parameters": [
@@ -390,7 +390,7 @@
 									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 									"line": 20,
 									"character": 88,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
 								}
 							],
 							"type": {
@@ -411,7 +411,7 @@
 									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 									"line": 20,
 									"character": 54,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
 								}
 							],
 							"type": {
@@ -432,7 +432,7 @@
 									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 									"line": 20,
 									"character": 24,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L20"
 								}
 							],
 							"type": {
@@ -453,7 +453,7 @@
 									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 									"line": 12,
 									"character": 9,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L12"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L12"
 								}
 							],
 							"type": {
@@ -475,7 +475,7 @@
 									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 									"line": 46,
 									"character": 9,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L46"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L46"
 								}
 							],
 							"signatures": [
@@ -490,7 +490,7 @@
 											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 											"line": 46,
 											"character": 9,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L46"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L46"
 										}
 									],
 									"type": {
@@ -511,7 +511,7 @@
 									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 									"line": 67,
 									"character": 8,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L67"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L67"
 								}
 							],
 							"signatures": [
@@ -526,7 +526,7 @@
 											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 											"line": 67,
 											"character": 8,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L67"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L67"
 										}
 									],
 									"type": {
@@ -558,7 +558,7 @@
 									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 									"line": 41,
 									"character": 2,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L41"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L41"
 								}
 							],
 							"signatures": [
@@ -573,7 +573,7 @@
 											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 											"line": 41,
 											"character": 2,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L41"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L41"
 										}
 									],
 									"type": {
@@ -594,7 +594,7 @@
 									"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 									"line": 36,
 									"character": 8,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L36"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L36"
 								}
 							],
 							"signatures": [
@@ -609,7 +609,7 @@
 											"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 											"line": 36,
 											"character": 8,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L36"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L36"
 										}
 									],
 									"type": {
@@ -662,7 +662,7 @@
 							"fileName": "ingesters/DecoderLecoGithubDataIngester.ts",
 							"line": 11,
 							"character": 13,
-							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/DecoderLecoGithubDataIngester.ts#L11"
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/DecoderLecoGithubDataIngester.ts#L11"
 						}
 					]
 				}
@@ -680,7 +680,7 @@
 					"fileName": "ingesters/index.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/ingesters/index.ts#L1"
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/ingesters/index.ts#L1"
 				}
 			]
 		},
@@ -717,7 +717,7 @@
 									"fileName": "pomme/ClasseA.ts",
 									"line": 2,
 									"character": 4,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/ClasseA.ts#L2"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/ClasseA.ts#L2"
 								}
 							],
 							"signatures": [
@@ -732,7 +732,7 @@
 											"fileName": "pomme/ClasseA.ts",
 											"line": 2,
 											"character": 4,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/ClasseA.ts#L2"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/ClasseA.ts#L2"
 										}
 									],
 									"type": {
@@ -758,7 +758,7 @@
 							"fileName": "pomme/ClasseA.ts",
 							"line": 1,
 							"character": 13,
-							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/ClasseA.ts#L1"
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/ClasseA.ts#L1"
 						}
 					]
 				},
@@ -780,7 +780,7 @@
 									"fileName": "pomme/ClasseB.ts",
 									"line": 2,
 									"character": 4,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/ClasseB.ts#L2"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/ClasseB.ts#L2"
 								}
 							],
 							"signatures": [
@@ -795,7 +795,7 @@
 											"fileName": "pomme/ClasseB.ts",
 											"line": 2,
 											"character": 4,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/ClasseB.ts#L2"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/ClasseB.ts#L2"
 										}
 									],
 									"type": {
@@ -821,7 +821,7 @@
 							"fileName": "pomme/ClasseB.ts",
 							"line": 1,
 							"character": 13,
-							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/ClasseB.ts#L1"
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/ClasseB.ts#L1"
 						}
 					]
 				},
@@ -843,7 +843,7 @@
 									"fileName": "pomme/ClasseC.ts",
 									"line": 2,
 									"character": 4,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/ClasseC.ts#L2"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/ClasseC.ts#L2"
 								}
 							],
 							"signatures": [
@@ -858,7 +858,7 @@
 											"fileName": "pomme/ClasseC.ts",
 											"line": 2,
 											"character": 4,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/ClasseC.ts#L2"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/ClasseC.ts#L2"
 										}
 									],
 									"type": {
@@ -884,7 +884,7 @@
 							"fileName": "pomme/ClasseC.ts",
 							"line": 1,
 							"character": 13,
-							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/ClasseC.ts#L1"
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/ClasseC.ts#L1"
 						}
 					]
 				}
@@ -904,7 +904,7 @@
 					"fileName": "pomme/index.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/pomme/index.ts#L1"
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/pomme/index.ts#L1"
 				}
 			]
 		},
@@ -949,7 +949,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 15,
 									"character": 2,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
 								}
 							],
 							"signatures": [
@@ -964,7 +964,7 @@
 											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 											"line": 15,
 											"character": 2,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
 										}
 									],
 									"parameters": [
@@ -1045,7 +1045,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 9,
 									"character": 10,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L9"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L9"
 								}
 							],
 							"type": {
@@ -1087,7 +1087,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 15,
 									"character": 24,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
 								}
 							],
 							"type": {
@@ -1124,7 +1124,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 15,
 									"character": 62,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L15"
 								}
 							],
 							"type": {
@@ -1145,7 +1145,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 10,
 									"character": 10,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L10"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L10"
 								}
 							],
 							"type": {
@@ -1171,7 +1171,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 56,
 									"character": 15,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L56"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L56"
 								}
 							],
 							"signatures": [
@@ -1194,7 +1194,7 @@
 											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 											"line": 56,
 											"character": 15,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L56"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L56"
 										}
 									],
 									"type": {
@@ -1228,7 +1228,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 64,
 									"character": 9,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L64"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L64"
 								}
 							],
 							"signatures": [
@@ -1243,7 +1243,7 @@
 											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 											"line": 64,
 											"character": 9,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L64"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L64"
 										}
 									],
 									"type": {
@@ -1271,7 +1271,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 35,
 									"character": 10,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L35"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L35"
 								}
 							],
 							"signatures": [
@@ -1286,7 +1286,7 @@
 											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 											"line": 35,
 											"character": 10,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L35"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L35"
 										}
 									],
 									"type": {
@@ -1309,7 +1309,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 91,
 									"character": 15,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L91"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L91"
 								}
 							],
 							"signatures": [
@@ -1324,7 +1324,7 @@
 											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 											"line": 91,
 											"character": 15,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L91"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L91"
 										}
 									],
 									"type": {
@@ -1356,7 +1356,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 44,
 									"character": 8,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L44"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L44"
 								}
 							],
 							"signatures": [
@@ -1379,7 +1379,7 @@
 											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 											"line": 44,
 											"character": 8,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L44"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L44"
 										}
 									],
 									"type": {
@@ -1418,7 +1418,7 @@
 									"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 									"line": 70,
 									"character": 15,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L70"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L70"
 								}
 							],
 							"signatures": [
@@ -1441,7 +1441,7 @@
 											"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 											"line": 70,
 											"character": 15,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L70"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L70"
 										}
 									],
 									"type": {
@@ -1501,7 +1501,7 @@
 							"fileName": "transformers/DecoderLecoGithubDataTransformer.ts",
 							"line": 8,
 							"character": 13,
-							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/DecoderLecoGithubDataTransformer.ts#L8"
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/DecoderLecoGithubDataTransformer.ts#L8"
 						}
 					]
 				}
@@ -1519,7 +1519,7 @@
 					"fileName": "transformers/index.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/transformers/index.ts#L1"
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/transformers/index.ts#L1"
 				}
 			]
 		},
@@ -1589,7 +1589,7 @@
 									"fileName": "utils/PolarsDataFramesUtils.ts",
 									"line": 14,
 									"character": 24,
-									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/utils/PolarsDataFramesUtils.ts#L14"
+									"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/utils/PolarsDataFramesUtils.ts#L14"
 								}
 							],
 							"signatures": [
@@ -1626,7 +1626,7 @@
 											"fileName": "utils/PolarsDataFramesUtils.ts",
 											"line": 14,
 											"character": 24,
-											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/utils/PolarsDataFramesUtils.ts#L14"
+											"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/utils/PolarsDataFramesUtils.ts#L14"
 										}
 									],
 									"parameters": [
@@ -1712,7 +1712,7 @@
 							"fileName": "utils/PolarsDataFramesUtils.ts",
 							"line": 7,
 							"character": 13,
-							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/utils/PolarsDataFramesUtils.ts#L7"
+							"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/utils/PolarsDataFramesUtils.ts#L7"
 						}
 					]
 				}
@@ -1730,7 +1730,7 @@
 					"fileName": "utils/index.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/6ff2128/src/utils/index.ts#L1"
+					"url": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/869a965/src/utils/index.ts#L1"
 				}
 			]
 		}
@@ -1771,7 +1771,7 @@
 		},
 		{
 			"kind": "code",
-			"text": "```TypeScript\r\nimport pl from \"nodejs-polars\"\r\nimport { ingesters, transformers } from \"@decoder-leco/poc-eurostat-data-transformers/\"\r\n\r\n/**\r\n * This will pull https://github.com/decoderleco/deces_europe/blob/main/data/csv/deces_ireland.csv\r\n */\r\nconst irelandPopulationDeathsData_Ingester = new ingesters.DecoderLecoGithubDataIngester(\r\n  \"main\", // may be a git branch, a git tag, or a git commit hash\r\n\r\n  \"data/csv/deces_ireland.csv\", // path in the repo of the CSV file\r\n  \r\n  `./data_pipeline_workdir/42` // any folder path in the local filesystem, as you choose, where the file will locally be persisted\r\n)\r\n\r\nconst irelandPopulationDeathsData_Transformer = new transformers.DecoderLecoGithubDataTransformer(\r\n  \"./data_pipeline_workdir/42/data/csv/deces_ireland.csv\",\r\n  \"./data_pipeline_workdir/42/transformedData/deces_ireland.csv\"\r\n)\r\n\r\nconst runExamplePipeline = async(): Promise<pl.DataFrame> => { \r\n  await irelandPopulationDeathsData_Ingester.run() \r\n  await irelandPopulationDeathsData_Transformer.run()\r\n}\r\n\r\nconst resultDF = await runExamplePipeline()\r\n```"
+			"text": "```TypeScript\r\nimport pl from \"nodejs-polars\" \r\n\r\nimport { ingesters, transformers } from \"@decoder-leco/poc-eurostat-data-transformers/\" \r\n\r\n/**\r\n * This will pull https://github.com/decoderleco/deces_europe/blob/main/data/csv/deces_ireland.csv\r\n */\r\nconst irelandPopulationDeathsData_Ingester = new ingesters.DecoderLecoGithubDataIngester(\r\n  /**\r\n   * may be a git branch, a git tag, or a \r\n   * git commit hash\r\n   */\r\n  \"main\",\r\n  /**\r\n   * path in the repo of the CSV file\r\n   */\r\n  \"data/csv/deces_ireland.csv\",\r\n  /**\r\n   * any folder path in the local filesystem, as \r\n   * you choose, where the file will locally be\r\n   * persisted\r\n   */\r\n  `./data_pipeline_workdir/42`\r\n)\r\n\r\nconst irelandPopulationDeathsData_Transformer = new transformers.DecoderLecoGithubDataTransformer(\r\n  \"./data_pipeline_workdir/42/data/csv/deces_ireland.csv\",\r\n  \"./data_pipeline_workdir/42/transformedData/deces_ireland.csv\"\r\n)\r\n\r\nconst runExamplePipeline = async(): Promise<pl.DataFrame> => { \r\n  await irelandPopulationDeathsData_Ingester.run() \r\n  await irelandPopulationDeathsData_Transformer.run()\r\n}\r\n\r\nconst resultDF = await runExamplePipeline()\r\n```"
 		},
 		{
 			"kind": "text",

@@ -5,7 +5,15 @@ module.exports = {
 		'./node_modules/flowbite/**/*.js'
 	],
 	theme: {
-		extend: {},
+		extend: {
+			listStyleType: {
+				none: 'none',
+				disc: 'disc',
+				decimal: 'decimal',
+				square: 'square',
+				roman: 'upper-roman',
+			  }
+		},
 	},
 	plugins: [
 		require('flowbite/plugin')

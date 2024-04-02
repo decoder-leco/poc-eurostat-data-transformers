@@ -5,7 +5,7 @@ import * as fs from 'node:fs'
 const testFilePathInEurostat = "demo_magec"
 const testDataWorkDir = "data_pipeline_tests/eurostat"
 const ingester = 
-  new projection.DecoderLecoEurostatDataIngester(testFilePathInEurostat, testDataWorkDir)
+  new projection.DecoderLecoEurostatDataIngester(testFilePathInEurostat, "/?format=SDMX-CSV", testDataWorkDir)
 
 describe('Testing - DecoderLecoGithubDataIngester', () => {
 

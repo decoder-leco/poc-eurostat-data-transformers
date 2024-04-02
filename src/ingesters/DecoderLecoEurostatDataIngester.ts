@@ -10,17 +10,18 @@ import * as fs from "node:fs"
  **/
 export class DecoderLecoEurostatDataIngester {
   static baseUrl: string = "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data"
-  static format: String = "/?format=SDMX-CSV"
+  // static format: String = "/?format=SDMX-CSV"
   /**
    * 
    * @param filePathInEurostat 
    * @param dataWorkDir 
    */
-  constructor(protected filePathInEurostat: string, protected dataWorkDir?: string) {
+  constructor(protected filePathInEurostat: string, protected format: string, protected dataWorkDir?: string) {
     if (filePathInEurostat == "") {
       throw new Error(`[DecoderLecoEurostatDataIngester] - [filePathInEurostat] second argument of constructor must not be an ampty string`);
     }
     this.filePathInEurostat = filePathInEurostat;
+    this.format = format
     this.dataWorkDir = dataWorkDir || `./data_pipeline_workdir/eurostat`
   }
   async run() {
@@ -50,11 +51,11 @@ export class DecoderLecoEurostatDataIngester {
   */
 
   async download() {
-    console.log("download: ", DecoderLecoEurostatDataIngester.baseUrl + this.filePathInEurostat + DecoderLecoEurostatDataIngester.format)
-    const res = await fetch( `${DecoderLecoEurostatDataIngester.baseUrl}/${this.filePathInEurostat}${DecoderLecoEurostatDataIngester.format}` )
+    console.log("download: ", DecoderLecoEurostatDataIngester.baseUrl + this.filePathInEurostat + this.format)
+    const res = await fetch( `${DecoderLecoEurostatDataIngester.baseUrl}/${this.filePathInEurostat}${this.format}` )
     if (!res.ok) {
-      console.log((`error while fetching ${DecoderLecoEurostatDataIngester.baseUrl + this.filePathInEurostat + DecoderLecoEurostatDataIngester.format}`))
-      throw new Error(`HTTP - ${res.statusText} - ${res.status} - An Error occured while fetching [${DecoderLecoEurostatDataIngester.baseUrl}/${this.filePathInEurostat+DecoderLecoEurostatDataIngester.format}]`)
+      console.log((`error while fetching ${DecoderLecoEurostatDataIngester.baseUrl + this.filePathInEurostat + this.format}`))
+      throw new Error(`HTTP - ${res.statusText} - ${res.status} - An Error occured while fetching [${DecoderLecoEurostatDataIngester.baseUrl}/${this.filePathInEurostat+this.format}]`)
     }
     const text = await res.text()
     try {

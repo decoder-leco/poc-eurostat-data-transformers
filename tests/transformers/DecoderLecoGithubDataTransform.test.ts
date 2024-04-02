@@ -1,14 +1,29 @@
-/*
-import * as projection from "../../src/transformers"
+import * as transformers from "../../src/transformers"
 import * as fs from 'node:fs'
 
+/*
+const video = require('./video');
 
-jest.mock('../../src/projectionDePopulation2019-2024/createDir', () => ({
-  createDirs: jest.fn(),
-}))
+test('plays video', () => {
+  const spy = jest.spyOn(video, 'play');
+  const isPlaying = video.play();
 
-const transform = new projection.Transform("./tests/projectionDePopulation2019-2024/test-transform.csv", "transformed.cvs")
-const transformedData = "DATAFLOW,LAST UPDATE,time,freq,unit,sex,projection,age,population_proj\n"+
+  expect(spy).toHaveBeenCalled();
+  expect(isPlaying).toBe(true);
+
+  spy.mockReset();
+  spy.mockRestore();
+});
+*/
+const testTransformedDataFilePath = `./transformedData.csv`
+const testSourceDataFilePath = `./tests/transformers/test-transform.csv`
+const transformer = new transformers.DecoderLecoGithubDataTransformer(testSourceDataFilePath, testTransformedDataFilePath)
+
+// let person = new Person('Lorem', 'Ipsum');
+// let spy = jest.spyOn(transformer, 'createDir').mockImplementation(() => 'Hello');
+const createDirSpy = jest.spyOn(transformer, 'createDir') // does not compile if the create method is private
+
+const expectedTransformedData = "DATAFLOW,LAST UPDATE,time,freq,unit,sex,projection,age,population_proj\n"+
                           "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2019,A,PER,F,BSL,Y1,\n"+
                           "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2020,A,PER,F,BSL,Y1,\n"+
                           "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2021,A,PER,F,BSL,Y1,\n"+
@@ -19,22 +34,17 @@ const transformedData = "DATAFLOW,LAST UPDATE,time,freq,unit,sex,projection,age,
                           "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2019,A,PER,F,BSL,Y1,\n"+
                           "ESTAT:PROJ_19NP(1.0),20/07/20 23:00:00,2020,A,PER,F,BSL,Y1,\n"
                           
-describe('Testing - projectionDePopulation2019-2024 Ingestion', () => {
+describe('Testing - DecoderLecoGithubDataTransformer', () => {
   afterAll(()=>{
     jest.restoreAllMocks();
-    fs.rmSync('transformed.cvs')
+    fs.rmSync('transformedData.csv')
   })
 
-  describe('createDirs', () => {
-    it('mkDirSync shall create a new dir if requiered', async () => {
-      await transform.run() 
-
-      // TEST PASS WITH toHaveBeenCalledTimes(1)
-      // TEST FAIL WITH toHaveBeenCalledTimes(2)
-      expect(transform.createDir).toHaveBeenCalledTimes(1)
-      expect(fs.existsSync('transformed.cvs')).toBe(true);
+  describe('Test the run() method', () => {
+    it('shall create the ', async () => {
+      await transformer.run()
+      expect(createDirSpy).toHaveBeenCalledTimes(1);
+      expect(fs.existsSync('transformedData.csv')).toBe(true);
     })
   })
 })
-
-*/

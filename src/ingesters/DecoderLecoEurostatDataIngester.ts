@@ -24,13 +24,20 @@ export class DecoderLecoEurostatDataIngester {
     this.format = format
     this.dataWorkDir = dataWorkDir || `./data_pipeline_workdir/eurostat`
   }
+
+  getIngestedDataFileFolderPath(): string {
+    let folderPath: string = ``;
+    folderPath = this.filePathInEurostat.split("/").slice(0,-1).join("/")
+    return folderPath;
+  }
+
   async run() {
-    await this.createDir(`${this.dataWorkDir}`)
+    await this.createDir()
     await this.download()
   }
 
-  public async createDir(folderToCreate: string): Promise<void> {
-    //const folderToCreate = `${this.dataWorkDir}/eurostat`;
+  public createDir(): void {
+    const folderToCreate = `${this.dataWorkDir}/eurostat`;
     if (!fs.existsSync(folderToCreate)) {
       try {
         fs.mkdirSync(folderToCreate, { recursive: true } )

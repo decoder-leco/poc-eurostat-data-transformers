@@ -30,7 +30,7 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
       // Test de la presence du directory
       expect(fs.existsSync(`${testDataWorkDir}/`)).toBe(true)
 
-      const result = ingester.createDir(testDataWorkDir) 
+      const result = ingester.createDir() 
       // Test de la presence du diretory créé
       expect(fs.existsSync(`${testDataWorkDir}/`)).toBe(true)
     })
@@ -58,7 +58,7 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
     it('createDir shall create the directory when it doesnt exist', () => {
       // Test de la presence du directory
       expect(fs.existsSync(`${testDataWorkDir}/`)).toBe(false)
-      ingester.createDir(testDataWorkDir)
+      ingester.createDir()
       // Test de la presence du directory
       expect(fs.existsSync(`${testDataWorkDir}/`)).toBe(true)
     })
@@ -66,7 +66,7 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
 
   describe('Tests about the downloaded file',  () => {
     beforeEach( () => { // Nous aurons besoins du directory local disponible pour les tests suivants
-      ingester.createDir(testDataWorkDir) 
+      ingester.createDir() 
     })
     /*
     afterEach( () => {  // Cleanup du directory local

@@ -43,6 +43,7 @@ export class DecoderLecoGithubDataIngester {
     folderPath = this.filePathInRepo.split("/").slice(0,-1).join("/")
     return folderPath;
   }
+  
   public createDir(): void {
     let folderToCreate = `${this.dataWorkDir}/${this.getIngestedDataFileFolderPath()}`;
     if (!fs.existsSync(folderToCreate)) {

@@ -16,8 +16,10 @@
     "astro": "^4.5.12",
     "autoprefixer": "^10.4.19",
     "flowbite": "^2.3.0",
+    "immutable": "5.0.0-beta.5",
     "postcss": "^8.4.38",
     "preact": "^10.19.2",
+    "react-json-tree": "^0.18.0",
     "typescript": "^5.4.3"
   },
   "devDependencies": {

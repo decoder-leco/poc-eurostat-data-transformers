@@ -7,7 +7,7 @@ import Counter from '../components/Counter';
 
 import { signal } from '@preact/signals';
 import FlowbiteNavbar from '../components/flowbite/navbar/FlowbiteNavbar';
-import ApiReadme from '../components/ApiReadme.astro';
+import ApiReadmeComponent from '../components/ApiReadme.astro';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -43,7 +43,7 @@ const count = signal(0);
                 
 				<div class="p-4 sm:ml-64">
 					<div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-						<ApiReadme/>
+						<ApiReadmeComponent/>
 					</div>
 				</div>
 				

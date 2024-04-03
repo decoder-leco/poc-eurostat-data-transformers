@@ -52,6 +52,14 @@ export default function ApiTypeChildrenTree({ json }: ApiTypeChildrenTreeProps) 
 
 	return (
 		<>
+    <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl dark:text-white">React Arborist</h1>
+    
+    <a href="https://github.com/brimdata/react-arborist" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">See The React arborist repo</a>
+
+    <hr/>
+    <hr/>
+    
+
         <Tree initialData={[json]} />
 		</>
 	);

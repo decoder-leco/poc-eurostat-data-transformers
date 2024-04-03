@@ -6,18 +6,17 @@ export interface regexp {
 }
 
 /**
- * convert [sdmx,tsv, ...] file to csv
- * converted file will be copyed as <filename>_cleaned.csv
+ * convert [sdmx,tsv, ...] file to regular csv
  * 
  * usage:
  *  const test = new ToCsvConverter(
- *    '../data_pipeline_tests/data/estat_proj_19np.tsv', 
- *      [
- *        { from: /\\/, to: ','},
+ *    '../data_pipeline_tests/data/estat_proj_19np.tsv',                          // source file input
+ *      [                                                                        
+ *        { from: /\\/, to: ','},                                               // your every regexp
  *        { from: /\t/g, to: ','}
  *      ], 
- *      false
-*    ).toFile(../data_pipeline_tests/data/estat_proj_19np_csvCleaned.csv)
+ *      false                                                                // verbose mode
+*    ).toFile(../data_pipeline_tests/data/estat_proj_19np_csvCleaned.csv)   // outputed file
  * 
  */
 export class StreamedConverter {
@@ -42,20 +41,16 @@ export class StreamedConverter {
           // process the data chunk
           let data: string = chunk.toString() 
           this.rgx.forEach( (reg: regexp) => data = data.replace( reg.from, reg.to ))
-          /*
-          if (this.verbose) {
-            console.debug(`------------------------- chunk[${inc}] -------------------------`)
-            console.debug(data)
-          }
-          */
-          inc++
           writeStream.write(data)
+          inc++
       })
       
       readStream.on('end', () => {
-        if (this.verbose) console.log(`file has been converted completely in ${dest}\n(${inc} chunks parsed in ${Date.now() - start} ms)`)
+        if (this.verbose) console.log(
+          `file has been converted completely in ${dest}\n(${inc} chunks parsed in ${Date.now() - start} ms)`
+          )
       })
-
+      
     } catch (err) {
       if (this.verbose) console.log(`error: ${err}`)
     }

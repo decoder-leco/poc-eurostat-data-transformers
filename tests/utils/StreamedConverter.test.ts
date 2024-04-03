@@ -30,6 +30,5 @@ describe('Test de la convertion en mode stream', () => {
     process.nextTick(
       () => { expect(fs.existsSync(destfile)).toBe(true) }
     )
-    //expect(fs.existsSync(destfile)).toBe(true)
   })
 })

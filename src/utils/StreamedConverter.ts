@@ -6,7 +6,7 @@ export interface regexp {
 }
 
 /**
- * convert [sdmx,tsv, ...] file to regular csv
+ * convert [sdmx,tsv, ...] file to regular csv with streaming method for very large files
  * 
  * usage:
  *  const test = new ToCsvConverter(
@@ -50,7 +50,7 @@ export class StreamedConverter {
           `file has been converted completely in ${dest}\n(${inc} chunks parsed in ${Date.now() - start} ms)`
           )
       })
-      
+
     } catch (err) {
       if (this.verbose) console.log(`error: ${err}`)
     }

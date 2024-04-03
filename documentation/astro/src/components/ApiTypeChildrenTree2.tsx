@@ -1,6 +1,6 @@
-import { JSONTree } from 'react-json-tree'; // https://www.npmjs.com/package/react-json-tree
+import { Tree } from 'react-arborist'; // https://www.npmjs.com/package/react-json-tree
 // If you're using Immutable.js: `npm i --save immutable`
-import { Map } from 'immutable';
+
 
 /*
 
@@ -52,7 +52,7 @@ export default function ApiTypeChildrenTree({ json }: ApiTypeChildrenTreeProps) 
 
 	return (
 		<>
-        <JSONTree data={{renderedJSon: json}} />
+        <Tree initialData={[json]} />
 		</>
 	);
 }

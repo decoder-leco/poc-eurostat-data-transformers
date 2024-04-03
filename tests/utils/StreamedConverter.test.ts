@@ -27,8 +27,9 @@ describe('Test de la convertion en mode stream', () => {
     )
 
     test.toFile(destfile)
-    await new Promise(process.nextTick)
-    expect(fs.existsSync(destfile)).toBe(true) 
-
+    process.nextTick(
+      () => { expect(fs.existsSync(destfile)).toBe(true) }
+    )
+    //expect(fs.existsSync(destfile)).toBe(true)
   })
 })

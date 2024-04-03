@@ -49,10 +49,11 @@ export class StreamedConverter {
         if (this.verbose) console.log(
           `file has been converted completely in ${dest}\n(${inc} chunks parsed in ${Date.now() - start} ms)`
           )
+        return(`file has been converted completely in ${dest}\n(${inc} chunks parsed in ${Date.now() - start} ms)`)
       })
 
     } catch (err) {
-      if (this.verbose) console.log(`error: ${err}`)
+      console.log(`error: ${err}`)
     }
   }
 }

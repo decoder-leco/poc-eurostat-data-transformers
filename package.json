@@ -82,6 +82,7 @@
     "showdown": "^2.1.0",
     "to-vfile": "^8.0.0",
     "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
     "typedoc": "^0.25.12",
     "typedoc-default-themes": "^0.12.10",
     "typedoc-plugin-frontmatter": "1.0.0-next.1",

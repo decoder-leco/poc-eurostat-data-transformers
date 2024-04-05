@@ -8,7 +8,7 @@
     "/dist"
   ],
   "engines": {
-    "node": "~20.12.0",
+    "node": "~20.11.0",
     "pnpm": "~8.14.1"
   },
   "homepage": "https://github.com/decoder-leco/poc-eurostat-data-transformers/blob/feature/circleci/pipeline/%232/README.md",

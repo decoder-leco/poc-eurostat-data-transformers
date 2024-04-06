@@ -29,6 +29,9 @@ const runExamplePipeline = async(): Promise<pl.DataFrame> => {
 //runExamplePipeline()
 //( async () => await populationProjection_2019_2024_Ingester.run() )()
 ( async () => {
+  /*
   await pjan.createDir()
   console.log( await pjan.download() )
+  */
+ console.log((await pjan.run()).join("\n"))
 })()

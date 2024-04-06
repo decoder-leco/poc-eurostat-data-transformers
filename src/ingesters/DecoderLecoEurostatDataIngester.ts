@@ -27,44 +27,44 @@ export class DecoderLecoEurostatDataIngester {
   }
 
   getIngestedDataFileFolderPath(): string {
-    let folderPath: string = ``;
-    folderPath = this.filePathInEurostat.split("/").slice(0,-1).join("/")
-    //console.log(`folderPath: ${folderPath}`)
-    return folderPath;
+    return this.dataWorkDir || `./data_pipeline_workdir/eurostat`
   }
 
-  async run() {
-    await this.createDir()
-    await this.download()
+  async run(): Promise<string[]> {
+    const returnMsg: string[] = [
+      await this.createDir(),
+      await this.download()
+    ]
+    return returnMsg
   }
 
-  public createDir(): void {
+  async createDir(): Promise<string> {
     const folderToCreate = `${this.dataWorkDir}`;
+    let returnMsg: string = 'pending'
     if (!fs.existsSync(folderToCreate)) {
       try {
         fs.mkdirSync(folderToCreate, { recursive: true } )
-        console.log(`directory ${folderToCreate} created`)
+        returnMsg = `directory ${folderToCreate} created`
       } catch (error) {
         throw new Error(`Failed to create the [${folderToCreate}] folder.`, { cause: error })
       }
     } else {
-      console.info(`Skipped creating the [${folderToCreate}] folder, because it already exists.`)
+      returnMsg = `Skipped creating the [${folderToCreate}] folder, because it already exists.`
     }
+    return returnMsg
   }
-  /*
+
   getIngestedDataFileName(): string {
-    let splittedFilePath = this.filePathInEurostat.split("/");
-    let filename: string = splittedFilePath[splittedFilePath.length - 1]
-    return filename;
+    return this.filePathInEurostat+".csv"
   }
-  */
+
 
   async download(): Promise<string> {
-    console.log("download: ", DecoderLecoEurostatDataIngester.baseUrl + '/' + this.filePathInEurostat + this.format)
+    // console.log("download: ", DecoderLecoEurostatDataIngester.baseUrl + '/' + this.filePathInEurostat + this.format)
     const res = await fetch( `${DecoderLecoEurostatDataIngester.baseUrl}/${this.filePathInEurostat}${this.format}` )
     let returnMsg: string ='pending'
     if (!res.ok) {
-      console.log((`error while fetching ${DecoderLecoEurostatDataIngester.baseUrl + this.filePathInEurostat + this.format}`))
+      //console.log((`error while fetching ${DecoderLecoEurostatDataIngester.baseUrl + this.filePathInEurostat + this.format}`))
       returnMsg = `HTTP - ${res.statusText} - ${res.status} - An Error occured while fetching [${DecoderLecoEurostatDataIngester.baseUrl}/${this.filePathInEurostat+this.format}]`
     }
     const text = await res.text()

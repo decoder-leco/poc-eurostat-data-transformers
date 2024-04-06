@@ -1,7 +1,6 @@
 import * as projection from "../../src/ingesters"
 import * as fs from 'node:fs'
-// ${testDataWorkDir}/${testFilePathInEurostat}
-// ${testDataWorkDir}/${ingester.getIngestedDataFileFolderPath()}
+
 const testFilePathInEurostat = "demo_magec"
 const testDataWorkDir = "data_pipeline_tests/eurostat"
 const ingester = 
@@ -26,11 +25,13 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
       }
     })
 
-    it('createDir shall not create the directory when it already exist', () => {
+    it('createDir shall not create the directory when it already exist', async () => {
       // Test de la presence du directory
       expect(fs.existsSync(`${testDataWorkDir}/`)).toBe(true)
 
-      const result = ingester.createDir() 
+      const result = await ingester.createDir()
+      // Test du retour createDir
+      expect(result.split(" ")[0]).toEqual('Skipped')
       // Test de la presence du diretory créé
       expect(fs.existsSync(`${testDataWorkDir}/`)).toBe(true)
     })
@@ -55,10 +56,12 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
       }
     })
 
-    it('createDir shall create the directory when it doesnt exist', () => {
+    it('createDir shall create the directory when it doesnt exist', async () => {
       // Test de la presence du directory
       expect(fs.existsSync(`${testDataWorkDir}/`)).toBe(false)
-      ingester.createDir()
+      const result = await ingester.createDir()
+      // Test du retour createDir
+      expect(result.split(" ")[0]).toEqual('directory')
       // Test de la presence du directory
       expect(fs.existsSync(`${testDataWorkDir}/`)).toBe(true)
     })
@@ -78,7 +81,10 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
     })
 
     it('Test if the file was downloaded', async () => {
-      await ingester.download()
+      const result = await ingester.download()
+
+      // Test du retour de download()
+      expect(result.split(" ")[0]).toEqual("File")
       
       // Test de la presence du fichier à ingest dans sa destination
       expect(fs.existsSync(`${testDataWorkDir}/${testFilePathInEurostat}.csv`)).toBe(true)

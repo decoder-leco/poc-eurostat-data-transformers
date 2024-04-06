@@ -11,6 +11,7 @@ import * as fs from "node:fs"
 export class DecoderLecoEurostatDataIngester {
   static baseUrl: string = "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data"
   // static format: String = "/?format=SDMX-CSV"
+  
   /**
    * 
    * @param filePathInEurostat 
@@ -28,6 +29,7 @@ export class DecoderLecoEurostatDataIngester {
   getIngestedDataFileFolderPath(): string {
     let folderPath: string = ``;
     folderPath = this.filePathInEurostat.split("/").slice(0,-1).join("/")
+    //console.log(`folderPath: ${folderPath}`)
     return folderPath;
   }
 
@@ -37,7 +39,7 @@ export class DecoderLecoEurostatDataIngester {
   }
 
   public createDir(): void {
-    const folderToCreate = `${this.dataWorkDir}/eurostat`;
+    const folderToCreate = `${this.dataWorkDir}`;
     if (!fs.existsSync(folderToCreate)) {
       try {
         fs.mkdirSync(folderToCreate, { recursive: true } )
@@ -57,14 +59,16 @@ export class DecoderLecoEurostatDataIngester {
   }
   */
 
-  async download() {
-    console.log("download: ", DecoderLecoEurostatDataIngester.baseUrl + this.filePathInEurostat + this.format)
+  async download(): Promise<string> {
+    console.log("download: ", DecoderLecoEurostatDataIngester.baseUrl + '/' + this.filePathInEurostat + this.format)
     const res = await fetch( `${DecoderLecoEurostatDataIngester.baseUrl}/${this.filePathInEurostat}${this.format}` )
+    let returnMsg: string ='pending'
     if (!res.ok) {
       console.log((`error while fetching ${DecoderLecoEurostatDataIngester.baseUrl + this.filePathInEurostat + this.format}`))
-      throw new Error(`HTTP - ${res.statusText} - ${res.status} - An Error occured while fetching [${DecoderLecoEurostatDataIngester.baseUrl}/${this.filePathInEurostat+this.format}]`)
+      returnMsg = `HTTP - ${res.statusText} - ${res.status} - An Error occured while fetching [${DecoderLecoEurostatDataIngester.baseUrl}/${this.filePathInEurostat+this.format}]`
     }
     const text = await res.text()
+    //console.log(text)
     try {
       fs.writeFileSync( `${this.dataWorkDir}/${this.filePathInEurostat}.csv`, text, 
         { 
@@ -73,12 +77,13 @@ export class DecoderLecoEurostatDataIngester {
           mode: 0o666
         }, 
       )
-      return (`File ${this.filePathInEurostat} has succesfully been writed to ${this.dataWorkDir}/${this.filePathInEurostat}.csv`)
+      returnMsg = `File ${this.filePathInEurostat} has succesfully been writed to ${this.dataWorkDir}/${this.filePathInEurostat}.csv`
     } catch (err) {
-      // console.log("error while writing " + this.filePathInEurostat + ": ", err)
+        returnMsg = "error while writing " + this.filePathInEurostat + ": ", err
       throw new Error(`Failed to write File ${this.filePathInEurostat} to ${this.dataWorkDir}/${this.filePathInEurostat}.csv`, {
         cause: err
       })
     }
+    return returnMsg
   }
 }

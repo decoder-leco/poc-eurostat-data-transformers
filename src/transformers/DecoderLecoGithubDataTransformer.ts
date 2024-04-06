@@ -23,10 +23,11 @@ export class DecoderLecoGithubDataTransformer {
     /**
      * init the transformed dataframe to dummy dataframe (almost empty)
      */
-    let csvInitDataAsString = `ID,Name,Birthday
-                     1,Alice,1995-07-12
-                     2,Bob,1990-09-20
-                     3,Charlie,2002-03-08`
+    let csvInitDataAsString = `
+      ID,Name,Birthday
+      1,Alice,1995-07-12
+      2,Bob,1990-09-20
+      3,Charlie,2002-03-08`
     this.transformedDataframe = pl.readCSV( csvInitDataAsString, { sep: "," } )
   }
   /**

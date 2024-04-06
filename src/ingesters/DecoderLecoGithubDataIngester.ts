@@ -43,6 +43,7 @@ export class DecoderLecoGithubDataIngester {
     folderPath = this.filePathInRepo.split("/").slice(0,-1).join("/")
     return folderPath;
   }
+  
   public createDir(): void {
     let folderToCreate = `${this.dataWorkDir}/${this.getIngestedDataFileFolderPath()}`;
     if (!fs.existsSync(folderToCreate)) {
@@ -56,13 +57,13 @@ export class DecoderLecoGithubDataIngester {
       console.info(`Skipped creating the [${folderToCreate}] folder, because it already exists.`)
     }
   }
-  /*
+  
   getIngestedDataFileName(): string {
     let splittedFilePath = this.filePathInRepo.split("/");
     let filename: string = splittedFilePath[splittedFilePath.length - 1]
     return filename;
   }
-  */
+  
 
   async download() {
     // console.log("download: ", DecoderLecoGithubDataIngester.baseUrl + this.gitVersion + this.filePathInRepo)
@@ -83,7 +84,7 @@ export class DecoderLecoGithubDataIngester {
       return (`[${this.gitVersion}] version of File ${this.filePathInRepo} has succesfully been downloaded from [https://github.com/decoderleco/deces_europe.git]`)
     } catch (err) {
       // console.log("error while writing " + this.filePathInRepo + ": ", err)
-      throw new Error(`Failed to download [${this.gitVersion}] version of File ${this.filePathInRepo} from [https://github.com/decoderleco/deces_europe.git]`, {
+      throw new Error(`Failed while writing [${this.gitVersion}] version of File ${this.filePathInRepo} from [https://github.com/decoderleco/deces_europe.git]`, {
         cause: err
       })
     }

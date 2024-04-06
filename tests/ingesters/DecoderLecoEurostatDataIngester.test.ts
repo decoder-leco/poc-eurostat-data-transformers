@@ -68,7 +68,7 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
     beforeEach( () => { // Nous aurons besoins du directory local disponible pour les tests suivants
       ingester.createDir() 
     })
-    /*
+
     afterEach( () => {  // Cleanup du directory local
       try {
         fs.rmSync( `${testDataWorkDir}/`, { recursive: true })
@@ -76,7 +76,7 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
         console.log(`in afterEach deletion of [${testDataWorkDir}/] failed`, err)
       }
     })
-    */
+
     it('Test if the file was downloaded', async () => {
       await ingester.download()
       

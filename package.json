@@ -36,7 +36,7 @@
     "test:e2e": "echo 'Run e2e Tests'",
     "build": "pnpm exec tsc",
     "start": "node dist/dev.js",
-    "clean": "rm -Rf rawData && rm -Rf transformedData && rm -fr dist/",
+    "clean": "rm -Rf data_pipeline_workdir && rm -Rf transformedData && rm -fr dist/",
     "dev": "pnpm run clean && pnpm test && pnpm build && pnpm start"
   },
   "keywords": [

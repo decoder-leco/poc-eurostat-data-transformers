@@ -5,4 +5,7 @@ transformedData/
 .github/
 .npmrc/
 src/CLI
-data_pipeline_workdir
+data_pipeline_workdir/
+data_pipeline_tests/
+README.bugs.md
+README.reunion.md

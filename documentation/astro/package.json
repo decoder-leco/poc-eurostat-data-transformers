@@ -22,6 +22,7 @@
     "preact": "^10.19.2",
     "react-arborist": "^3.4.0",
     "react-json-tree": "^0.18.0",
+    "react-medium-image-zoom": "^5.2.0",
     "typescript": "^5.4.3"
   },
   "devDependencies": {

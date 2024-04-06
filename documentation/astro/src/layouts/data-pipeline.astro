@@ -1,0 +1,83 @@
+---
+// import FlowbiteModal from '../components/flowbite/modal/FlowbiteModal';
+import FlowbiteSidebar from '../components/flowbite/sidebar/FlowbiteSidebar'
+import FlowbiteNavbar from '../components/flowbite/navbar/FlowbiteNavbar';
+import MainContent from './main-content.astro';
+import { Image } from 'astro:assets';
+// import decoder_leco_org_img from '../assets/images/small_decoder_leco_org.jpg';
+import decoder_leco_org_img from '../assets/images/decoder_leco_org.jpg';
+
+import pipeline_branch1_img from '../assets/images/eurostat-data-pipeline-design_part1_BRANCH1.jpg'
+import pipeline_branch2_img from '../assets/images/eurostat-data-pipeline-design_part2_BRANCH2.jpg'
+import pipeline_branch3_img from '../assets/images/eurostat-data-pipeline-design_part3_BRANCH3.jpg'
+// import PicsGallery from './picsGallery.astro';
+import PicsGallery from './picsGallery2.astro';
+
+export interface Props {
+    /**
+     * The left part of the title: it will not be highlighted, and the text color will be black
+     */
+    title_starting_part?: string
+    /**
+     * The center part of the title: it will be highlighted, and the text color will be blue
+     */
+    title_highlighted_part?: string
+    /**
+     * The last part of the title: it will not be highlighted, on the right of the highlited part, and the text color will be black
+     */
+    title_ending_part?: string
+	subtitle?: string
+}
+
+const { 
+    title_starting_part = 'The',
+    title_highlighted_part = 'Data Pipeline',
+    title_ending_part = 'design.',
+	subtitle = 'Here you will find the description of the architecture and design of the data pipeline of Décoder l\'éco, for the eurostat data.'
+} = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<style>
+			html,
+			body {
+				font-family: system-ui;
+				margin: 0;
+			}
+			body {
+				padding: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+        <div class="grid grid-cols-4 gap-4">
+            <div class="col col-span-4">
+                <FlowbiteNavbar client:only="preact" />
+            </div>
+            <!-- ... -->
+            <div class="col col-span-4">
+                <FlowbiteSidebar client:only="preact" />
+                <!-- FakeContent client:only="preact" / -->        
+				<MainContent title_starting_part={ title_starting_part } title_highlighted_part={ title_highlighted_part } title_ending_part={ title_ending_part } subtitle={subtitle} >
+					<div slot="first-main">
+						//...
+						<Image
+						src={decoder_leco_org_img}
+						width={decoder_leco_org_img.width / 2}
+						densities={[1.5, 2]}
+						alt="A description of my image."
+						/>
+						<PicsGallery />
+					</div>
+				</MainContent>
+            </div>
+        </div>
+
+
+	</body>
+</html>

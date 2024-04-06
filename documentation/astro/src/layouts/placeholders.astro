@@ -1,17 +1,13 @@
 ---
 import FlowbiteModal from '../components/flowbite/modal/FlowbiteModal';
 import FlowbiteSidebar from '../components/flowbite/sidebar/FlowbiteSidebar'
-import {FlowbiteMainContent as FakeContent, FlowbiteMainContent} from '../components/flowbite/mocks/FlowbiteMainContent';
-// Component Imports
-import Counter from '../components/Counter';
-
-import { signal } from '@preact/signals';
+import {FlowbiteMainContent as FakeContent} from '../components/flowbite/mocks/FlowbiteMainContent';
 import FlowbiteNavbar from '../components/flowbite/navbar/FlowbiteNavbar';
+import MainContent from './main-content.astro';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 
-const count = signal(0);
 ---
 
 <html lang="en">
@@ -39,7 +35,10 @@ const count = signal(0);
             <!-- ... -->
             <div class="col col-span-4">
                 <FlowbiteSidebar client:only="preact" />
-                <FlowbiteMainContent client:only="preact" />        
+                <!-- FakeContent client:only="preact" / -->        
+				<MainContent>
+					<slot />
+				</MainContent>
             </div>
         </div>
 

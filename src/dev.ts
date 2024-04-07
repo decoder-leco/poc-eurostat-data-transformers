@@ -9,7 +9,7 @@ const populationProjection_2019_2024_Ingester = new DataIngester.DecoderLecoGith
 );
 
   // https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/demo_pjan/?format=SDMX-CSV
-const pjan = new DataIngester.DecoderLecoEurostatDataIngester('demo_pjan','/?format=SDMX-CSV')
+const pjan = new DataIngester.DecoderLecoEurostatDataIngester('demo_pjan','SDMX-CSV')
 
 const runExamplePipeline = async(): Promise<pl.DataFrame> => { 
 
@@ -29,9 +29,8 @@ const runExamplePipeline = async(): Promise<pl.DataFrame> => {
 //runExamplePipeline()
 //( async () => await populationProjection_2019_2024_Ingester.run() )()
 ( async () => {
-  /*
-  await pjan.createDir()
-  console.log( await pjan.download() )
-  */
- console.log((await pjan.run()).join("\n"))
+  const [ logDir, logDL ] = await pjan.run()
+  //console.log((await pjan.run()).join("\n"))
+  console.log('dir: '+logDir)
+  console.log('DL: '+logDL)
 })()

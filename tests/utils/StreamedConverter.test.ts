@@ -25,7 +25,7 @@ describe('Test de la convertion en mode stream', () => {
     
     expect(fs.existsSync(destfile)).toBe(false)
 
-    new StreamedConverter(
+    const res = await new StreamedConverter(
       sourcefile, 
       [
         { from: /\\/, to: ','},
@@ -33,10 +33,11 @@ describe('Test de la convertion en mode stream', () => {
       ],
       false
     ).toFile(destfile)
+    
+    // Test du retour de la methode toFile
+    expect(res.split(" ")[0]).toEqual("File")
+    // Test de l'existence du fichier converti
+    expect(fs.existsSync(destfile)).toBe(true)
 
-    process.nextTick(
-      () => { expect(fs.existsSync(destfile)).toBe(true) }
-    )
-    expect.assertions(1)
   })
 })

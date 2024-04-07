@@ -10,6 +10,7 @@ import * as fs from "node:fs"
  **/
 export class DecoderLecoEurostatDataIngester {
   static baseUrl: string = "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data"
+  static defaultWorkdir: string = `./data_pipeline_workdir/eurostat`
   // static format: String = "/?format=SDMX-CSV"
   
   /**
@@ -22,23 +23,23 @@ export class DecoderLecoEurostatDataIngester {
       throw new Error(`[DecoderLecoEurostatDataIngester] - [filePathInEurostat] second argument of constructor must not be an ampty string`);
     }
     this.filePathInEurostat = filePathInEurostat;
-    this.format = format
-    this.dataWorkDir = dataWorkDir || `./data_pipeline_workdir/eurostat`
+    this.format = '/?format='+format
+    this.dataWorkDir = dataWorkDir || DecoderLecoEurostatDataIngester.defaultWorkdir
   }
 
   getIngestedDataFileFolderPath(): string {
-    return this.dataWorkDir || `./data_pipeline_workdir/eurostat`
+    return this.dataWorkDir || DecoderLecoEurostatDataIngester.defaultWorkdir
   }
 
   async run(): Promise<string[]> {
     const returnMsg: string[] = [
-      await this.createDir(),
+      this.createDir(),
       await this.download()
     ]
     return returnMsg
   }
 
-  async createDir(): Promise<string> {
+  createDir(): string {
     const folderToCreate = `${this.dataWorkDir}`;
     let returnMsg: string = 'pending'
     if (!fs.existsSync(folderToCreate)) {
@@ -77,7 +78,7 @@ export class DecoderLecoEurostatDataIngester {
           mode: 0o666
         }, 
       )
-      returnMsg = `File ${this.filePathInEurostat} has succesfully been writed to ${this.dataWorkDir}/${this.filePathInEurostat}.csv`
+      returnMsg = `File ${this.dataWorkDir}/${this.filePathInEurostat}.csv has succesfully been writed`
     } catch (err) {
         returnMsg = "error while writing " + this.filePathInEurostat + ": ", err
       throw new Error(`Failed to write File ${this.filePathInEurostat} to ${this.dataWorkDir}/${this.filePathInEurostat}.csv`, {

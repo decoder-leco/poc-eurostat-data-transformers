@@ -8,10 +8,16 @@ import { StreamedConverter, regexp } from './utils'
 const reg: regexp[] = [
   { from: /\\/, to: ','},
   { from: /\t/g, to: ','}
-]
+];
 
-new StreamedConverter(
-  '../data_pipeline_tests/data/estat_proj_19np.tsv', 
-  reg ,
-  true
-).toFile('../data_pipeline_tests/data/estat_proj_19np_csvCleaned.csv')
+let res
+
+( async () => {
+  res =  await new StreamedConverter(
+    './data_pipeline_tests/data/estat_proj_19np.tsv', 
+    reg ,
+    false
+  ).toFile('./data_pipeline_tests/data/estat_proj_19np_csvCleaned.csv')
+  console.log(res)
+})()
+

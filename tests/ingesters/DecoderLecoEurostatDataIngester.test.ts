@@ -96,6 +96,6 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
       expect(fs.readFileSync(`${testDataWorkDir}/${testFilePathInEurostat}.csv`, { encoding: 'utf8', flag: 'r' }) == "404 error" ).toBe(false)
     }, 
     // large timeout for large files
-    500000)
+    )
   })
 })

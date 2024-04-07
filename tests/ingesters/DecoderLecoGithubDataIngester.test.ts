@@ -1,11 +1,11 @@
-import * as projection from "../../src/ingesters"
+import * as ingesters from "../../src/ingesters"
 import * as fs from 'node:fs'
 // ${testDataWorkDir}/${testFilePathInRepo}
 // ${testDataWorkDir}/${ingester.getIngestedDataFileFolderPath()}
 const testFilePathInRepo = "data/csv/deces_ireland.csv"
 const testDataWorkDir = "data_pipeline_tests"
 const ingester = 
-  new projection.DecoderLecoGithubDataIngester("main", testFilePathInRepo, testDataWorkDir)
+  new ingesters.DecoderLecoGithubDataIngester("main", testFilePathInRepo, testDataWorkDir)
   
 describe('Testing - DecoderLecoGithubDataIngester', () => {
 

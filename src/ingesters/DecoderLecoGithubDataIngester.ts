@@ -1,4 +1,5 @@
 import * as fs from "node:fs"
+
 /**
  * Ingestion des données csv provenant du repsitory Github https://github.com/decoderleco/deces_europe
  * 

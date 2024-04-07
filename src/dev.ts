@@ -30,7 +30,6 @@ const runExamplePipeline = async(): Promise<pl.DataFrame> => {
 //( async () => await populationProjection_2019_2024_Ingester.run() )()
 ( async () => {
   const [ logDir, logDL ] = await pjan.run()
-  //console.log((await pjan.run()).join("\n"))
   console.log('dir: '+logDir)
   console.log('DL: '+logDL)
 })()

@@ -10,13 +10,13 @@ export interface regexp {
  * 
  * usage:
  *  const test = new ToCsvConverter(
- *    '../data_pipeline_tests/data/estat_proj_19np.tsv',                          // source file input
+ *    './data_pipeline_tests/data/estat_proj_19np.tsv',                           // source file input
  *      [                                                                        
  *        { from: /\\/, to: ','},                                               // your every regexp
  *        { from: /\t/g, to: ','}
  *      ], 
  *      false                                                                // verbose mode
-*    ).toFile(../data_pipeline_tests/data/estat_proj_19np_csvCleaned.csv)   // outputed file
+*    ).toFile(./data_pipeline_tests/data/estat_proj_19np_csvCleaned.csv)    // outputed file
  * 
  */
 export class StreamedConverter {

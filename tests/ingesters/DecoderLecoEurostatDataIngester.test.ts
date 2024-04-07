@@ -3,8 +3,11 @@ import * as fs from 'node:fs'
 
 const testFilePathInEurostat = "demo_magec"
 const testDataWorkDir = "data_pipeline_tests/eurostat"
-const ingester = 
-  new projection.DecoderLecoEurostatDataIngester(testFilePathInEurostat, "/?format=SDMX-CSV", testDataWorkDir)
+const ingester = new projection.DecoderLecoEurostatDataIngester(
+  testFilePathInEurostat, 
+  "/?format=SDMX-CSV", 
+  testDataWorkDir
+)
 
 describe('Testing - DecoderLecoGithubDataIngester', () => {
 
@@ -94,8 +97,6 @@ describe('Testing - DecoderLecoGithubDataIngester', () => {
       expect(fs.readFileSync(`${testDataWorkDir}/${testFilePathInEurostat}.csv`, { encoding: 'utf8', flag: 'r' }).length == 0 ).toBe(false)
       // Test if the file containt "404 error" as text
       expect(fs.readFileSync(`${testDataWorkDir}/${testFilePathInEurostat}.csv`, { encoding: 'utf8', flag: 'r' }) == "404 error" ).toBe(false)
-    }, 
-    // large timeout for large files
-    )
+    })
   })
 })

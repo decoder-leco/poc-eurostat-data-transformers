@@ -44,7 +44,7 @@ export class DecoderLecoGithubDataIngester {
 
   getIngestedDataFileFolderPath(): string {
     let folderPath: string = ``;
-    folderPath = this.filePathInRepo.split("/").slice(0,-1).join("/")
+    folderPath = this.dataWorkDir + "/" + this.filePathInRepo.split("/").slice(0,-1).join("/")
     return folderPath;
   }
   

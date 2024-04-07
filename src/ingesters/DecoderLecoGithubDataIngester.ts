@@ -34,9 +34,12 @@ export class DecoderLecoGithubDataIngester {
     }
     this.dataWorkDir = dataWorkDir || `./data_pipeline_workdir`
   }
-  async run() {
-    await this.createDir()
-    await this.download()
+  async run(): Promise<string[]> {
+    return ([
+      this.createDir(),
+      await this.download()
+    ])
+
   }
 
   getIngestedDataFileFolderPath(): string {
@@ -45,18 +48,20 @@ export class DecoderLecoGithubDataIngester {
     return folderPath;
   }
   
-  public createDir(): void {
+  public createDir(): string {
     let folderToCreate = `${this.dataWorkDir}/${this.getIngestedDataFileFolderPath()}`;
+    let returnMsg: string = 'pending'
     if (!fs.existsSync(folderToCreate)) {
       try {
         fs.mkdirSync(folderToCreate, { recursive: true } )
-        console.log(`directory ${folderToCreate} created`)
+        returnMsg = `directory ${folderToCreate} created`
       } catch (error) {
         throw new Error(`Failed to create the [${folderToCreate}] folder.`, { cause: error })
       }
     } else {
-      console.info(`Skipped creating the [${folderToCreate}] folder, because it already exists.`)
+      returnMsg = `Skipped creating the [${folderToCreate}] folder, because it already exists.`
     }
+    return returnMsg
   }
   
   getIngestedDataFileName(): string {

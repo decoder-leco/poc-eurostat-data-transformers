@@ -13,7 +13,9 @@ const pjan = new DataIngester.DecoderLecoEurostatDataIngester('demo_pjan','SDMX-
 
 const runExamplePipeline = async(): Promise<pl.DataFrame> => { 
 
-   await populationProjection_2019_2024_Ingester.run() 
+   const [logDir, logDL ] = await populationProjection_2019_2024_Ingester.run() 
+   console.log('dir: ', logDir)
+   console.log('dirDL: ', logDL)
 
   /* initalise transformers class after running the ingestion class */
   
@@ -23,13 +25,21 @@ const runExamplePipeline = async(): Promise<pl.DataFrame> => {
   )
   
   return await populationProjection_2019_2024_Transformer.run()
+  
 
 }
 
 //runExamplePipeline()
-//( async () => await populationProjection_2019_2024_Ingester.run() )()
+
+( async () => {
+  const [logDir, logDL ] = await populationProjection_2019_2024_Ingester.run() 
+  console.log('dir: ', logDir)
+  console.log('dirDL: ', logDL)
+})();
+
+
 ( async () => {
   const [ logDir, logDL ] = await pjan.run()
   console.log('dir: '+logDir)
   console.log('DL: '+logDL)
-})()
+})();

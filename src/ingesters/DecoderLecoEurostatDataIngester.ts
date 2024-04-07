@@ -32,11 +32,10 @@ export class DecoderLecoEurostatDataIngester {
   }
 
   async run(): Promise<string[]> {
-    const returnMsg: string[] = [
+    return ([
       this.createDir(),
       await this.download()
-    ]
-    return returnMsg
+    ])
   }
 
   createDir(): string {

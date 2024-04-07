@@ -7,6 +7,7 @@ import pipeline_branch1_img from '../assets/images/eurostat-data-pipeline-design
 import pipeline_branch2_img from '../assets/images/eurostat-data-pipeline-design_part2_BRANCH2.jpg'
 import pipeline_branch3_img from '../assets/images/eurostat-data-pipeline-design_part3_BRANCH3.jpg'
 
+import pipeline_branch1_img_svg from '../assets/images/eurostat-data-pipeline-design_part1_BRANCH1.drawio.svg?raw'
 /**
  * To be continued:
  * https://github.com/rpearce/react-medium-image-zoom
@@ -23,18 +24,13 @@ import 'react-medium-image-zoom/dist/styles.css'
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     
-    <Zoom>
+    <!--Zoom>
         <img
           alt="That Wanaka Tree, New Zealand by Laura Smetsers"
           src={pipeline_branch1_img.src}
           width="500"
         />
-      </Zoom>
-      <!-- Image
-      class="h-auto max-w-full rounded-lg"
-      src={pipeline_branch1_img}
-      width={pipeline_branch1_img.width / 2}
-      densities={[1.5, 2]}
-      alt="Pipeline first branch."
-      / -->
+      </Zoom -->
+      <!-- SVG export of draw.io are the only one format which preserves images definition -->
+      <Fragment set:html={pipeline_branch1_img_svg} />
 </div>

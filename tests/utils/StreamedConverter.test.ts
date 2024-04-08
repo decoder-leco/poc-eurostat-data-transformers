@@ -39,5 +39,5 @@ describe('Test de la convertion en mode stream', () => {
     // Test de l'existence du fichier converti
     expect(fs.existsSync(destfile)).toBe(true)
 
-  }, 50000)
+  })
 })

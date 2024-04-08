@@ -33,6 +33,7 @@ export class StreamedConverter {
   }
 
   async toFile(dest: string): Promise<string> {
+    if (!fs.existsSync(this.file)) return 'false'
     return new Promise( (resolve, reject) => {
 
       const readStream: fs.ReadStream = fs.createReadStream(this.file);

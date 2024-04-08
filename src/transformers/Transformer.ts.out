@@ -6,9 +6,34 @@ import { SdmxToCsvConverter } from "../utils/SdmxToCsvConverter";
  * Transformation des données csv provenant du
  * repository Github https://github.com/decoderleco/deces_europe
  */
-export class DecoderLecoGithubDataTransformer {
+export abstract class Transformer<T> {
   private polarsSourceDataFrame: pl.DataFrame;
   private transformedDataframe: pl.DataFrame;
+  public abstract /* async */ getPolarsSourceDataframe(): Promise<pl.DataFrame>; /*{
+    return this.polarsSourceDataFrame;
+  }
+  */
+  public abstract /* async */ getPolarsTransformedDataframe(): Promise<pl.DataFrame>; /*{
+    return this.transformedDataframe;
+  }
+  */
+  /**
+   * Persists the dataframe to the (datalake)
+   * @param dataframe 
+   */
+  protected abstract /* async */ persist(dataframe: pl.DataFrame): Promise<pl.DataFrame>; /*{
+    return this.transformedDataframe;
+  }
+  */
+  /**
+   * Loads the data from the (datalake), to the polars dataframe.
+   * @param dataframe the polars dataframe in which the data should be loaded
+   */
+  protected abstract /* async */ load(dataframe: T): Promise<pl.DataFrame>; /*{
+    return this.transformedDataframe;
+  }
+  */
+  
   /**
    * @param sourceDataFilePath The path to the file containing the data to transform "the source data". E.g. `./rawData/proj_19np.csv`, the path must begin with './'.
    * @param transformedDataFilePath The path to the file in which the transformed data will be persisted. E.g. `./transformedData/proj_19np_transformed.csv`, the path must begin with './'.
@@ -63,9 +88,7 @@ export class DecoderLecoGithubDataTransformer {
   }
   
 
-  public getPolarsSourceDataframe(): pl.DataFrame {
-    return this.polarsSourceDataFrame;
-  }
+
   /**
    * Transforms the data, and persists the transformed data to a file.
    */
@@ -85,10 +108,9 @@ export class DecoderLecoGithubDataTransformer {
       ).withColumn(
         //pl.col("time").str.strptime(pl.Dtypes[pl.Datetime]).alias("newdate"),
         pl.col('age').str.replace('Y_GE100','Y_OPEN') 
-      ).withColumn(
-        //pl.col("time").str.strptime(pl.Dtypes[pl.Datetime]).alias("newdate"),
-        pl.col("time").str.concat(`-01-01`)
       )
+
+    
     return this.transformedDataframe;
   }
   public async persistTransformedData() {

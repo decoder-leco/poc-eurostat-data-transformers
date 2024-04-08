@@ -9,7 +9,7 @@ export class PolarsDataFramesUtils {
      * Compute the sum of all values in a column of a `polars` dataframe
      * @param columunName The name of the column for which you want to compute the total sum of all values
      * @param providedDf The dataframe for which you want to compute the sum of all values in the <code>columunName</code> column.
-     * @returns 
+     * @returns the sum of all values in the <code>columunName</code> column
      */
     public static async totalSum(columunName: string, providedDf: pl.DataFrame): Promise<number> {
         /**

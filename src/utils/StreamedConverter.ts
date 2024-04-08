@@ -27,18 +27,17 @@ export class StreamedConverter {
    */
 
   constructor(protected file: string, protected rgx: regexp[], protected verbose: boolean = false) {
+    if (!fs.existsSync(this.file))
+      throw new Error(`${this.file} doesn't exist`)
     this.file = file
     this.rgx = rgx
     this.verbose = verbose || false
-    if (!fs.existsSync(this.file))
-      throw new Error(`Error: ${this.file} doesn't exist`)
   }
 
   async toFile(dest: string): Promise<string> {
 
     if (!fs.existsSync(this.file)) {
-      console.log(`error: ${this.file} doesnt exist`)
-      return `error: ${this.file} doesnt exist`
+      throw new Error(`${this.file} doesn't exist`)
     }
 
     return new Promise( (resolve, reject) => {

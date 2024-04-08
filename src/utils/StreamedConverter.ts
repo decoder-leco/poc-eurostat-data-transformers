@@ -30,10 +30,17 @@ export class StreamedConverter {
     this.file = file
     this.rgx = rgx
     this.verbose = verbose || false
+    if (!fs.existsSync(this.file))
+      throw new Error(`Error: ${this.file} doesn't exist`)
   }
 
   async toFile(dest: string): Promise<string> {
-    if (!fs.existsSync(this.file)) return `error: ${this.file} doesnt exist`
+
+    if (!fs.existsSync(this.file)) {
+      console.log(`error: ${this.file} doesnt exist`)
+      return `error: ${this.file} doesnt exist`
+    }
+
     return new Promise( (resolve, reject) => {
 
       const readStream: fs.ReadStream = fs.createReadStream(this.file);

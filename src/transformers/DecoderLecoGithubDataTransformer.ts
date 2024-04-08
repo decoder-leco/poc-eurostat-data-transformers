@@ -13,6 +13,8 @@ export class DecoderLecoGithubDataTransformer {
    * @param transformedDataFilePath The path to the file in which the transformed data will be persisted. E.g. `./transformedData/proj_19np_transformed.csv`, the path must begin with './'.
    */
   constructor(protected sourceDataFilePath: string, protected transformedDataFilePath: string) {
+    if (!fs.existsSync(this.sourceDataFilePath))
+      throw new Error(`${this.sourceDataFilePath} doesn't exists`)
     this.sourceDataFilePath = sourceDataFilePath
     this.transformedDataFilePath = transformedDataFilePath
     /**

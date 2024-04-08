@@ -36,10 +36,6 @@ export class StreamedConverter {
 
   async toFile(dest: string): Promise<string> {
 
-    if (!fs.existsSync(this.file)) {
-      throw new Error(`${this.file} doesn't exist`)
-    }
-
     return new Promise( (resolve, reject) => {
 
       const readStream: fs.ReadStream = fs.createReadStream(this.file);
@@ -60,7 +56,7 @@ export class StreamedConverter {
           if (this.verbose) console.log(
             `File has been converted completely in ${dest}\n(${inc} chunks parsed in ${Date.now() - start} ms)`
             )
-          resolve(`File has been converted completely in ${dest}\n(${inc} chunks parsed in ${Date.now() - start} ms)`)
+          resolve(`File has been converted completely in ${dest} (${inc} chunks parsed in ${Date.now() - start} ms)`)
         })
 
       } catch (err) {

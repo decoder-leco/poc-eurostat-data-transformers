@@ -99,7 +99,7 @@ EOF
 cat <<EOF >./src/content/config.ts
 import { z, defineCollection } from 'astro:content'
 
-// 2. Define a `type` and `schema` for each collection
+// 2. Define a \`type\` and \`schema\` for each collection
 const apiDocsCollection = defineCollection({
   type: 'content', // v2.5.0 and later
   schema: z.object({
@@ -109,7 +109,7 @@ const apiDocsCollection = defineCollection({
   }),
 });
 
-// 3. Export a single `collections` object to register your collection(s)
+// 3. Export a single \`collections\` object to register your collection(s)
 export const collections = {
   'api-docs': apiDocsCollection,
 };
